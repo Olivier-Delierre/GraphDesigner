@@ -9,11 +9,13 @@ class Arc
 		/**
 		 * Constructeur prenant comme paramètre un poids, ainsi
 		 * qu'un libelle.
-		 * 
+		 *
 		 * @param poids Le poids de l'arc ;
 		 * @param libelle Le libellé de l'arc.
 		 */
 		Arc(double poids, std::string libelle);
+
+		Arc() = default ;
 
 	private:
 		/// Poids de l'arc.

@@ -1,7 +1,7 @@
 /**
- * Classe héritant de Graphe permettant de représenter 
+ * Classe héritant de Graphe permettant de représenter
  * un graphe sous la forme Fs Aps.
- */ 
+ */
 
 #ifndef FSAPS_H
 #define FSAPS_H
@@ -9,18 +9,20 @@
 #include <vector>
 
 #include "Sommet.h"
+#include "Arc.h"
+#include "Graphe.h"
 
 class FsAps : public Graphe
 {
 	public:
 		/**
 		 * Constructeur par défaut de FsAps.
-		 */ 
+		 */
 		FsAps();
 
 		/**
 		 * Affiche un Fs Aps sur la sortie standard.
-		 * 
+		 *
 		 * @param ost Une sortie standard.
 		 */
 		virtual void affiche(std::ostream& ost) const override;
