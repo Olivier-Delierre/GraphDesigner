@@ -1,4 +1,4 @@
-#include "SommetNumero.h"
+#include "../include/SommetNumero.h"
 
 SommetNumero::SommetNumero(unsigned int id, int nom) :
     Sommet{ id },
