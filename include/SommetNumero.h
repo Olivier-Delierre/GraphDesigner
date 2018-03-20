@@ -25,7 +25,7 @@ class SommetNumero : public Sommet
 		 * 
 		 * @param ost Une sortie standard.
 		 */ 
-        virtual void affiche(std::ostream& ost) const override;
+        void affiche(std::ostream& ost) const override;
     private:
         /// Nom du sommet.
         int d_nom;

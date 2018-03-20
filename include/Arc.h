@@ -15,7 +15,7 @@ class Arc
 		 */
 		Arc(double poids, std::string libelle);
 
-		Arc() = default ;
+		Arc() = default;
 
 	private:
 		/// Poids de l'arc.

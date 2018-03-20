@@ -25,10 +25,10 @@ class FsAps : public Graphe
 		 *
 		 * @param ost Une sortie standard.
 		 */
-		virtual void affiche(std::ostream& ost) const override;
+		void affiche(std::ostream& ost) const override;
 
 	private:
-		std::vector<Sommet> d_fs;
+		std::vector<Sommet*> d_fs;
 		std::vector<int> d_aps;
 		std::vector<Arc> d_arcs;
 };

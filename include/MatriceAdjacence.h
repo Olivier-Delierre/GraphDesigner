@@ -21,6 +21,21 @@ class MatriceAdjacence : public Graphe
 		MatriceAdjacence();
 
 		/**
+		 * Ajoute un sommet à la matrice d'adjacence courante,
+		 * et redimensionne en conséquence celle-ci.
+		 *
+		 * @param sommet Un sommet à ajouter.
+		 */
+		void ajouterSommet(Sommet* sommet);
+
+		/**
+		 * Ajoute un arc à la matrice d'adjacence courante.
+		 *
+		 * @param arc Un arc à ajouter.
+		 */
+		void ajouterArc(Arc* arc);
+
+		/**
 		 * Affiche une matrice d'adjacence sur la sortie standard.
 		 *
 		 * @param ost Une sortie standard.
@@ -29,8 +44,8 @@ class MatriceAdjacence : public Graphe
 
 	private:
 		std::vector< std::vector<int> > d_adjacence;
-		std::vector<Sommet> d_sommets;
-		std::vector<Arc> d_arcs;
+		std::vector<Sommet*> d_sommets;
+		std::vector<Arc*> d_arcs;
 };
 
 #endif
