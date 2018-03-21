@@ -6,6 +6,12 @@ MatriceAdjacence::MatriceAdjacence() :
 	d_arcs(0)
 {}
 
+MatriceAdjacence::MatriceAdjacence(std::vector< std::vector<int> > adjacence , std::vector<Sommet*> sommets , std::vector<Arc*> arcs) :
+    d_adjacence(adjacence),
+	d_sommets(sommets),
+	d_arcs(arcs)
+{}
+
 void MatriceAdjacence::ajouterSommet(Sommet* sommet)
 {
 	unsigned int nouvelle_taille{ d_adjacence.size() + 1 };
@@ -42,4 +48,24 @@ void MatriceAdjacence::affiche(std::ostream& ost) const
 
 		ost << std::endl;
 	}
+}
+
+std::vector< std::vector<int> > MatriceAdjacence::matrice() const
+{
+    return d_adjacence ;
+}
+
+std::vector<Sommet*> MatriceAdjacence::sommets() const
+{
+    return d_sommets ;
+}
+
+std::vector<Arc*> MatriceAdjacence::arcs() const
+{
+    return d_arcs ;
+}
+
+int MatriceAdjacence::nombreSommets() const
+{
+    return d_adjacence.size() ;
 }

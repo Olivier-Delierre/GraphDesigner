@@ -12,6 +12,8 @@ class ListeSommets
 		 */
 		ListeSommets();
 
+		friend class Listes ;
+
 	private:
 		Sommet* d_info;
 		ListeSommets* d_suivant;

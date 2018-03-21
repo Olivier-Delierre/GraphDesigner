@@ -13,18 +13,20 @@ class Sommet
 	public:
 		/**
 		 * Constructeur avec comme paramètre un ID.
-		 * 
+		 *
 		 * @param id Un identifiant.
-		 */ 
+		 */
 		Sommet(unsigned int id);
 
 		/**
 		 * Méthode virtuelle pure permettant d'afficher un Sommet
 		 * sur une sortie standard.
-		 * 
+		 *
 		 * @param ost - Une sortie standard.
 		 */
 		virtual void affiche(std::ostream& ost) const = 0;
+
+		unsigned int id() const ;
 
 	private:
 		/// Identifiant d'un sommet.

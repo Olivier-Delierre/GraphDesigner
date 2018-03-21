@@ -21,6 +21,11 @@ class MatriceAdjacence : public Graphe
 		MatriceAdjacence();
 
 		/**
+		* Constructeur complet de MatriceAdjacence
+		*/
+		MatriceAdjacence(std::vector< std::vector<int> > adjacence , std::vector<Sommet*> sommets , std::vector<Arc*> arcs) ;
+
+		/**
 		 * Ajoute un sommet à la matrice d'adjacence courante,
 		 * et redimensionne en conséquence celle-ci.
 		 *
@@ -41,6 +46,34 @@ class MatriceAdjacence : public Graphe
 		 * @param ost Une sortie standard.
 		 */
 		virtual void affiche(std::ostream& ost) const override;
+
+		/**
+		* Retourne le tableau des arcs.
+        *
+        * @return un vecteur d'arcs.
+		*/
+		std::vector<Arc*> arcs() const ;
+
+		/**
+		* Retourne le tableau des sommets.
+        *
+        * @return un vecteur de pointeur vers sommets.
+		*/
+		std::vector<Sommet*> sommets() const ;
+
+		/**
+		* Retourne la matrice d'adjacence
+        *
+        * @return un tableau à deux dimensions d'entiers.
+		*/
+		std::vector< std::vector<int> > matrice() const ;
+
+        /**
+		* Méthode virtuelle pure qui renvoie le nombre de sommets du graphe.
+		*
+		* @return le nombre de sommets.
+		*/
+        virtual int nombreSommets() const override ;
 
 	private:
 		std::vector< std::vector<int> > d_adjacence;
