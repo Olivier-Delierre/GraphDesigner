@@ -1,4 +1,5 @@
 #include "../include/FsAps.h"
+#include <iostream>
 
 FsAps::FsAps() :
 	d_fs(0),
@@ -41,5 +42,17 @@ int FsAps::nombreSommets() const
 
 void FsAps::affiche(std::ostream& ost) const
 {
-
+    std::cout << "Sommets : " ;
+    for (int i=0 ; i<nombreSommets() ; i++)
+    {
+        std::cout << sommets()[i] ;
+    }
+    std::cout << std::endl << "Arcs : " ;
+    for (int i=0 ; i<d_aps.size() ; i++)
+    {
+        for (int j=d_fs[i] ; d_fs[j]!=0 ; i++)
+        {
+            std::cout << i << "->" << j << std::endl ;
+        }
+    }
 }

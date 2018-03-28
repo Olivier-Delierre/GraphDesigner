@@ -1,8 +1,7 @@
 #ifndef LISTESOMMETS_H
 #define LISTESOMMETS_H
 
-#include "ListeArcs.h"
-#include "Sommet.h"
+#include "ChainonSommet.h"
 
 class ListeSommets
 {
@@ -15,9 +14,7 @@ class ListeSommets
 		friend class Listes ;
 
 	private:
-		Sommet* d_info;
-		ListeSommets* d_suivant;
-		ListeArcs* d_successeurs;
+		ChainonSommet *racine;
 };
 
 #endif
