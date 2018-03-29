@@ -15,6 +15,25 @@ FsAps::FsAps(const std::vector<int>& fs , const std::vector<int>& aps , const st
 	d_sommets(sommets)
 {}
 
+FsAps::FsAps(const std::vector<int>& fs , const std::vector<int>& aps , const std::vector<Sommet*>& sommets) :
+    d_fs(fs),
+	d_aps(aps),
+	d_arcs(fs.size()),
+	d_sommets(sommets)
+{
+    for (int i=0 ; i<fs.size() ; i++)
+    {
+        if (fs[i]==0)
+        {
+            d_arcs[i] = nullptr;
+        }
+        else
+        {
+            d_arcs[i] = new Arc() ;
+        }
+    }
+}
+
 std::vector<int> FsAps::fs() const
 {
     return d_fs ;
@@ -42,17 +61,18 @@ int FsAps::nombreSommets() const
 
 void FsAps::affiche(std::ostream& ost) const
 {
-    std::cout << "Sommets : " ;
+    ost << "Sommets : " ;
     for (int i=0 ; i<nombreSommets() ; i++)
     {
-        std::cout << sommets()[i] ;
+        sommets()[i]->affiche(ost) ;
+        ost << ' ' ;
     }
-    std::cout << std::endl << "Arcs : " ;
+    ost << std::endl << "Arcs : " ;
     for (int i=0 ; i<d_aps.size() ; i++)
     {
-        for (int j=d_fs[i] ; d_fs[j]!=0 ; i++)
+        for (int j=d_aps[i] ; d_fs[j]!=0 ; j++)
         {
-            std::cout << i << "->" << j << std::endl ;
+            ost << i+1 << "->" << d_fs[j] << " (" << d_arcs[j]->poids() << ")" << std::endl ;
         }
     }
 }

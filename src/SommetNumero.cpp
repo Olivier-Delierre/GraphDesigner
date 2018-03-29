@@ -8,5 +8,5 @@ SommetNumero::SommetNumero(unsigned int id, int num) :
 
 void SommetNumero::affiche(std::ostream& ost) const
 {
-    std::cout << d_num ;
+    ost << d_num ;
 }

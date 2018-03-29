@@ -1,15 +1,14 @@
 #include "../include/MatriceAdjacence.h"
 
 MatriceAdjacence::MatriceAdjacence() :
-	d_adjacence(0, std::vector<int>(0)),
-	d_sommets(0),
-	d_arcs(0)
+	d_adjacence(0, std::vector<Arc*>(0)),
+	d_sommets(0)
 {}
 
-MatriceAdjacence::MatriceAdjacence(std::vector< std::vector<int> > adjacence , std::vector<Sommet*> sommets , std::vector<Arc*> arcs) :
+MatriceAdjacence::MatriceAdjacence(std::vector< std::vector<Arc*> > adjacence , std::vector<Sommet*> sommets) :
     d_adjacence(adjacence),
-	d_sommets(sommets),
-	d_arcs(arcs)
+	d_sommets(sommets)
+
 {}
 
 void MatriceAdjacence::ajouterSommet(Sommet* sommet)
@@ -25,15 +24,15 @@ void MatriceAdjacence::ajouterSommet(Sommet* sommet)
 		d_adjacence[i].resize(nouvelle_taille);
 	}
 
-	// On remplie la dernière ligne de la matrice de 0.
+	// On remplie la dernière ligne de la matrice de pointeurs nuls.
 	for (unsigned int index = 0; index < nouvelle_taille; index++)
 	{
-		d_adjacence[derniere_position][index] = 0;
+		d_adjacence[derniere_position][index] = nullptr;
 	}
 
-	// On remplie la dernière colonne de la matrice de 0.
+	// On remplie la dernière colonne de la matrice de pointeurs nuls.
 	for (unsigned int index = 0; index < nouvelle_taille - 1; index++) {
-		d_adjacence[index][derniere_position] = 0;
+		d_adjacence[index][derniere_position] = nullptr;
 	}
 }
 
@@ -43,14 +42,13 @@ void MatriceAdjacence::affiche(std::ostream& ost) const
 	{
 		for (unsigned int colonne = 0; colonne < d_adjacence.size(); colonne++)
 		{
-			ost << d_adjacence[ligne][colonne] << ' ';
+			if(d_adjacence[ligne][colonne])
+                ost << ligne+1 << "->" << colonne+1 << " (" << d_adjacence[ligne][colonne]->poids() << ")" << std::endl ;
 		}
-
-		ost << std::endl;
 	}
 }
 
-std::vector< std::vector<int> > MatriceAdjacence::matrice() const
+std::vector< std::vector<Arc*> > MatriceAdjacence::matrice() const
 {
     return d_adjacence ;
 }
@@ -58,11 +56,6 @@ std::vector< std::vector<int> > MatriceAdjacence::matrice() const
 std::vector<Sommet*> MatriceAdjacence::sommets() const
 {
     return d_sommets ;
-}
-
-std::vector<Arc*> MatriceAdjacence::arcs() const
-{
-    return d_arcs ;
 }
 
 int MatriceAdjacence::nombreSommets() const
