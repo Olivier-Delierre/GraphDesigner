@@ -26,6 +26,8 @@ class Sommet
 		 */
 		virtual void affiche(std::ostream& ost) const = 0;
 
+
+
 		unsigned int id() const ;
 
 	private:

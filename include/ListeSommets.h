@@ -14,7 +14,7 @@ class ListeSommets
 		friend class Listes ;
 
 	private:
-		ChainonSommet *racine;
+		ChainonSommet *d_racine;
 };
 
 #endif

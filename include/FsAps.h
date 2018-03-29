@@ -26,6 +26,11 @@ class FsAps : public Graphe
 		FsAps(const std::vector<int>& fs , const std::vector<int>& aps , const std::vector<Arc*> arcs , const std::vector<Sommet*>& sommets) ;
 
 		/**
+		 * Constructeur sans arcs de FsAps (les poids seront nuls).
+		 */
+		FsAps(const std::vector<int>& fs , const std::vector<int>& aps , const std::vector<Sommet*>& sommets) ;
+
+		/**
 		 * Affiche un Fs Aps sur la sortie standard.
 		 *
 		 * @param ost Une sortie standard.

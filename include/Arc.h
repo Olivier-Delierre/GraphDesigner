@@ -15,7 +15,24 @@ class Arc
 		 */
 		Arc(double poids, std::string libelle);
 
-		Arc() = default;
+        /**
+		 * Constructeur qui initialise un arc de poids nul et sans nom.
+		 */
+		Arc();
+
+		/**
+		* Renvoie le poids de l'arc.
+		*
+		* @return le poids de l'arc.
+		*/
+		double poids() const ;
+
+		/**
+		* Renvoie le libelle de l'arc.
+		*
+		* @return le libelle de l'arc.
+		*/
+		std::string libelle() const ;
 
 	private:
 		/// Poids de l'arc.

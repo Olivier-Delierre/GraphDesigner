@@ -7,27 +7,27 @@
 
 class Convertisseur {
     public:
-        FsAps convertirEnFsAps(const Listes listes) const;
+        static FsAps convertirEnFsAps(const Listes listes);
 
         /**
         * Renvoie le graphe stocke sous forme des vecteurs fs et aps a partir d'un graphe stocke sous forme de matrice d'adjacence
         *
         * @return un graphe sous la forme fs/aps.
         */
-        FsAps convertirEnFsAps(const MatriceAdjacence matriceAdjacence) const;
+        static FsAps convertirEnFsAps(const MatriceAdjacence matriceAdjacence);
 
         /**
         * Renvoie le graphe stocke sous forme de matrice d'adjacencea partir d'un graphe stocke sous forme des vecteurs fs et aps
         *
         * @return un graphe sous la forme d'une matrice d'adjacence.
         */
-        MatriceAdjacence convertirEnMatriceAdjacence(const FsAps fsAps) const;
+        static MatriceAdjacence convertirEnMatriceAdjacence(const FsAps fsAps);
 
-        MatriceAdjacence convertirEnMatriceAdjacence(const Listes listes) const;
+        static MatriceAdjacence convertirEnMatriceAdjacence(const Listes listes);
 
-		Listes convertirEnListes(const FsAps fsAps) const;
+		static Listes convertirEnListes(const FsAps fsAps);
 
-        Listes convertirEnListes(const MatriceAdjacence matriceAdjacence) const;
+        static Listes convertirEnListes(const MatriceAdjacence matriceAdjacence);
 };
 
 #endif
