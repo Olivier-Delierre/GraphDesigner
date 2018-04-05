@@ -3,6 +3,8 @@
 
 #include <fstream>
 
+class Arc ;
+
 class Graphe
 {
 	public:
@@ -25,6 +27,24 @@ class Graphe
 		* @return le nombre de sommets.
 		*/
 		virtual int nombreSommets() const = 0;
+
+		/**
+		 * Ajoute un arc au graphe courant, allant du sommet i au sommet j
+		 * Si les index sont incorrects, la fonction ne fait rien.
+		 *
+		 * @param arc Un arc à ajouter.
+		 * @param[in] i Le sommet de depart.
+		 * @param[in] j Le sommet d'arrivee.
+		 */
+		virtual void ajouterArc(Arc* arc , int i , int j) = 0 ;
+
+		/**
+		 * Supprime l'arc (i,j) du graphe courant s'il existe.
+		 *
+		 * @param[in] i Le sommet de depart.
+		 * @param[in] j Le sommet d'arrivee.
+		 */
+		virtual void supprimerArc(int i , int j) = 0 ;
 
 		/**
 		* Méthode qui réalise et affiche l'algorithme de calcul des distances d'un graphe

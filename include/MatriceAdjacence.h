@@ -34,11 +34,22 @@ class MatriceAdjacence : public Graphe
 		void ajouterSommet(Sommet* sommet);
 
 		/**
-		 * Ajoute un arc à la matrice d'adjacence courante.
+		 * Ajoute un arc à la matrice d'adjacence courante, allant du sommet i au sommet j
+		 * Si les index sont incorrects, la fonction ne fait rien.
 		 *
 		 * @param arc Un arc à ajouter.
+		 * @param[in] i Le sommet de depart.
+		 * @param[in] j Le sommet d'arrivee.
 		 */
-		void ajouterArc(Arc* arc);
+		virtual void ajouterArc(Arc* arc , int i , int j) override ;
+
+		/**
+		 * Supprime l'arc (i,j) de la matrice d'adjacence courante s'il existe.
+		 *
+		 * @param[in] i Le sommet de depart.
+		 * @param[in] j Le sommet d'arrivee.
+		 */
+		virtual void supprimerArc(int i , int j) override;
 
 		/**
 		 * Affiche une matrice d'adjacence sur la sortie standard, sous la forme d'une liste d'arcs.

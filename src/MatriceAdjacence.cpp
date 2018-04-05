@@ -36,8 +36,30 @@ void MatriceAdjacence::ajouterSommet(Sommet* sommet)
 	}
 }
 
+void MatriceAdjacence::ajouterArc(Arc* arc , int i , int j)
+{
+    if (i>0 && j>0 && i<=nombreSommets() && j<=nombreSommets())
+        d_adjacence[i-1][j-1] = arc ;
+}
+
+void MatriceAdjacence::supprimerArc(int i , int j)
+{
+    if (i>0 && j>0 && i<=nombreSommets() && j<=nombreSommets())
+    {
+        delete d_adjacence[i-1][j-1] ;
+        d_adjacence[i-1][j-1] = nullptr ;
+    }
+}
+
 void MatriceAdjacence::affiche(std::ostream& ost) const
 {
+	ost << "(MA) Sommets : " ;
+    for (int i=0 ; i<nombreSommets() ; i++)
+    {
+        sommets()[i]->affiche(ost) ;
+        ost << ' ' ;
+    }
+    ost << std::endl << "Arcs : " << std::endl ;
 	for (unsigned int ligne = 0; ligne < d_adjacence.size(); ligne++)
 	{
 		for (unsigned int colonne = 0; colonne < d_adjacence.size(); colonne++)

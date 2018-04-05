@@ -2,12 +2,13 @@
 
 FsAps Convertisseur::convertirEnFsAps(const MatriceAdjacence matriceAdjacence)
 {
-    std::vector<int> aps (matriceAdjacence.sommets().size()) ;
+    std::vector<int> aps (0) ;
     std::vector<int> fs (0) ;
     std::vector<Arc*> arcs(0) ;
 
     for (int i=0 ; i<matriceAdjacence.nombreSommets() ; i++)
     {
+        aps.push_back(fs.size()) ;
         for (int j=0 ; j<matriceAdjacence.nombreSommets() ; j++)
         {
             if (matriceAdjacence.matrice()[i][j] != nullptr)
@@ -15,9 +16,9 @@ FsAps Convertisseur::convertirEnFsAps(const MatriceAdjacence matriceAdjacence)
                 fs.push_back(j+1) ;
                 arcs.push_back(matriceAdjacence.matrice()[i][j]) ;
             }
-            fs.push_back(0) ;
-            arcs.push_back(nullptr) ;
         }
+        fs.push_back(0) ;
+        arcs.push_back(nullptr) ;
     }
 
     return FsAps{fs,aps,arcs,matriceAdjacence.sommets()} ;
