@@ -12,7 +12,7 @@ FsAps Convertisseur::convertirEnFsAps(const MatriceAdjacence matriceAdjacence)
         {
             if (matriceAdjacence.matrice()[i][j] != nullptr)
             {
-                fs.push_back(j) ;
+                fs.push_back(j+1) ;
                 arcs.push_back(matriceAdjacence.matrice()[i][j]) ;
             }
             fs.push_back(0) ;
@@ -35,9 +35,24 @@ MatriceAdjacence Convertisseur::convertirEnMatriceAdjacence(const FsAps fsAps)
         }
         else
         {
-            matrice[i][fsAps.fs()[j]] = fsAps.arcs()[j] ;
+            matrice[i][fsAps.fs()[j]-1] = fsAps.arcs()[j] ;
         }
     }
 
     return MatriceAdjacence{matrice,fsAps.sommets()} ;
+}
+
+MatriceAdjacence convertirEnMatriceAdjacence(const MatriceAdjacence matriceAdjacence)
+{
+    return matriceAdjacence ;
+}
+
+FsAps convertirEnFsAps(const FsAps fsAps)
+{
+    return fsAps ;
+}
+
+Listes convertirEnListes(const Listes listes)
+{
+    return listes ;
 }

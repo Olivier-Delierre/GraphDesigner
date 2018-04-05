@@ -48,6 +48,21 @@ void MatriceAdjacence::affiche(std::ostream& ost) const
 	}
 }
 
+void MatriceAdjacence::afficheMatrice(std::ostream& ost) const
+{
+    for (unsigned int ligne = 0; ligne < d_adjacence.size(); ligne++)
+	{
+		for (unsigned int colonne = 0; colonne < d_adjacence.size(); colonne++)
+		{
+            if (d_adjacence[ligne][colonne]!=nullptr)
+                ost << 1 << " " ;
+            else
+                ost << 0 << " " ;
+		}
+		ost << std::endl ;
+	}
+}
+
 std::vector< std::vector<Arc*> > MatriceAdjacence::matrice() const
 {
     return d_adjacence ;

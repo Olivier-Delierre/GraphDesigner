@@ -41,11 +41,18 @@ class MatriceAdjacence : public Graphe
 		void ajouterArc(Arc* arc);
 
 		/**
-		 * Affiche une matrice d'adjacence sur la sortie standard.
+		 * Affiche une matrice d'adjacence sur la sortie standard, sous la forme d'une liste d'arcs.
 		 *
 		 * @param ost Une sortie standard.
 		 */
 		virtual void affiche(std::ostream& ost) const override;
+
+		/**
+		 * Affiche une matrice d'adjacence sur la sortie standard.
+		 *
+		 * @param ost Une sortie standard.
+		 */
+		void afficheMatrice(std::ostream& ost) const ;
 
 		/**
 		* Retourne le tableau des arcs.

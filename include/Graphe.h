@@ -9,7 +9,7 @@ class Graphe
 		/**
 		 * Constructeur par défaut d'un Graphe.
 		 */
-		Graphe();
+		Graphe() = default ;
 
 		/**
 		 * Méthode virtuelle pure permettant d'afficher un Graphe
@@ -24,7 +24,56 @@ class Graphe
 		*
 		* @return le nombre de sommets.
 		*/
-		virtual int nombreSommets() const = 0 ;
+		virtual int nombreSommets() const = 0;
+
+		/**
+		* Méthode qui réalise et affiche l'algorithme de calcul des distances d'un graphe
+		*
+		* @param ost - Une sortie standard.
+		*/
+		void distance(std::ostream ost) const ;
+
+		/**
+		* Méthode qui réalise et affiche l'algorithme de determination des rangs des sommets
+		*
+		* @param ost - Une sortie standard.
+		*/
+		void rangs(std::ostream ost) const ;
+
+		/**
+		* Méthode qui réalise et affiche l'algorithme de determination des CFC selon Tarjan
+		*
+		* @param ost - Une sortie standard.
+		*/
+		void Tarjan(std::ostream ost) const ;
+
+		/**
+		* Méthode qui réalise et affiche l'algorithme de resolution du probleme d'ordonnancement
+		*
+		* @param ost - Une sortie standard.
+		*/
+		void ordonnancement(std::ostream ost) const ;
+
+		/**
+		* Méthode qui réalise et affiche l'algorithme de calcul des plus courts chemin selon Djikstra
+		*
+		* @param ost - Une sortie standard.
+		*/
+		void Djikstra(std::ostream ost) const ;
+
+		/**
+		* Méthode qui réalise et affiche l'algorithme de calcul des distances d'un graphe
+		*
+		* @param ost - Une sortie standard.
+		*/
+		void Kruskal(std::ostream ost) const ;
+
+		/**
+		* Méthode qui réalise et affiche le codage de Prufer.
+		*
+		* @param ost - Une sortie standard.
+		*/
+		void Prufer(std::ostream ost) const ;
 
 	private:
 };
