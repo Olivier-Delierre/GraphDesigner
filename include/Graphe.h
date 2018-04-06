@@ -99,25 +99,25 @@ class Graphe
 		void Prufer(std::ostream ost) const ;
 
 		/**
-        * Renvoie le graphe stocke sous forme des vecteurs fs et aps
-        *
-        * @return un graphe sous la forme fs/aps.
-        */
-        virtual FsAps convertirEnFsAps() const = 0 ;
+		* Renvoie le graphe stocke sous forme des vecteurs fs et aps
+		*
+		* @return un graphe sous la forme fs/aps.
+		*/
+		virtual FsAps convertirEnFsAps() const = 0 ;
 
-        /**
-        * Renvoie le graphe stocke sous forme de matrice d'adjacence
-        *
-        * @return un graphe sous la forme d'une matrice d'adjacence.
-        */
-        virtual MatriceAdjacence convertirEnMatriceAdjacence() const = 0 ;
+		/**
+		* Renvoie le graphe stocke sous forme de matrice d'adjacence
+		*
+		* @return un graphe sous la forme d'une matrice d'adjacence.
+		*/
+		virtual MatriceAdjacence convertirEnMatriceAdjacence() const = 0 ;
 
-        /**
-        * Renvoie le graphe stocke sous forme de listes chainees
-        *
-        * @return un graphe sous la forme de listes chainees.
-        */
-        virtual Listes convertirEnListes() const = 0 ;
+		/**
+		* Renvoie le graphe stocke sous forme de listes chainees
+		*
+		* @return un graphe sous la forme de listes chainees.
+		*/
+		virtual Listes convertirEnListes() const = 0 ;
 
 
 	private:
