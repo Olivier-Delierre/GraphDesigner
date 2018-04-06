@@ -1,6 +1,8 @@
 #include "../include/FsAps.h"
 #include <iostream>
 
+
+
 FsAps::FsAps() :
 	d_fs(0),
 	d_aps(0),
@@ -21,7 +23,7 @@ FsAps::FsAps(const std::vector<int>& fs , const std::vector<int>& aps , const st
 	d_arcs(fs.size()),
 	d_sommets(sommets)
 {
-    for (int i=0 ; i<fs.size() ; i++)
+    for (unsigned int i=0 ; i<fs.size() ; i++)
     {
         if (fs[i]==0)
         {
@@ -63,7 +65,7 @@ void FsAps::ajouterArc(Arc* arc , int i , int j)
 {
     if (i>0 && j>0 && i<=nombreSommets() && j<=nombreSommets())
     {
-        int k = d_aps[i-1] ;
+        unsigned int k = d_aps[i-1] ;
         while (k<d_fs.size() && d_fs[k]<j)
             k++ ;
         if (d_fs[k]!=j)
@@ -71,7 +73,7 @@ void FsAps::ajouterArc(Arc* arc , int i , int j)
             d_fs.resize(d_fs.size()+1) ;
 
             // DECALAGE DU TABLEAU FS et ARCS
-            for (int l=d_fs.size() ; l>k ; l--)
+            for (unsigned int l=d_fs.size() ; l>k ; l--)
             {
                 d_fs[l] = d_fs[l-1] ;
                 d_arcs[l] = d_arcs[l-1] ;
@@ -80,7 +82,7 @@ void FsAps::ajouterArc(Arc* arc , int i , int j)
             d_arcs[k] = arc ;
 
             // MISE A JOUR DE APS
-            for (int l=i ; l<d_aps.size() ; l++)
+            for (unsigned int l=i ; l<d_aps.size() ; l++)
                 d_aps[l]++ ;
         }
     }
@@ -90,13 +92,13 @@ void FsAps::supprimerArc(int i , int j)
 {
     if (i>0 && j>0 && i<=nombreSommets() && j<=nombreSommets())
     {
-        int k = d_aps[i-1] ;
+        unsigned int k = d_aps[i-1] ;
         while (k<d_fs.size() && d_fs[k]<j)
             k++ ;
         if (d_fs[k]==j)
         {
             // DECALAGE DU TABLEAU FS et ARCS
-            for (int l=k ; l<d_fs.size() ; l++)
+            for (unsigned int l=k ; l<d_fs.size() ; l++)
             {
                 d_fs[l] = d_fs[l+1] ;
                 d_arcs[l] = d_arcs[l+1] ;
@@ -106,7 +108,7 @@ void FsAps::supprimerArc(int i , int j)
             d_arcs.pop_back() ;
 
             // MISE A JOUR DE APS
-            for (int l=i ; l<d_aps.size() ; l++)
+            for (unsigned int l=i ; l<d_aps.size() ; l++)
                 d_aps[l]-- ;
         }
     }
@@ -121,13 +123,46 @@ void FsAps::affiche(std::ostream& ost) const
         ost << ' ' ;
     }
     ost << std::endl << "Arcs : " << std::endl ;
-    for (int i=0 ; i<d_aps.size() ; i++)
+    for (unsigned int i=0 ; i<d_aps.size() ; i++)
     {
-        for (int j=d_aps[i] ; d_fs[j]!=0 ; j++)
+        for (unsigned int j=d_aps[i] ; d_fs[j]!=0 ; j++)
         {
             ost << i+1 << "->" << d_fs[j] << " (" << d_arcs[j]->poids() << ")" << std::endl ;
         }
     }
+}
+
+
+FsAps FsAps::convertirEnFsAps() const
+{
+    return *this ;
+}
+
+
+MatriceAdjacence FsAps::convertirEnMatriceAdjacence() const
+{
+    std::vector<std::vector<Arc*> > matrice(nombreSommets(),std::vector<Arc*>(nombreSommets(),0)) ;
+    int i=0 ;
+    for(unsigned int j=0 ; j<fs().size() ; j++)
+    {
+        if (fs()[j]==0)
+        {
+            i++ ;
+        }
+        else
+        {
+            matrice[i][fs()[j]-1] = arcs()[j] ;
+        }
+    }
+
+    std::vector<Sommet*> s = sommets() ;
+
+    return MatriceAdjacence{matrice,s} ;
+}
+
+Listes FsAps::convertirEnListes() const
+{
+
 }
 
 

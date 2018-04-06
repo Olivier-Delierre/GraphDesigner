@@ -8,6 +8,8 @@
 
 #include "Graphe.h"
 #include "ListeSommets.h"
+#include "FsAps.h"
+#include "MatriceAdjacence.h"
 
 class Listes : public Graphe
 {
@@ -48,6 +50,27 @@ class Listes : public Graphe
 		 * @param[in] j Le sommet d'arrivee.
 		 */
 		virtual void supprimerArc(int i , int j) override;
+
+		/**
+        * Renvoie le graphe stocke sous forme des vecteurs fs et aps
+        *
+        * @return un graphe sous la forme fs/aps.
+        */
+        virtual FsAps convertirEnFsAps() const override ;
+
+        /**
+        * Renvoie le graphe stocke sous forme de matrice d'adjacence
+        *
+        * @return un graphe sous la forme d'une matrice d'adjacence.
+        */
+        virtual MatriceAdjacence convertirEnMatriceAdjacence() const override ;
+
+        /**
+        * Renvoie le graphe stocke sous forme de listes chainees
+        *
+        * @return un graphe sous la forme de listes chainees.
+        */
+        virtual Listes convertirEnListes() const override ;
 
 	private:
 		ListeSommets* d_principale;

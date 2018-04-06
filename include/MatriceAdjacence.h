@@ -11,6 +11,8 @@
 #include "Sommet.h"
 #include "Arc.h"
 #include "Graphe.h"
+#include "FsAps.h"
+#include "Listes.h"
 
 class MatriceAdjacence : public Graphe
 {
@@ -92,6 +94,27 @@ class MatriceAdjacence : public Graphe
 		* @return le nombre de sommets.
 		*/
         virtual int nombreSommets() const override ;
+
+        /**
+        * Renvoie le graphe stocke sous forme des vecteurs fs et aps
+        *
+        * @return un graphe sous la forme fs/aps.
+        */
+        virtual FsAps convertirEnFsAps() const override ;
+
+        /**
+        * Renvoie le graphe stocke sous forme de matrice d'adjacence
+        *
+        * @return un graphe sous la forme d'une matrice d'adjacence.
+        */
+        virtual MatriceAdjacence convertirEnMatriceAdjacence() const override ;
+
+        /**
+        * Renvoie le graphe stocke sous forme de listes chainees
+        *
+        * @return un graphe sous la forme de listes chainees.
+        */
+        virtual Listes convertirEnListes() const override ;
 
 	private:
 		std::vector< std::vector<Arc*> > d_adjacence;

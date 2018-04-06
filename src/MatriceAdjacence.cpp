@@ -99,3 +99,38 @@ int MatriceAdjacence::nombreSommets() const
 {
     return d_adjacence.size() ;
 }
+
+FsAps MatriceAdjacence::convertirEnFsAps() const
+{
+    std::vector<int> aps (0) ;
+    std::vector<int> fs (0) ;
+    std::vector<Arc*> arcs(0) ;
+
+    for (int i=0 ; i<nombreSommets() ; i++)
+    {
+        aps.push_back(fs.size()) ;
+        for (int j=0 ; j<nombreSommets() ; j++)
+        {
+            if (matrice()[i][j] != nullptr)
+            {
+                fs.push_back(j+1) ;
+                arcs.push_back(matrice()[i][j]) ;
+            }
+        }
+        fs.push_back(0) ;
+        arcs.push_back(nullptr) ;
+    }
+
+    return FsAps{fs,aps,arcs,sommets()} ;
+}
+
+MatriceAdjacence MatriceAdjacence::convertirEnMatriceAdjacence() const
+{
+    return *this ;
+}
+
+Listes MatriceAdjacence::convertirEnListes() const
+{
+
+}
+

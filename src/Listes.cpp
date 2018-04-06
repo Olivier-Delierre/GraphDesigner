@@ -19,3 +19,19 @@ void Listes::supprimerArc(int i , int j)
 {
 
 }
+
+FsAps Listes::convertirEnFsAps() const
+{
+
+}
+
+MatriceAdjacence Listes::convertirEnMatriceAdjacence() const
+{
+
+}
+
+Listes Listes::convertirEnListes() const
+{
+    return *this ;
+}
+

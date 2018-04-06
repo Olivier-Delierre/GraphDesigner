@@ -1,4 +1,4 @@
-#include "../include/Convertisseur.h"
+/*#include "../include/Convertisseur.h"
 
 FsAps Convertisseur::convertirEnFsAps(const MatriceAdjacence matriceAdjacence)
 {
@@ -57,3 +57,4 @@ Listes convertirEnListes(const Listes listes)
 {
     return listes ;
 }
+*/
