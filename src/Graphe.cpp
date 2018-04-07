@@ -17,7 +17,7 @@ void Graphe::ordonnancement(std::ostream ost) const
 
 void Graphe::Djikstra(std::ostream ost) const
 {
-
+	
 }
 
 void Graphe::Kruskal(std::ostream ost) const

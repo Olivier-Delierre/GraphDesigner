@@ -116,6 +116,8 @@ class MatriceAdjacence : public Graphe
         */
         virtual Listes convertirEnListes() const override ;
 
+		void Dijkstra(std::ostream ost) const ;
+
 	private:
 		std::vector< std::vector<Arc*> > d_adjacence;
 		std::vector<Sommet*> d_sommets;

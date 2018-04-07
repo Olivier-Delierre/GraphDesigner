@@ -162,7 +162,7 @@ MatriceAdjacence FsAps::convertirEnMatriceAdjacence() const
 
 Listes FsAps::convertirEnListes() const
 {
-
+	return Listes();
 }
 
 
