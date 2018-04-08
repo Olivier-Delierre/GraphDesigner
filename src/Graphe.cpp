@@ -44,7 +44,7 @@ void Graphe::Dijkstra(std::ostream &ost) const
 		// On parcourt la liste des sommets.
 		for (unsigned int i = 1; i <= this->nombreSommets(); i++)
 		{
-			// Si le sommet i n'est pas vérouillé
+			// Si le sommet i n'est pas verouillé
 			if (!isLocked[i] && fsaps.estPredecesseur(s, i))
 			{
 				// On calcule la distance entre le point s et le point i.
@@ -53,6 +53,7 @@ void Graphe::Dijkstra(std::ostream &ost) const
 				int distance = fsaps.arcs()[index_distance]->poids();
 
 				int temporaire = d[s] + distance;
+
 				if ((temporaire < d[i]) || (d[i] == -1))
 				{
 					d[i] = temporaire;
@@ -66,13 +67,13 @@ void Graphe::Dijkstra(std::ostream &ost) const
 		// On remplace maintenant s par l'indice le plus petit non vérouillé.
 		// On récupère le premier sommet non vérouillé
 		unsigned int i = 1;
-		while (isLocked[i]) { i++; }
+		while (isLocked[i] || d[i] == -1) { i++; }
 
 		// On cherche maintenant la plus petite valeur.
 		unsigned int index_min = i;
 		for (; i <= this->nombreSommets(); i++)
 		{
-			if (!isLocked[i] && d[i] < d[index_min])
+			if (!isLocked[i] && (d[i] != -1) && d[i] < d[index_min])
 			{
 				index_min = i;
 			}
@@ -85,6 +86,23 @@ void Graphe::Dijkstra(std::ostream &ost) const
 	}
 
 	ost << "Résultat de Dijkstra : " << std::endl;
+
+	ost << "d = {";
+	for (int i = 1; i < d.size(); i++)
+	{
+		ost << d[i] << ',';
+	}
+
+	ost << '}' << std::endl;
+
+	ost << "pred = {";
+	for (int i = 1; i < pred.size(); i++)
+	{
+		ost << pred[i] << ',';
+	}
+
+	ost << '}' << std::endl;
+
 	for (int i = 1; i <= this->nombreSommets(); i++)
 	{
 		if (d[i] != -1)
