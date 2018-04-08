@@ -132,6 +132,28 @@ void FsAps::affiche(std::ostream& ost) const
     }
 }
 
+bool FsAps::estPredecesseur(int i, int j) const
+{
+	int k = d_aps[i - 1];
+	int nextZero;
+
+	if ((i - 1) == d_aps.size() - 1)
+	{
+		nextZero = d_fs.size();
+	}
+	else
+	{
+		nextZero = d_aps[i];
+	}
+
+	while (k < nextZero && d_fs[k] != j)
+	{
+		k++;
+	}
+
+	return !(k == nextZero);
+}
+
 
 FsAps FsAps::convertirEnFsAps() const
 {

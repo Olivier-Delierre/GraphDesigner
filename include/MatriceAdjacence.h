@@ -6,11 +6,8 @@
 #ifndef MATRICEADJACENCE_H
 #define MATRICEADJACENCE_H
 
-#include <vector>
-
 #include "Sommet.h"
 #include "Arc.h"
-#include "Graphe.h"
 #include "FsAps.h"
 #include "Listes.h"
 
@@ -115,8 +112,6 @@ class MatriceAdjacence : public Graphe
         * @return un graphe sous la forme de listes chainees.
         */
         virtual Listes convertirEnListes() const override ;
-
-		void Dijkstra(std::ostream ost) const ;
 
 	private:
 		std::vector< std::vector<Arc*> > d_adjacence;

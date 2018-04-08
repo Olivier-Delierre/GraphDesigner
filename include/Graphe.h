@@ -2,6 +2,7 @@
 #define GRAPHE_H
 
 #include <fstream>
+#include <vector>
 
 class Arc ;
 class MatriceAdjacence ;
@@ -82,7 +83,7 @@ class Graphe
 		*
 		* @param ost - Une sortie standard.
 		*/
-		void Djikstra(std::ostream ost) const ;
+		void Dijkstra(std::ostream &ost) const ;
 
 		/**
 		* Méthode qui réalise et affiche l'algorithme de calcul des distances d'un graphe

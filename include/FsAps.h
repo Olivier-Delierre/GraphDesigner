@@ -52,6 +52,16 @@ class FsAps : public Graphe
 		virtual void ajouterArc(Arc* arc , int i , int j) override ;
 
 		/**
+		 * Retourne vrai si le sommet d'index i est un successeur du
+		 * sommet d'index j.
+		 * 
+		 * @param[in] i Le sommet de départ.
+		 * @param[in] j Le sommet d'arrivée.
+		 * @returns vrai si i est prédecesseur de j, false sinon.
+		 */
+		bool estPredecesseur(int i, int j) const ;
+
+		/**
 		 * Supprime l'arc (i,j) du graphe courant s'il existe.
 		 *
 		 * @param[in] i Le sommet de depart.
