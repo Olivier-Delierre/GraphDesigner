@@ -9,7 +9,44 @@ void Graphe::rangs(std::ostream ost) const
 
 void Graphe::distance(std::ostream ost) const
 {
+    int nbr_sommets = d_aps[0];
+    d_matrice_distance = new int*[nbr_sommets + 1];
+    d_matrice_distance[0] = new int[1];
+    d_matrice_distance[0][0] = nbr_sommets;
 
+    for(int i = 1; i <= nbr_sommets; ++i) {
+
+        int *fa = new int[nbr_sommets + 1];
+        int t = 0, q = 1, p = 1, compteur = 0, x;
+        d_matrice_distance[i] = new int[nbr_sommets + 1];
+
+        for(int j = 0; j <= nbr_sommets; ++j) {
+
+            d_matrice_distance[i][j] = -1;
+        }
+        d_matrice_distance[i][0] = nbr_sommets;
+        d_matrice_distance[i][i] = 0;
+        fa[1] = i;
+
+        while(t < q) {
+
+            ++compteur;
+            for(int m = t + 1; m <= q; ++m) {
+
+                for(int n = d_aps[fa[m]]; (x = d_fs[n]) != 0; ++n) {
+
+                    if(d_matrice_distance[x] == -1) {
+
+                        d_matrice_distance[x] = compteur;
+                        fa[++p] = x;
+                    }
+                }
+            }
+            t = q;
+            q = p;
+        }
+        delete[] fa;
+    }
 }
 
 void Graphe::ordonnancement(std::ostream ost) const
