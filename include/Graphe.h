@@ -97,7 +97,7 @@ class Graphe
 		*
 		* @param ost - Une sortie standard.
 		*/
-		void Prufer(std::ostream ost) const ;
+		void Prufer(std::ostream &ost) const ;
 
 		/**
 		* Renvoie le graphe stocke sous forme des vecteurs fs et aps

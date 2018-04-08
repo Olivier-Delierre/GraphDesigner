@@ -90,25 +90,29 @@ void FsAps::ajouterArc(Arc* arc , int i , int j)
 
 void FsAps::supprimerArc(int i , int j)
 {
-    if (i>0 && j>0 && i<=nombreSommets() && j<=nombreSommets())
+    if (i > 0 && j > 0 && i <= nombreSommets() && j <= nombreSommets())
     {
-        unsigned int k = d_aps[i-1] ;
-        while (k<d_fs.size() && d_fs[k]<j)
-            k++ ;
-        if (d_fs[k]==j)
+        unsigned int k = d_aps[i - 1];
+
+		while (k < d_fs.size() && d_fs[k] != j)
+		{
+			k++;
+		}
+
+        if (d_fs[k] == j)
         {
             // DECALAGE DU TABLEAU FS et ARCS
-            for (unsigned int l=k ; l<d_fs.size() ; l++)
+            for (unsigned int l = k; l < d_fs.size() - 1; l++)
             {
-                d_fs[l] = d_fs[l+1] ;
-                d_arcs[l] = d_arcs[l+1] ;
+                d_fs[l] = d_fs[l + 1] ;
+                d_arcs[l] = d_arcs[l + 1] ;
             }
             d_fs.pop_back() ;
             delete d_arcs.back() ;
             d_arcs.pop_back() ;
 
             // MISE A JOUR DE APS
-            for (unsigned int l=i ; l<d_aps.size() ; l++)
+            for (unsigned int l = i; l < d_aps.size(); l++)
                 d_aps[l]-- ;
         }
     }

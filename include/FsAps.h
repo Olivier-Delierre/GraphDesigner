@@ -69,6 +69,8 @@ class FsAps : public Graphe
 		 */
 		virtual void supprimerArc(int i , int j) override;
 
+
+
 		/**
 		* Retourne le tableau fs.
         *

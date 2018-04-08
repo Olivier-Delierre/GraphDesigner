@@ -123,9 +123,36 @@ void Graphe::Kruskal(std::ostream ost) const
 
 }
 
-void Graphe::Prufer(std::ostream ost) const
+void Graphe::Prufer(std::ostream &ost) const
 {
+	ost << "Résultat de Prufer : " << std::endl;
+	FsAps fsaps = this->convertirEnFsAps();
 
+	bool *I = new bool[this->nombreSommets()];
+	for (int i = 1; i <= this->nombreSommets(); i++)
+	{
+		I[i] = true;
+	}
+
+	int compteur = 0;
+	ost << "{ ";
+	// Tant qu'on a pas éliminer tout les sommets du graphe
+	while (compteur < this->nombreSommets() - 2)
+	{
+		int i = 1;
+		//Tant que i n'est pas présent et qu'il n'est pas une feuille
+		while (((fsaps.aps()[i] - fsaps.aps()[i - 1]) != 2) || (I[i - 1] == false)) { i++; }
+
+		int sommet = fsaps.fs()[fsaps.aps()[i - 1]];
+		fsaps.supprimerArc(sommet, i);
+		fsaps.supprimerArc(i, sommet);
+
+		ost << sommet << ", ";
+
+		I[i - 1] = false;
+
+		compteur++;
+	}
 }
 
 void Graphe::Tarjan(std::ostream ost) const
