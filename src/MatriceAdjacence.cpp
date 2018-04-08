@@ -70,6 +70,16 @@ void MatriceAdjacence::affiche(std::ostream& ost) const
 	}
 }
 
+void MatriceAdjacence::lire(std::istream & ist) const
+{
+	std::string c;
+
+	int idSommet = 0;
+
+	// On lit 'Sommets :' à blanc
+	ist >> c >> c;
+}
+
 void MatriceAdjacence::afficheMatrice(std::ostream& ost) const
 {
     for (unsigned int ligne = 0; ligne < d_adjacence.size(); ligne++)

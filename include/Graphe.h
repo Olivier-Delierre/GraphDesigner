@@ -26,6 +26,14 @@ class Graphe
 		virtual void affiche(std::ostream& ost) const = 0;
 
 		/**
+		* Méthode virtuelle pure permettant de lire un Graphe
+		* sur une entrée standard.
+		*
+		* @param ist - Une entrée standard.
+		*/
+		virtual void lire(std::istream& ist) const = 0;
+
+		/**
 		* Méthode virtuelle pure qui renvoie le nombre de sommets du graphe.
 		*
 		* @return le nombre de sommets.
