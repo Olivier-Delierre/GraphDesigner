@@ -130,7 +130,7 @@ class Graphe
 
 
 	private:
-	    int* d_matrice_distance;
+
 };
 
 #endif
