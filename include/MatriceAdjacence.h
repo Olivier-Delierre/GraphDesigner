@@ -50,6 +50,13 @@ class MatriceAdjacence : public Graphe
 		 */
 		virtual void supprimerArc(int i , int j) override;
 
+        /**
+		* Méthode qui réalise et affiche l'algorithme de determination des rangs des sommets
+		*
+		* @param ost - Une sortie standard.
+		*/
+		virtual void rangs(std::ostream ost) const override;
+
 		/**
 		 * Affiche une matrice d'adjacence sur la sortie standard, sous la forme d'une liste d'arcs.
 		 *
