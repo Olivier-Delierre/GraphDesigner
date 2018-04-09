@@ -10,22 +10,20 @@ void Graphe::rangs(std::ostream ost) const
 void Graphe::distance(std::ostream ost) const
 {
     int nbr_sommets = d_aps[0];
-    d_matrice_distance = new int*[nbr_sommets + 1];
-    d_matrice_distance[0] = new int[1];
-    d_matrice_distance[0][0] = nbr_sommets;
+    std::vector<vector<int> > matrice_distance (nbr_sommets + 1,vector<int>(nbr_sommets + 1)) ;
+    matrice_distance[0][0] = nbr_sommets;
 
     for(int i = 1; i <= nbr_sommets; ++i) {
 
-        int *fa = new int[nbr_sommets + 1];
+        std::vector<int> *fa (nbr_sommets + 1) ;
         int t = 0, q = 1, p = 1, compteur = 0, x;
-        d_matrice_distance[i] = new int[nbr_sommets + 1];
 
         for(int j = 0; j <= nbr_sommets; ++j) {
 
-            d_matrice_distance[i][j] = -1;
+            matrice_distance[i][j] = -1;
         }
-        d_matrice_distance[i][0] = nbr_sommets;
-        d_matrice_distance[i][i] = 0;
+        matrice_distance[i][0] = nbr_sommets;
+        matrice_distance[i][i] = 0;
         fa[1] = i;
 
         while(t < q) {
@@ -35,9 +33,9 @@ void Graphe::distance(std::ostream ost) const
 
                 for(int n = d_aps[fa[m]]; (x = d_fs[n]) != 0; ++n) {
 
-                    if(d_matrice_distance[x] == -1) {
+                    if(matrice_distance[x] == -1) {
 
-                        d_matrice_distance[x] = compteur;
+                        matrice_distance[x] = compteur;
                         fa[++p] = x;
                     }
                 }
@@ -67,12 +65,12 @@ void Graphe::Dijkstra(std::ostream &ost) const
 
 	for (unsigned int i = 1; i <= this->nombreSommets(); i++)
 	{
-		// On initialise toutes les distances à l'infini (-1 pour le coup)
+		// On initialise toutes les distances Ã  l'infini (-1 pour le coup)
 		d[i] = -1;
 		pred[i] = 1;
 	}
 
-	// On initialise la distance du premier point à 0.
+	// On initialise la distance du premier point Ã  0.
 	d[1] = 0;
 
 	// On fait boucler l'algorithme tant que S n'est pas vide.
@@ -81,7 +79,7 @@ void Graphe::Dijkstra(std::ostream &ost) const
 		// On parcourt la liste des sommets.
 		for (unsigned int i = 1; i <= this->nombreSommets(); i++)
 		{
-			// Si le sommet i n'est pas verouillé
+			// Si le sommet i n'est pas verouillÃ©
 			if (!isLocked[i] && fsaps.estPredecesseur(s, i))
 			{
 				// On calcule la distance entre le point s et le point i.
@@ -101,8 +99,8 @@ void Graphe::Dijkstra(std::ostream &ost) const
 
 		isLocked[s] = true;
 
-		// On remplace maintenant s par l'indice le plus petit non vérouillé.
-		// On récupère le premier sommet non vérouillé
+		// On remplace maintenant s par l'indice le plus petit non vÃ©rouillÃ©.
+		// On rÃ©cupÃ¨re le premier sommet non vÃ©rouillÃ©
 		unsigned int i = 1;
 		while (isLocked[i] || d[i] == -1) { i++; }
 
@@ -118,11 +116,11 @@ void Graphe::Dijkstra(std::ostream &ost) const
 
 		s = index_min;
 
-		// Puis on enlève un élément à S.
+		// Puis on enlÃ¨ve un Ã©lÃ©ment Ã  S.
 		S--;
 	}
 
-	ost << "Résultat de Dijkstra : " << std::endl;
+	ost << "RÃ©sultat de Dijkstra : " << std::endl;
 
 	ost << "d = {";
 	for (int i = 1; i < d.size(); i++)
@@ -162,7 +160,7 @@ void Graphe::Kruskal(std::ostream ost) const
 
 void Graphe::Prufer(std::ostream &ost) const
 {
-	ost << "Résultat de Prufer : " << std::endl;
+	ost << "RÃ©sultat de Prufer : " << std::endl;
 	FsAps fsaps = this->convertirEnFsAps();
 
 	bool *I = new bool[this->nombreSommets()];
@@ -173,11 +171,11 @@ void Graphe::Prufer(std::ostream &ost) const
 
 	int compteur = 0;
 	ost << "{ ";
-	// Tant qu'on a pas éliminer tout les sommets du graphe
+	// Tant qu'on a pas Ã©liminer tout les sommets du graphe
 	while (compteur < this->nombreSommets() - 2)
 	{
 		int i = 1;
-		//Tant que i n'est pas présent et qu'il n'est pas une feuille
+		//Tant que i n'est pas prÃ©sent et qu'il n'est pas une feuille
 		while (((fsaps.aps()[i] - fsaps.aps()[i - 1]) != 2) || (I[i - 1] == false)) { i++; }
 
 		int sommet = fsaps.fs()[fsaps.aps()[i - 1]];
