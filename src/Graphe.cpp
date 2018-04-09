@@ -4,7 +4,7 @@
 
 void Graphe::rangs(std::ostream ost) const
 {
-
+    this.convertirEnMatriceAdjacence().MatriceAdjacence::rangs(ost);
 }
 
 void Graphe::distance(std::ostream ost) const
