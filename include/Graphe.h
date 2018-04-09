@@ -70,7 +70,7 @@ class Graphe
 		*
 		* @param ost - Une sortie standard.
 		*/
-		void rangs(std::ostream ost) const ;
+		virtual void rangs(std::ostream ost) const ;
 
 		/**
 		* Méthode qui réalise et affiche l'algorithme de determination des CFC selon Tarjan
