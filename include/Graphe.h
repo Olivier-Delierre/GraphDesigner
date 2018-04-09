@@ -63,7 +63,7 @@ class Graphe
 		*
 		* @param ost - Une sortie standard.
 		*/
-		void distance(std::ostream ost) const ;
+		virtual void distance(std::ostream ost) const ;
 
 		/**
 		* Méthode qui réalise et affiche l'algorithme de determination des rangs des sommets
