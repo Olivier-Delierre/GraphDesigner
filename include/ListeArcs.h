@@ -5,7 +5,7 @@
 #include "ChainonArc.h"
 #include "Sommet.h"
 
-class ListeArcs 
+class ListeArcs
 {
 public:
 	/**
@@ -29,8 +29,12 @@ public:
 	 */
 	void supprimer(ChainonArc *chainearc);
 
+	friend class ChainonArc ;
+	friend class ChainonSommet ;
+	friend class ListeSommets ;
+
 private:
-	ChainonArc *racine;
+	ChainonArc *d_racine;
 };
 
 #endif

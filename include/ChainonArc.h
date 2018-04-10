@@ -8,9 +8,13 @@ class ChainonArc
 {
 public:
 	/**
-	 * Constructeur par défaut de ChainonArc
+	 * Constructeur de ChainonArc
 	 */
-	ChainonArc();
+	ChainonArc(Arc* arc , ChainonArc* succ , Sommet* j);
+
+    friend class ListeArcs ;
+    friend class ChainonSommet ;
+    friend class ListeSommets ;
 
 private:
 	Arc d_info;

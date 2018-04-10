@@ -18,6 +18,11 @@ class Graphe
 		Graphe() = default ;
 
 		/**
+		 * Destructeur virtuel
+		 */
+		virtual ~Graphe() = default ;
+
+		/**
 		 * Méthode virtuelle pure permettant d'afficher un Graphe
 		 * sur une sortie standard.
 		 *

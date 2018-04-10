@@ -24,6 +24,11 @@ class FsAps : public Graphe
 		 */
 		FsAps();
 
+        /**
+		 * Destructeur virtuel
+		 */
+        virtual ~FsAps() = default ;
+
 		/**
 		 * Constructeur complet de FsAps.
 		 */
@@ -54,7 +59,7 @@ class FsAps : public Graphe
 		/**
 		 * Retourne vrai si le sommet d'index i est un successeur du
 		 * sommet d'index j.
-		 * 
+		 *
 		 * @param[in] i Le sommet de départ.
 		 * @param[in] j Le sommet d'arrivée.
 		 * @returns vrai si i est prédecesseur de j, false sinon.

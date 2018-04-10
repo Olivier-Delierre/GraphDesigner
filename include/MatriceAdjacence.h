@@ -20,6 +20,11 @@ class MatriceAdjacence : public Graphe
 		MatriceAdjacence();
 
 		/**
+		 * Destructeur virtuel
+		 */
+        virtual ~MatriceAdjacence() = default ;
+
+		/**
 		* Constructeur complet de MatriceAdjacence
 		*/
 		MatriceAdjacence(std::vector< std::vector<Arc*> > adjacence , std::vector<Sommet*> sommets) ;

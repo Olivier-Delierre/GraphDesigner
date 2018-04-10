@@ -1,4 +1,6 @@
 #include "../include/Interface.h"
+#include "windows.h"
+#include <iostream>
 
 namespace Interface {
 
@@ -272,7 +274,7 @@ namespace Interface {
 		}
 
 		Graphe* tmp = grapheSelectionne;
-		
+
 		switch (std::stoi(choice))
 		{
 		case 1:
