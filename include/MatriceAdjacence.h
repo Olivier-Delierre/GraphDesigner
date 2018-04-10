@@ -58,13 +58,6 @@ class MatriceAdjacence : public Graphe
 		virtual void affiche(std::ostream& ost) const override;
 
 		/**
-		 * Lit une matrice d'adjacence sur l'entrée standard, sous la forme d'une liste d'arcs.
-		 *
-		 * @param ist Une sortie standard.
-		 */
-		virtual void lire(std::istream& ist) const override;
-
-		/**
 		 * Affiche une matrice d'adjacence sur la sortie standard.
 		 *
 		 * @param ost Une sortie standard.

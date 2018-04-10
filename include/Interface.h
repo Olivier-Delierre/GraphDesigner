@@ -22,11 +22,7 @@ namespace Interface {
 
 	void ImporterGraphe();
 
-	// Création de graphe
 	void CreerGraphe();
-	void CreerMatriceAdjacence();
-	void CreerFsAps();
-	void CreerListes();
 
 	void TransformerGraphe();
 	void AppliquerAlgorithme();
