@@ -154,7 +154,96 @@ void Graphe::Prufer(std::ostream &ost) const
 	}
 }
 
+void empiler(int s , std::vector<int>& tarj)
+{
+    tarj[s] = tarj[0] ;
+    tarj[0] = s ;
+}
+
+void depiler(std::vector<int>& tarj)
+{
+    tarj[0] = tarj[tarj[0]] ;
+}
+
+void traversee(int s , int &p , int& nbcfc , const FsAps& fsaps , std::vector<int>& num, std::vector<int>& mu , std::vector<int>&prem , std::vector<int>& pilch , std::vector<int>& cfc, std::vector<int>& tarj , std::vector<bool>& entarj)
+{
+    int t ;
+    num[s] = p++ ;
+    mu[s] = num[s] ;
+    empiler(s,tarj) ;
+    entarj[s] = true ;
+    for(int k=fsaps.aps()[s] ; (t=fsaps.fs()[k])!=0 ; k++)
+    {
+        if (num[t] == 0)
+        {
+            traversee(t,p,nbcfc,fsaps,num,mu,prem,pilch,cfc,tarj,entarj) ;
+            mu[s] = mu[s] < mu[t] ? mu[s] : mu[t] ;
+        }
+        else if (entarj[t] && num[t] < num[s])
+        {
+            mu[s] = mu[s] < num[t] ? mu[s] : num[t] ;
+        }
+    }
+    if(mu[s]==num[s])
+    {
+        nbcfc++ ;
+        int x = tarj[0] ;
+        pilch[0] = 0 ;
+        prem[nbcfc] = x ;
+        x = tarj[x] ;
+        entarj[x] = false ;
+        while (x!=s)
+        {
+            empiler(x,pilch) ;
+            cfc[x] = nbcfc ;
+            x = tarj[x] ;
+            entarj[x] = false ;
+        }
+    }
+
+}
+
 void Graphe::Tarjan(std::ostream ost) const
 {
+    ost << "Resultats de Tarjan" << std::endl ;
+
+    FsAps fsaps = this->convertirEnFsAps() ;
+
+    int p=1 , nbcfc=0 ;
+
+    std::vector<int> num (nombreSommets(),0) ;
+    std::vector<int> mu (nombreSommets()) ;
+    std::vector<int> prem (nombreSommets()+1) ;
+    std::vector<int> pilch (nombreSommets()+1,0) ;
+    std::vector<int> cfc (nombreSommets()) ;
+    std::vector<int> tarj (nombreSommets()+1,0) ;
+    std::vector<bool> entarj (nombreSommets(),false) ;
+
+
+    for (int s=0 ; s<nombreSommets() ; s++)
+    {
+        if (num[s]==0)
+            traversee(s,p,nbcfc,fsaps,num,mu,prem,pilch,cfc,tarj,entarj) ;
+    }
+
+    prem[0] = nbcfc ;
+
+    for(int i=0 ; i<prem.size() ; i++)
+    {
+        ost << prem[i] << ' ' ;
+    }
+    ost<<std::endl ;
+    for(int i=0 ; i<pilch.size() ; i++)
+    {
+        ost << pilch[i] << ' ' ;
+    }
+    ost<<std::endl ;
+    for(int i=0 ; i<cfc.size() ; i++)
+    {
+        ost << cfc[i] << ' ' ;
+    }
+    ost<<std::endl ;
+
+
 
 }
