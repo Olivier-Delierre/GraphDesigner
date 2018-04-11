@@ -24,6 +24,11 @@ class FsAps : public Graphe
 		 */
 		FsAps();
 
+        /**
+		 * Destructeur virtuel
+		 */
+        virtual ~FsAps() = default ;
+
 		/**
 		 * Constructeur complet de FsAps.
 		 */

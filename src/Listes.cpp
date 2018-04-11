@@ -1,21 +1,21 @@
 #include "../include/Listes.h"
 
-Listes::Listes()
+Listes::Listes() : d_principale{nullptr}
 {}
 
 void Listes::affiche(std::ostream& ost) const
 {
-
+    d_principale->affiche(ost) ;
 }
 
 int Listes::nombreSommets() const
 {
-	return 0;
+	return d_principale->nombreSommets();
 }
 
 void Listes::ajouterArc(Arc* arc , int i , int j)
 {
-
+    d_principale->ajouterArc(arc,i,j) ;
 }
 
 void Listes::supprimerArc(int i , int j)

@@ -18,20 +18,17 @@ class Graphe
 		Graphe() = default ;
 
 		/**
+		 * Destructeur virtuel
+		 */
+		virtual ~Graphe() = default ;
+
+		/**
 		 * Méthode virtuelle pure permettant d'afficher un Graphe
 		 * sur une sortie standard.
 		 *
 		 * @param ost - Une sortie standard.
 		 */
 		virtual void affiche(std::ostream& ost) const = 0;
-
-		/**
-		* Méthode virtuelle pure permettant de lire un Graphe
-		* sur une entrée standard.
-		*
-		* @param ist - Une entrée standard.
-		*/
-		virtual void lire(std::istream& ist) const = 0;
 
 		/**
 		* Méthode virtuelle pure qui renvoie le nombre de sommets du graphe.

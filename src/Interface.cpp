@@ -1,4 +1,6 @@
 #include "../include/Interface.h"
+#include "windows.h"
+#include <iostream>
 
 namespace Interface {
 
@@ -54,21 +56,21 @@ namespace Interface {
 
 				if (grapheSelectionne != nullptr)
 				{
-				case 3:
-					TransformerGraphe();
-					break;
+			case 3:
+				TransformerGraphe();
+				break;
 
-				case 4:
-					AppliquerAlgorithme();
-					break;
+			case 4:
+				AppliquerAlgorithme();
+				break;
 
-				case 5:
-					AfficherGraphe();
-					break;
+			case 5:
+				AfficherGraphe();
+				break;
 
-				case 6:
-					SauvegarderGraphe();
-					break;
+			case 6:
+				SauvegarderGraphe();
+				break;
 				}
 
 			case 0:
@@ -84,55 +86,19 @@ namespace Interface {
 	void ImporterGraphe()
 	{
 		Header();
+		std::cout << "- Importation d'un graphe -" << std::endl;
+		/*
+			=======
+			A FAIRE
+			=======
+		*/
+		system("pause");
 	}
 
 	void CreerGraphe()
 	{
-		int choice = -1;
-
-		while (choice != 0)
-		{
-			Header();
-			int choice;
-
-			std::cout << "- Creer un graphe -" << std::endl;
-			std::cout << "1. Syntaxe Matrice Adjacence" << std::endl;
-			std::cout << "2. Syntaxe Fs Aps" << std::endl;
-			std::cout << "3. Syntaxe Listes" << std::endl;
-			std::cout << std::endl;
-			std::cout << "0. Retour" << std::endl;
-
-			std::cout << std::endl;
-
-			std::cout << "Votre choix : ";
-			std::cin >> choice;
-
-			switch (choice)
-			{
-			case 1:
-				CreerMatriceAdjacence();
-				break;
-
-			case 2:
-				CreerFsAps();
-				break;
-
-			case 3:
-				CreerListes();
-				break;
-
-			case 0:
-				return;
-			}
-
-			std::cout << choice;
-		}
-	}
-
-	void CreerMatriceAdjacence()
-	{
 		Header();
-		std::cout << "- Syntaxe Matrice Adjacence -" << std::endl;
+		std::cout << "- Creer un graphe -" << std::endl;
 		std::cout << "Saisir le nombre de sommet : ";
 		int nombreSommet = 0;
 		std::cin >> nombreSommet;
@@ -167,7 +133,7 @@ namespace Interface {
 					while (j < nomSommet.size() && (nomSommet[j] < 48 || nomSommet[j] > 57))
 					{
 						j++;
-					}	
+					}
 
 					if (j == nomSommet.size())
 					{
@@ -205,8 +171,8 @@ namespace Interface {
 
 				while (yes_no != "y" && yes_no != "Y" && yes_no != "n" && yes_no != "N")
 				{
-					std::cout << "\tMerci de répondre par y ou par n." << std::endl << std::endl;
-					yes_no = "";
+					std::cout << "\tMerci de repondre par y ou par n." << std::endl << "\t";
+					std::cin >> yes_no;
 				}
 
 				if ((yes_no == "y") || (yes_no == "Y"))
@@ -220,7 +186,7 @@ namespace Interface {
 
 						int j = 0;
 
-						while (j < poids.size() && (poids[j] < 48 || poids[j] > 57))
+						while (j < poids.length() && (poids[j] < 48 || poids[j] > 57))
 						{
 							j++;
 						}
@@ -246,35 +212,145 @@ namespace Interface {
 		}
 
 		grapheSelectionne = new MatriceAdjacence(arcs, sommets);
+		std::cout << std::endl;
+		std::cout << "Dans quel format enregistrer le graphe ?" << std::endl;
+		std::cout << "1. Matrice adjacence" << std::endl;
+		std::cout << "2. Fs Aps" << std::endl;
+		std::cout << "3. Listes" << std::endl << std::endl;
+
+		int format;
+		std::cout << "Votre choix : ";
+		std::cin >> format;
+
+		Graphe *tmp = grapheSelectionne;
+
+		switch (format)
+		{
+		case 1:
+			break;
+		case 2:
+			grapheSelectionne = new FsAps(grapheSelectionne->convertirEnFsAps());
+			delete tmp;
+			break;
+		case 3:
+			grapheSelectionne = new Listes(grapheSelectionne->convertirEnListes());
+			delete tmp;
+			break;
+		default:
+			break;
+		}
+
+
 		return;
-	}
-
-	void CreerFsAps()
-	{
-
-	}
-
-	void CreerListes()
-	{
-
 	}
 
 	void TransformerGraphe()
 	{
+		std::string choice = "";
 
+		Header();
+		std::cout << "- Transormation du graphe -" << std::endl;
+		std::cout << "1. Convertir en Matrice d'adjacence" << std::endl;
+		std::cout << "2. Convertir en Fs Aps" << std::endl;
+		std::cout << "3. Convertir en Listes" << std::endl << std::endl;
+
+		while (choice == "")
+		{
+			std::cout << "Votre choix : ";
+			std::cin >> choice;
+
+			int j = 0;
+
+			while (j < choice.length() && (choice[j] < 48 || choice[j] > 57))
+			{
+				j++;
+			}
+
+			if (j == choice.size())
+			{
+				std::cout << "\t\tMerci de saisir un nombre." << std::endl << std::endl;
+				choice = "";
+			}
+		}
+
+		Graphe* tmp = grapheSelectionne;
+
+		switch (std::stoi(choice))
+		{
+		case 1:
+			grapheSelectionne = new MatriceAdjacence(grapheSelectionne->convertirEnMatriceAdjacence());
+			delete tmp;
+			std::cout << "Le graphe a bien ete converti en Matrice d'adjacence." << std::endl;
+			break;
+		case 2:
+			grapheSelectionne = new FsAps(grapheSelectionne->convertirEnFsAps());
+			delete tmp;
+			std::cout << "Le graphe a bien ete converti en Fs Aps." << std::endl;
+			break;
+		case 3:
+			grapheSelectionne = new Listes(grapheSelectionne->convertirEnListes());
+			delete tmp;
+			std::cout << "Le graphe a bien ete converti en Listes." << std::endl;
+			break;
+		case 4:
+			break;
+		}
+
+		system("pause");
 	}
 
 	void AppliquerAlgorithme()
 	{
+		std::string choice = "";
 
+		Header();
+		std::cout << "- Appliquer un algorithme -" << std::endl;
+		std::cout << "1. Appliquer Dijkstra" << std::endl;
+		std::cout << "2. Appliquer Prufer" << std::endl << std::endl;
+
+		while (choice == "")
+		{
+			std::cout << "Votre choix : ";
+			std::cin >> choice;
+
+			int j = 0;
+
+			while (j < choice.length() && (choice[j] < 48 || choice[j] > 57))
+			{
+				j++;
+			}
+
+			if (j == choice.size())
+			{
+				std::cout << "\t\tMerci de saisir un nombre." << std::endl << std::endl;
+				choice = "";
+			}
+		}
+
+		switch (std::stoi(choice))
+		{
+		case 1:
+			std::cout << "Resultat de Dijkstra :" << std::endl;
+			grapheSelectionne->Dijkstra(std::cout);
+			break;
+		case 2:
+			std::cout << "Resultat de Prufer :" << std::endl;
+			grapheSelectionne->Prufer(std::cout);
+			break;
+		}
+
+		system("pause");
 	}
 
 	void AfficherGraphe()
 	{
-
+		Header();
+		std::cout << "- Affichage du graphe -" << std::endl;
+		grapheSelectionne->affiche(std::cout);
+		system("pause");
 	}
 
-	void SauvegarderGraphe() 
+	void SauvegarderGraphe()
 	{
 		Header();
 		std::cout << "- Sauvegarde du graphe -" << std::endl;

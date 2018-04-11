@@ -8,11 +8,28 @@ class ChainonSommet
 {
 public:
 	/**
-	* Constructeur par défaut de ChainonSommet.
+	* Constructeur de ChainonSommet.
 	*/
-	ChainonSommet();
+	ChainonSommet(Sommet* s);
 
-	friend class Listes;
+	/**
+	*   Renvoie le sommet du chainon
+	*
+	* @returns le sommet du chainon.
+	*/
+	Sommet* sommet() const ;
+
+	/**
+     * Ajoute un arc au sommet courant, allant au sommet j
+     *
+     * @param arc Un arc à ajouter.
+     * @param[in] j Le sommet d'arrivee.
+     */
+    void ajouterArc(Arc* arc , Sommet* j) ;
+
+	friend class ListeSommets;
+	friend class ChainonArc ;
+	friend class ListeArcs ;
 
 private:
 	Sommet * d_info;

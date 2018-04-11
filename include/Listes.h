@@ -20,6 +20,11 @@ class Listes : public Graphe
 		Listes();
 
 		/**
+		 * Destructeur virtuel
+		 */
+        virtual ~Listes() = default ;
+
+		/**
 		 * Affiche une Listes sur la sortie standard.
 		 *
 		 * @param ost Une sortie standard.
