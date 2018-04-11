@@ -122,10 +122,6 @@ void FsAps::supprimerArc(int i , int j)
     }
 }
 
-void FsAps::distance(std::ostream ost) const
-{
-}
-
 void FsAps::affiche(std::ostream& ost) const
 {
     ost << "(FS APS) Sommets : " ;
