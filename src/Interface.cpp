@@ -1,5 +1,6 @@
 #include "../include/Interface.h"
 #include <iostream>
+#include <cstdlib>
 
 namespace Interface {
 
