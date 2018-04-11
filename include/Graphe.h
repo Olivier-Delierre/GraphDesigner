@@ -38,6 +38,11 @@ class Graphe
 		*/
 		virtual int nombreSommets() const = 0;
 
+		/**
+		* Méthode virtuelle pure qui renvoie le tableau de pointeurs de sommets du graphe.
+		*
+		* @return le tableau de pointeurs de sommets.
+		*/
 		virtual std::vector<Sommet*> sommets() const = 0;
 
 		/**
@@ -71,7 +76,7 @@ class Graphe
 		*
 		* @param ost - Une sortie standard.
 		*/
-		virtual void distance(std::ostream &ost) const ;
+		void distance(std::ostream &ost) const ;
 
 		/**
 		* Méthode qui réalise et affiche l'algorithme de determination des rangs des sommets
