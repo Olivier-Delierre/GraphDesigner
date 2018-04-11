@@ -7,15 +7,13 @@
 #include "../include/SommetNumero.h"
 #include "../include/SommetMot.h"
 #include "../include/Graphe.h"
-
-#define ADJACENCE 0
-#define FSAPS 1
-#define LISTES 2
+#include "../include/Arc.h"
 
 namespace Interface {
 	static Graphe* grapheSelectionne = nullptr;
 	static int typeGraphe = -1;
 	static int dernierIdArc = 0;
+	static bool possedeSommetNumero;
 
 	void Header();
 	void MenuPrincipal();
@@ -23,6 +21,9 @@ namespace Interface {
 	void ImporterGraphe();
 
 	void CreerGraphe();
+
+	// Manipulation du graphe
+	void AjouterSommet();
 
 	void TransformerGraphe();
 	void AppliquerAlgorithme();

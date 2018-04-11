@@ -1,5 +1,4 @@
 #include "../include/Interface.h"
-#include "windows.h"
 #include <iostream>
 
 namespace Interface {
@@ -28,11 +27,16 @@ namespace Interface {
 			if (grapheSelectionne != nullptr)
 			{
 				std::cout << std::endl;
-				std::cout << "3. Transformer le graphe" << std::endl;
-				std::cout << "4. Appliquer un algorithme" << std::endl;
+				std::cout << "3. Ajouter un sommet" << std::endl;
+				std::cout << "4. Ajouter un arc" << std::endl;
+				std::cout << "5. Supprimer un sommet" << std::endl;
+				std::cout << "6. Supprimer un arc" << std::endl;
 				std::cout << std::endl;
-				std::cout << "5. Afficher le graphe" << std::endl;
-				std::cout << "6. Enregistrer le graphe" << std::endl;
+				std::cout << "7. Transformer le graphe" << std::endl;
+				std::cout << "8. Appliquer un algorithme" << std::endl;
+				std::cout << std::endl;
+				std::cout << "9. Afficher le graphe" << std::endl;
+				std::cout << "10. Enregistrer le graphe" << std::endl;
 			}
 
 			std::cout << std::endl;
@@ -56,19 +60,24 @@ namespace Interface {
 
 				if (grapheSelectionne != nullptr)
 				{
+
 			case 3:
+				AjouterSommet();
+				break;
+
+			case 7:
 				TransformerGraphe();
 				break;
 
-			case 4:
+			case 8:
 				AppliquerAlgorithme();
 				break;
 
-			case 5:
+			case 9:
 				AfficherGraphe();
 				break;
 
-			case 6:
+			case 10:
 				SauvegarderGraphe();
 				break;
 				}
@@ -121,6 +130,8 @@ namespace Interface {
 
 		if (choice == 1)
 		{
+			possedeSommetNumero = true;
+
 			for (int i = 0; i < nombreSommet; i++)
 			{
 				std::string nomSommet = "";
@@ -148,6 +159,8 @@ namespace Interface {
 
 		if (choice == 2)
 		{
+			possedeSommetNumero = false;
+
 			for (int i = 0; i < nombreSommet; i++)
 			{
 				std::string nomSommet = "";
@@ -242,6 +255,63 @@ namespace Interface {
 
 
 		return;
+	}
+
+	void AjouterSommet()
+	{
+		std::string nomSommet = "";
+		Header();
+		std::cout << "- Ajouter un sommet -" << std::endl;
+		
+		// On affiche les noms deja pris
+		std::cout << "Liste des noms deja pris : { ";
+
+		for (int i = 0; i < grapheSelectionne->nombreSommets() - 1; i++)
+		{
+			grapheSelectionne->sommets()[i]->affiche(std::cout);
+			std::cout << ", ";
+		}
+
+		grapheSelectionne->sommets()[grapheSelectionne->nombreSommets() - 1]->affiche(std::cout);
+
+		std::cout << " }" << std::endl;
+
+
+		if (possedeSommetNumero)
+		{
+			while (nomSommet == "")
+			{
+				std::cout << "Nom du sommet a ajouter : ";
+				std::cin >> nomSommet;
+
+				int j = 0;
+				while (j < nomSommet.size() && (nomSommet[j] < 48 || nomSommet[j] > 57))
+				{
+					j++;
+				}
+
+				if (j == nomSommet.size())
+				{
+					std::cout << "Merci de saisir un nombre." << std::endl << std::endl;
+					nomSommet = "";
+				}
+			}
+
+			SommetNumero *sommet = new SommetNumero(grapheSelectionne->nombreSommets(), stoi(nomSommet));
+			grapheSelectionne->ajouterSommet(sommet);
+		}
+
+		else
+		{
+			std::cout << "Nom du sommet a ajouter : ";
+			std::cin >> nomSommet;
+
+			SommetMot *sommet = new SommetMot(grapheSelectionne->nombreSommets(), nomSommet);
+			grapheSelectionne->ajouterSommet(sommet);
+		}
+
+		std::cout << "Le sommet a bien ete ajoute." << std::endl;
+		system("pause");
 	}
 
 	void TransformerGraphe()

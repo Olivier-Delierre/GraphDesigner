@@ -10,6 +10,10 @@ FsAps::FsAps() :
 	d_sommets(0)
 {}
 
+void FsAps::ajouterSommet(Sommet * sommet)
+{
+}
+
 FsAps::FsAps(const std::vector<int>& fs , const std::vector<int>& aps , const std::vector<Arc*> arcs , const std::vector<Sommet*>& sommets) :
     d_fs(fs),
 	d_aps(aps),

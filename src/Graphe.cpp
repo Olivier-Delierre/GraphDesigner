@@ -4,7 +4,6 @@
 
 void Graphe::rangs(std::ostream ost) const
 {
-
 }
 
 void Graphe::distance(std::ostream ost) const
