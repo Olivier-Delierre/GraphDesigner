@@ -3,6 +3,15 @@
 Listes::Listes() : d_principale{nullptr}
 {}
 
+void Listes::ajouterSommet(Sommet * sommet)
+{
+}
+
+std::vector<Sommet*> Listes::sommets() const
+{
+	return std::vector<Sommet*>();
+}
+
 void Listes::affiche(std::ostream& ost) const
 {
     d_principale->affiche(ost) ;

@@ -2,145 +2,145 @@
 
 #include "../include/FsAps.h"
 
-void Graphe::rangs(std::ostream &ost) const
+void Graphe::rangs(std::ostream ost) const
 {
-	MatriceAdjacence matriceAdjacence = this->convertirEnMatriceAdjacence();
+    MatriceAdjacence matriceAdjacence = this->convertirEnMatriceAdjacence();
 
-	int nbr_sommets = matriceAdjacence.matrice().size();
-	std::vector<bool> rang_est_calcule(nbr_sommets);
-	std::vector<int> nbr_predecesseurs(nbr_sommets);
-	std::vector<int> tab_rang(nbr_sommets);
+    int nbr_sommets = matriceAdjacence.matrice().size();
+    std::vector<bool> rang_est_calcule(nbr_sommets);
+    std::vector<int> nbr_predecesseurs(nbr_sommets);
+    std::vector<int> tab_rang(nbr_sommets);
 
-	for (int i = 0; i < nbr_sommets; ++i) {
+    for(int i = 0; i < nbr_sommets; ++i) {
 
-		rang_est_calcule[i] = false;
-		int sommets_passes = 0;
-		for (int j = 0; j < nbr_sommets; ++j) {
+        rang_est_calcule[i] = false;
+        int sommets_passes = 0;
+        for(int j = 0; j < nbr_sommets; ++j) {
 
-			if (matriceAdjacence.matrice()[i][j] > 0) {
+            if(matriceAdjacence.matrice()[i][j] > 0) {
 
-				++sommets_passes;
-			}
-		}
-		nbr_predecesseurs[i] = sommets_passes;
-	}
-	int nbr_sommets_marques = 0;
-	int rang_courant = -1;
-	bool si_circuit = false;
+                ++sommets_passes;
+            }
+        }
+        nbr_predecesseurs[i] = sommets_passes;
+    }
+    int nbr_sommets_marques = 0;
+    int rang_courant = -1;
+    bool si_circuit = false;
 
-	while (nbr_sommets_marques < nbr_sommets && si_circuit == false) {
+    while(nbr_sommets_marques < nbr_sommets && si_circuit == false) {
 
-		bool si_modification = false;
-		++rang_courant;
-		for (int i = 0; i < nbr_sommets; ++i) {
+        bool si_modification = false;
+        ++rang_courant;
+        for(int i = 0; i < nbr_sommets; ++i) {
 
-			if ((!rang_est_calcule[i]) && nbr_predecesseurs[i] == 0) {
+            if( ( !rang_est_calcule[i] ) && nbr_predecesseurs[i] == 0) {
 
-				rang_est_calcule[i] = 1;
-				++nbr_sommets_marques;
-				tab_rang[i] = rang_courant;
-				si_modification = true;
-			}
-		}
-		if (si_modification == false) {
+                rang_est_calcule[i] = 1;
+                ++nbr_sommets_marques;
+                tab_rang[i] = rang_courant;
+                si_modification = true;
+            }
+        }
+        if(si_modification == false) {
 
-			si_circuit = true;
-		}
-		else {
+            si_circuit = true;
+        }
+        else {
 
-			if (nbr_sommets_marques < nbr_sommets) {
+            if(nbr_sommets_marques < nbr_sommets) {
 
-				for (int i = 0; i < nbr_sommets; ++i) {
+                for(int i = 0; i < nbr_sommets; ++i) {
 
-					int sommets_passes = 0;
-					for (int j = 0; j < nbr_sommets; ++j) {
+                    int sommets_passes = 0;
+                    for(int j = 0; j < nbr_sommets; ++j) {
 
-						if (matriceAdjacence.matrice()[i][j] > 0 && rang_est_calcule[j] == 0) {
+                        if(matriceAdjacence.matrice()[i][j] > 0 && rang_est_calcule[j] == 0) {
 
-							++sommets_passes;
-						}
-					}
-					nbr_predecesseurs[i] = sommets_passes;
-				}
-			}
-		}
-	}
-	if (si_circuit == false) {
+                            ++sommets_passes;
+                        }
+                    }
+                    nbr_predecesseurs[i] = sommets_passes;
+                }
+            }
+        }
+    }
+    if(si_circuit == false) {
 
-		for (int i = 1; i <= nbr_sommets; ++i) {
+        for(int i = 1; i <= nbr_sommets; ++i) {
 
-			ost << i << "\t";
-		}
-		ost << std::endl;
-		for (int i = 0; i < nbr_sommets; ++i) {
+            ost << i << "\t";
+        }
+        ost << std::endl;
+        for(int i = 0; i < nbr_sommets; ++i) {
 
-			ost << tab_rang[i] << "\t";
-		}
-	}
-	else {
+            ost << tab_rang[i] << "\t";
+        }
+    }
+    else {
 
-		ost << "Impossible ! Le graphe possede un circuit !";
-	}
+        ost << "Impossible ! Le graphe possede un circuit !";
+    }
 }
 
-void Graphe::distance(std::ostream &ost) const
+void Graphe::distance(std::ostream ost) const
 {
-	FsAps fsaps = this->convertirEnFsAps();
+    FsAps fsaps = this->convertirEnFsAps();
 
-	int nbr_sommets = fsaps.aps()[0];
-	std::vector< std::vector<int> > matrice_distance(nbr_sommets + 1, std::vector<int>(nbr_sommets + 1));
-	matrice_distance[0][0] = nbr_sommets;
+    int nbr_sommets = fsaps.aps()[0];
+    std::vector< std::vector<int> > matrice_distance (nbr_sommets + 1, std ::vector<int>(nbr_sommets + 1)) ;
+    matrice_distance[0][0] = nbr_sommets;
 
-	for (int i = 1; i <= nbr_sommets; ++i) {
+    for(int i = 1; i <= nbr_sommets; ++i) {
 
-		std::vector<int> fa(nbr_sommets + 1);
-		int t = 0, q = 1, p = 1, compteur = 0, x;
+        std::vector<int> fa (nbr_sommets + 1) ;
+        int t = 0, q = 1, p = 1, compteur = 0, x;
 
-		for (int j = 0; j <= nbr_sommets; ++j) {
+        for(int j = 0; j <= nbr_sommets; ++j) {
 
-			matrice_distance[i][j] = -1;
-		}
-		matrice_distance[i][0] = nbr_sommets;
-		matrice_distance[i][i] = 0;
-		fa[1] = i;
+            matrice_distance[i][j] = -1;
+        }
+        matrice_distance[i][0] = nbr_sommets;
+        matrice_distance[i][i] = 0;
+        fa[1] = i;
 
-		while (t < q) {
+        while(t < q) {
 
-			++compteur;
-			for (int m = t + 1; m <= q; ++m) {
+            ++compteur;
+            for(int m = t + 1; m <= q; ++m) {
 
-				for (int n = fsaps.aps()[fa[m]]; (x = fsaps.fs()[n]) != 0; ++n) {
+                for(int n = fsaps.aps()[fa[m]]; (x = fsaps.fs()[n]) != 0; ++n) {
 
-					if (matrice_distance[i][x] == -1) {
+                    if(matrice_distance[i][x] == -1) {
 
-						matrice_distance[i][x] = compteur;
-						fa[++p] = x;
-					}
-				}
-			}
-			t = q;
-			q = p;
-		}
-	}
+                        matrice_distance[i][x] = compteur;
+                        fa[++p] = x;
+                    }
+                }
+            }
+            t = q;
+            q = p;
+        }
+    }
 
-	ost << "\t";
-	for (int i = 1; i <= nbr_sommets; ++i) {
+    ost << "\t";
+    for(int i = 1; i <= nbr_sommets; ++i) {
 
-		ost << i << "\t";
-	}
-	ost << std::endl;
-	for (int i = 1; i <= nbr_sommets; ++i) {
+            ost << i << "\t";
+        }
+    ost << std::endl;
+    for(int i = 1; i <= nbr_sommets; ++i) {
 
-		ost << i << "\t";
-		for (int j = 1; j <= nbr_sommets; ++j) {
+        ost << i << "\t";
+        for(int j = 1; j <= nbr_sommets; ++j) {
 
-			ost << matrice_distance[i][j] << "\t";
-		}
-		ost << std::endl;
-	}
+            ost << matrice_distance[i][j] << "\t";
+        }
+        ost << std::endl;
+    }
 }
 
-void Graphe::ordonnancement(std::ostream &ost) const
+void Graphe::ordonnancement(std::ostream ost) const
 {
 
 }
@@ -246,7 +246,7 @@ void Graphe::Dijkstra(std::ostream &ost) const
 	}
 }
 
-void Graphe::Kruskal(std::ostream &ost) const
+void Graphe::Kruskal(std::ostream ost) const
 {
 
 }
@@ -332,7 +332,7 @@ void traversee(int s , int &p , int& nbcfc , const FsAps& fsaps , std::vector<in
 
 }
 
-void Graphe::Tarjan(std::ostream &ost) const
+void Graphe::Tarjan(std::ostream ost) const
 {
     ost << "Resultats de Tarjan" << std::endl ;
 

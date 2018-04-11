@@ -30,14 +30,6 @@ class FsAps : public Graphe
         virtual ~FsAps() = default ;
 
 		/**
-		* Ajoute un sommet à la matrice d'adjacence courante,
-		* et redimensionne en conséquence celle-ci.
-		*
-		* @param sommet Un sommet à ajouter.
-		*/
-		virtual void ajouterSommet(Sommet* sommet) override;
-
-		/**
 		 * Constructeur complet de FsAps.
 		 */
 		FsAps(const std::vector<int>& fs , const std::vector<int>& aps , const std::vector<Arc*> arcs , const std::vector<Sommet*>& sommets) ;
@@ -108,7 +100,7 @@ class FsAps : public Graphe
         *
         * @return un vecteur de pointeurs de sommets;
 		*/
-		virtual std::vector<Sommet*> sommets() const override;
+		std::vector<Sommet*> sommets() const ;
 
 		/**
 		* Méthode virtuelle pure qui renvoie le nombre de sommets du graphe.
