@@ -8,6 +8,7 @@ class Arc ;
 class MatriceAdjacence ;
 class FsAps ;
 class Listes ;
+class Sommet ;
 
 class Graphe
 {
@@ -36,6 +37,16 @@ class Graphe
 		* @return le nombre de sommets.
 		*/
 		virtual int nombreSommets() const = 0;
+
+		virtual std::vector<Sommet*> sommets() const = 0;
+
+		/**
+		* Ajoute un sommet à la matrice d'adjacence courante,
+		* et redimensionne en conséquence celle-ci.
+		*
+		* @param sommet Un sommet à ajouter.
+		*/
+		virtual void ajouterSommet(Sommet* sommet) = 0;
 
 		/**
 		 * Ajoute un arc au graphe courant, allant du sommet i au sommet j
@@ -67,7 +78,7 @@ class Graphe
 		*
 		* @param ost - Une sortie standard.
 		*/
-		virtual void rangs(std::ostream ost) const ;
+		void rangs(std::ostream ost) const ;
 
 		/**
 		* Méthode qui réalise et affiche l'algorithme de determination des CFC selon Tarjan

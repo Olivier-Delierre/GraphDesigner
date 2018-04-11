@@ -35,7 +35,7 @@ class MatriceAdjacence : public Graphe
 		 *
 		 * @param sommet Un sommet à ajouter.
 		 */
-		void ajouterSommet(Sommet* sommet);
+		virtual void ajouterSommet(Sommet* sommet) override ;
 
 		/**
 		 * Ajoute un arc à la matrice d'adjacence courante, allant du sommet i au sommet j
@@ -54,13 +54,6 @@ class MatriceAdjacence : public Graphe
 		 * @param[in] j Le sommet d'arrivee.
 		 */
 		virtual void supprimerArc(int i , int j) override;
-
-        /**
-		* Méthode qui réalise et affiche l'algorithme de determination des rangs des sommets
-		*
-		* @param ost - Une sortie standard.
-		*/
-		virtual void rangs(std::ostream ost) const override;
 
 		/**
 		 * Affiche une matrice d'adjacence sur la sortie standard, sous la forme d'une liste d'arcs.
@@ -88,7 +81,7 @@ class MatriceAdjacence : public Graphe
         *
         * @return un vecteur de pointeur vers sommets.
 		*/
-		std::vector<Sommet*> sommets() const ;
+		std::vector<Sommet*> sommets() const override;
 
 		/**
 		* Retourne la matrice d'adjacence
