@@ -62,7 +62,7 @@ class FsAps : public Graphe
 		 *
 		 * @param[in] i Le sommet de départ.
 		 * @param[in] j Le sommet d'arrivée.
-		 * @returns vrai si i est prédecesseur de j, false sinon.
+		 * @return vrai si i est prédecesseur de j, false sinon.
 		 */
 		bool estPredecesseur(int i, int j) const ;
 
@@ -74,7 +74,12 @@ class FsAps : public Graphe
 		 */
 		virtual void supprimerArc(int i , int j) override;
 
-
+		/**
+		* Méthode qui réalise et affiche l'algorithme de calcul des distances d'un graphe
+		*
+		* @param ost - Une sortie standard.
+		*/
+        virtual void distance(std::ostream ost) const override;
 
 		/**
 		* Retourne le tableau fs.

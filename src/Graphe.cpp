@@ -9,6 +9,7 @@ void Graphe::rangs(std::ostream ost) const
 
 void Graphe::distance(std::ostream ost) const
 {
+
 }
 
 void Graphe::ordonnancement(std::ostream ost) const
