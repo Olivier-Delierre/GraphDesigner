@@ -376,7 +376,9 @@ namespace Interface {
 		Header();
 		std::cout << "- Appliquer un algorithme -" << std::endl;
 		std::cout << "1. Appliquer Dijkstra" << std::endl;
-		std::cout << "2. Appliquer Prufer" << std::endl << std::endl;
+		std::cout << "2. Appliquer Prufer" << std::endl;
+		std::cout << "3. Appliquer l'algorithme de rangs" << std::endl;
+		std::cout << "4. Appliquer l'algorithme de distance" << std::endl << std::endl;
 
 		while (choice == "")
 		{
@@ -407,6 +409,12 @@ namespace Interface {
 			std::cout << "Resultat de Prufer :" << std::endl;
 			grapheSelectionne->Prufer(std::cout);
 			break;
+		case 3:
+			std::cout << "Resultat de l'algorithme de rangs : " << std::endl;
+			grapheSelectionne->rangs(std::cout);
+		case 4:
+			std::cout << "Resultat de l'algorithme de distance : " << std::endl;
+			grapheSelectionne->distance(std::cout);
 		}
 
 		system("pause");

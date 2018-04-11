@@ -71,28 +71,28 @@ class Graphe
 		*
 		* @param ost - Une sortie standard.
 		*/
-		virtual void distance(std::ostream ost) const ;
+		virtual void distance(std::ostream &ost) const ;
 
 		/**
 		* Méthode qui réalise et affiche l'algorithme de determination des rangs des sommets
 		*
 		* @param ost - Une sortie standard.
 		*/
-		void rangs(std::ostream ost) const ;
+		void rangs(std::ostream &ost) const ;
 
 		/**
 		* Méthode qui réalise et affiche l'algorithme de determination des CFC selon Tarjan
 		*
 		* @param ost - Une sortie standard.
 		*/
-		void Tarjan(std::ostream ost) const ;
+		void Tarjan(std::ostream &ost) const ;
 
 		/**
 		* Méthode qui réalise et affiche l'algorithme de resolution du probleme d'ordonnancement
 		*
 		* @param ost - Une sortie standard.
 		*/
-		void ordonnancement(std::ostream ost) const ;
+		void ordonnancement(std::ostream &ost) const ;
 
 		/**
 		* Méthode qui réalise et affiche l'algorithme de calcul des plus courts chemin selon Djikstra
@@ -106,7 +106,7 @@ class Graphe
 		*
 		* @param ost - Une sortie standard.
 		*/
-		void Kruskal(std::ostream ost) const ;
+		void Kruskal(std::ostream &ost) const ;
 
 		/**
 		* Méthode qui réalise et affiche le codage de Prufer.

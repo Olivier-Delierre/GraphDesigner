@@ -83,13 +83,6 @@ class FsAps : public Graphe
 		virtual void supprimerArc(int i , int j) override;
 
 		/**
-		* Méthode qui réalise et affiche l'algorithme de calcul des distances d'un graphe
-		*
-		* @param ost - Une sortie standard.
-		*/
-        virtual void distance(std::ostream ost) const override;
-
-		/**
 		* Retourne le tableau fs.
         *
         * @return un vecteur d'entier
