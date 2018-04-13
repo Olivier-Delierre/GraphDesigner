@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Graph Designed
-   &#160;<span id="projectnumber">dev</span>
+   &#160;<span id="projectnumber">production</span>
    </div>
   </td>
  </tr>
@@ -93,9 +93,26 @@ $(document).ready(function(){initNavTree('class_listes.html','');});
 
 <p>Liste complète des membres de <a class="el" href="class_listes.html">Listes</a>, y compris les membres hérités :</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_listes.html#a81a650e081276e7e71039a6409dccda3">affiche</a>(std::ostream &amp;ost) const override</td><td class="entry"><a class="el" href="class_listes.html">Listes</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_graphe.html#ac2447672b28bd73a211eac00799aab89">Graphe</a>()</td><td class="entry"><a class="el" href="class_graphe.html">Graphe</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_listes.html#aaef0ce3447c86318b3ff0e95e671c1ef">affiche</a>(std::ostream &amp;ost) const override</td><td class="entry"><a class="el" href="class_listes.html">Listes</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_listes.html#a5cfa44fbeea2867748f149710bd3bf81">ajouterArc</a>(Arc *arc, int i, int j) override</td><td class="entry"><a class="el" href="class_listes.html">Listes</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_listes.html#a273e206afcda2b66196238d07b007f10">ajouterSommet</a>(Sommet *sommet) override</td><td class="entry"><a class="el" href="class_listes.html">Listes</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_listes.html#ae20196d9907cee489d72a21ad0310cee">convertirEnFsAps</a>() const override</td><td class="entry"><a class="el" href="class_listes.html">Listes</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_listes.html#a138c2974a6ebd9c349eedab3478ce31b">convertirEnListes</a>() const override</td><td class="entry"><a class="el" href="class_listes.html">Listes</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_listes.html#a7b586e1495e3f238e10bbba51df4add8">convertirEnMatriceAdjacence</a>() const override</td><td class="entry"><a class="el" href="class_listes.html">Listes</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_graphe.html#a0a594caf77866a7bbe7b3627e3e82a4e">Dijkstra</a>(std::ostream &amp;ost) const</td><td class="entry"><a class="el" href="class_graphe.html">Graphe</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_graphe.html#a704b5f0abb18036d24ea70b90359c3a5">distance</a>(std::ostream &amp;ost) const</td><td class="entry"><a class="el" href="class_graphe.html">Graphe</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_graphe.html#abf227c43df4bf1adf0035b28f63dd652">Graphe</a>()=default</td><td class="entry"><a class="el" href="class_graphe.html">Graphe</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_graphe.html#a0e5b73db1268e57279e37e9191a86f32">Kruskal</a>(std::ostream &amp;ost) const</td><td class="entry"><a class="el" href="class_graphe.html">Graphe</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_listes.html#ae4e52cfff62f2fad210aebec61f31a43">Listes</a>()</td><td class="entry"><a class="el" href="class_listes.html">Listes</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_listes.html#a39946f4cd6efa269aa7e729d9d646a78">nombreSommets</a>() const override</td><td class="entry"><a class="el" href="class_listes.html">Listes</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_graphe.html#a627eab684220ea4aafa8bb6e89d5cf4e">ordonnancement</a>(std::ostream &amp;ost) const</td><td class="entry"><a class="el" href="class_graphe.html">Graphe</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_graphe.html#ae58f4ba84f966038213041ad47bbf384">Prufer</a>(std::ostream &amp;ost) const</td><td class="entry"><a class="el" href="class_graphe.html">Graphe</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_graphe.html#a4ad40b8d6335d65208a598bff5a86774">rangs</a>(std::ostream &amp;ost) const</td><td class="entry"><a class="el" href="class_graphe.html">Graphe</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_listes.html#a327f930e3705cd96f9a0695f5fa4e847">sommets</a>() const override</td><td class="entry"><a class="el" href="class_listes.html">Listes</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_listes.html#adaeec6d28b02976d46ee25aae743438d">supprimerArc</a>(int i, int j) override</td><td class="entry"><a class="el" href="class_listes.html">Listes</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_graphe.html#a8fc511c5632a056aa2edeeac5e81c69a">Tarjan</a>(std::ostream &amp;ost) const</td><td class="entry"><a class="el" href="class_graphe.html">Graphe</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_graphe.html#a1e327d65486ccf60d0b3b7e1a999fe38">~Graphe</a>()=default</td><td class="entry"><a class="el" href="class_graphe.html">Graphe</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_listes.html#a8424e1c69fe865d7bdebfa6d9bae3505">~Listes</a>()=default</td><td class="entry"><a class="el" href="class_listes.html">Listes</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

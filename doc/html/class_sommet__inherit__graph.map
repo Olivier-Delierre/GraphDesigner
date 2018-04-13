@@ -1,3 +1,4 @@
 <map id="Sommet" name="Sommet">
-<area shape="rect" id="node2" href="$class_sommet_numero.html" title="SommetNumero" alt="" coords="5,80,121,107"/>
+<area shape="rect" id="node2" href="$class_sommet_mot.html" title="SommetMot" alt="" coords="5,80,99,107"/>
+<area shape="rect" id="node3" href="$class_sommet_numero.html" title="SommetNumero" alt="" coords="123,80,239,107"/>
 </map>

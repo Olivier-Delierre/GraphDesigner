@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Graph Designed
-   &#160;<span id="projectnumber">dev</span>
+   &#160;<span id="projectnumber">production</span>
    </div>
   </td>
  </tr>
@@ -88,6 +88,7 @@ $(document).ready(function(){initNavTree('class_liste_sommets.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#friends">Amis</a> &#124;
 <a href="class_liste_sommets-members.html">Liste de tous les membres</a>  </div>
   <div class="headertitle">
 <div class="title">Référence de la classe ListeSommets</div>  </div>
@@ -100,10 +101,21 @@ $(document).ready(function(){initNavTree('class_liste_sommets.html','');});
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:afc9694dedd6545aafbfb0b081eb19568"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_liste_sommets.html#afc9694dedd6545aafbfb0b081eb19568">ListeSommets</a> ()</td></tr>
 <tr class="separator:afc9694dedd6545aafbfb0b081eb19568"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5896678e5514fc24723ad9356176d0e3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_liste_sommets.html#a5896678e5514fc24723ad9356176d0e3">nombreSommets</a> () const</td></tr>
+<tr class="separator:a5896678e5514fc24723ad9356176d0e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a262c037299beddfac6b046a229a27f81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_liste_sommets.html#a262c037299beddfac6b046a229a27f81">affiche</a> (std::ostream &amp;ost) const</td></tr>
+<tr class="separator:a262c037299beddfac6b046a229a27f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65ffc36e171dd0ad211d2ab1c6406eaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_liste_sommets.html#a65ffc36e171dd0ad211d2ab1c6406eaf">ajouterArc</a> (<a class="el" href="class_arc.html">Arc</a> *arc, int i, int j)</td></tr>
+<tr class="separator:a65ffc36e171dd0ad211d2ab1c6406eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Amis</h2></td></tr>
+<tr class="memitem:a786521238c819ee4b372ff9fc6d57346"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_liste_sommets.html#a786521238c819ee4b372ff9fc6d57346">Listes</a></td></tr>
+<tr class="separator:a786521238c819ee4b372ff9fc6d57346"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock">
-<p class="definition">Définition à la ligne <a class="el" href="_liste_sommets_8h_source.html#l00007">7</a> du fichier <a class="el" href="_liste_sommets_8h_source.html">ListeSommets.h</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_liste_sommets_8h_source.html#l00006">6</a> du fichier <a class="el" href="_liste_sommets_8h_source.html">ListeSommets.h</a>.</p>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a id="afc9694dedd6545aafbfb0b081eb19568"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afc9694dedd6545aafbfb0b081eb19568">&#9670;&nbsp;</a></span>ListeSommets()</h2>
@@ -125,9 +137,173 @@ Fonctions membres publiques</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="a262c037299beddfac6b046a229a27f81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a262c037299beddfac6b046a229a27f81">&#9670;&nbsp;</a></span>affiche()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ListeSommets::affiche </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>ost</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Affiche une <a class="el" href="class_listes.html">Listes</a> sur la sortie standard.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ost</td><td>Une sortie standard. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="_liste_sommets_8cpp_source.html#l00017">17</a> du fichier <a class="el" href="_liste_sommets_8cpp_source.html">ListeSommets.cpp</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_liste_sommets_a262c037299beddfac6b046a229a27f81_cgraph.png" border="0" usemap="#class_liste_sommets_a262c037299beddfac6b046a229a27f81_cgraph" alt=""/></div>
+<map name="class_liste_sommets_a262c037299beddfac6b046a229a27f81_cgraph" id="class_liste_sommets_a262c037299beddfac6b046a229a27f81_cgraph">
+<area shape="rect" id="node2" href="class_chainon_sommet.html#a90658827419bcdf20c941f3a8504030c" title="ChainonSommet::sommet" alt="" coords="204,5,377,32"/>
+<area shape="rect" id="node3" href="class_sommet.html#a7e795b7960773423c2b843204a9e243d" title="Sommet::affiche" alt="" coords="233,56,349,83"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_liste_sommets_a262c037299beddfac6b046a229a27f81_icgraph.png" border="0" usemap="#class_liste_sommets_a262c037299beddfac6b046a229a27f81_icgraph" alt=""/></div>
+<map name="class_liste_sommets_a262c037299beddfac6b046a229a27f81_icgraph" id="class_liste_sommets_a262c037299beddfac6b046a229a27f81_icgraph">
+<area shape="rect" id="node2" href="class_listes.html#aaef0ce3447c86318b3ff0e95e671c1ef" title="Listes::affiche" alt="" coords="204,5,307,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a65ffc36e171dd0ad211d2ab1c6406eaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65ffc36e171dd0ad211d2ab1c6406eaf">&#9670;&nbsp;</a></span>ajouterArc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ListeSommets::ajouterArc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_arc.html">Arc</a> *&#160;</td>
+          <td class="paramname"><em>arc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ajoute un arc au graphe courant, allant du sommet i au sommet j Si les index sont incorrects, la fonction ne fait rien.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">arc</td><td>Un arc à ajouter. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Le sommet de depart. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">j</td><td>Le sommet d'arrivee. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="_liste_sommets_8cpp_source.html#l00032">32</a> du fichier <a class="el" href="_liste_sommets_8cpp_source.html">ListeSommets.cpp</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_liste_sommets_a65ffc36e171dd0ad211d2ab1c6406eaf_cgraph.png" border="0" usemap="#class_liste_sommets_a65ffc36e171dd0ad211d2ab1c6406eaf_cgraph" alt=""/></div>
+<map name="class_liste_sommets_a65ffc36e171dd0ad211d2ab1c6406eaf_cgraph" id="class_liste_sommets_a65ffc36e171dd0ad211d2ab1c6406eaf_cgraph">
+<area shape="rect" id="node2" href="class_liste_sommets.html#a5896678e5514fc24723ad9356176d0e3" title="ListeSommets::nombreSommets" alt="" coords="227,5,440,32"/>
+<area shape="rect" id="node3" href="class_chainon_sommet.html#a6af628d76105ca95f1e1c4fa2ba0a046" title="ChainonSommet::ajouterArc" alt="" coords="241,56,426,83"/>
+<area shape="rect" id="node4" href="class_chainon_sommet.html#a90658827419bcdf20c941f3a8504030c" title="ChainonSommet::sommet" alt="" coords="247,107,420,133"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_liste_sommets_a65ffc36e171dd0ad211d2ab1c6406eaf_icgraph.png" border="0" usemap="#class_liste_sommets_a65ffc36e171dd0ad211d2ab1c6406eaf_icgraph" alt=""/></div>
+<map name="class_liste_sommets_a65ffc36e171dd0ad211d2ab1c6406eaf_icgraph" id="class_liste_sommets_a65ffc36e171dd0ad211d2ab1c6406eaf_icgraph">
+<area shape="rect" id="node2" href="class_listes.html#a5cfa44fbeea2867748f149710bd3bf81" title="Listes::ajouterArc" alt="" coords="227,5,351,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5896678e5514fc24723ad9356176d0e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5896678e5514fc24723ad9356176d0e3">&#9670;&nbsp;</a></span>nombreSommets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ListeSommets::nombreSommets </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Renvoie le nombre de sommets de la liste.</p>
+<dl class="section return"><dt>Renvoie</dt><dd>le nombre de sommets. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="_liste_sommets_8cpp_source.html#l00005">5</a> du fichier <a class="el" href="_liste_sommets_8cpp_source.html">ListeSommets.cpp</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_liste_sommets_a5896678e5514fc24723ad9356176d0e3_icgraph.png" border="0" usemap="#class_liste_sommets_a5896678e5514fc24723ad9356176d0e3_icgraph" alt=""/></div>
+<map name="class_liste_sommets_a5896678e5514fc24723ad9356176d0e3_icgraph" id="class_liste_sommets_a5896678e5514fc24723ad9356176d0e3_icgraph">
+<area shape="rect" id="node2" href="class_listes.html#a39946f4cd6efa269aa7e729d9d646a78" title="Listes::nombreSommets" alt="" coords="271,5,435,32"/>
+<area shape="rect" id="node3" href="class_liste_sommets.html#a65ffc36e171dd0ad211d2ab1c6406eaf" title="ListeSommets::ajouterArc" alt="" coords="267,56,440,83"/>
+<area shape="rect" id="node4" href="class_listes.html#a5cfa44fbeea2867748f149710bd3bf81" title="Listes::ajouterArc" alt="" coords="488,56,612,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions amies et associées</h2>
+<a id="a786521238c819ee4b372ff9fc6d57346"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a786521238c819ee4b372ff9fc6d57346">&#9670;&nbsp;</a></span>Listes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_listes.html">Listes</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="_liste_sommets_8h_source.html#l00038">38</a> du fichier <a class="el" href="_liste_sommets_8h_source.html">ListeSommets.h</a>.</p>
+
+</div>
+</div>
 <hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
-<li>include/<a class="el" href="_liste_sommets_8h_source.html">ListeSommets.h</a></li>
-<li>src/<a class="el" href="_liste_sommets_8cpp_source.html">ListeSommets.cpp</a></li>
+<li>C:/Users/Olivier Delierre/source/repos/GraphDesigner/include/<a class="el" href="_liste_sommets_8h_source.html">ListeSommets.h</a></li>
+<li>C:/Users/Olivier Delierre/source/repos/GraphDesigner/src/<a class="el" href="_liste_sommets_8cpp_source.html">ListeSommets.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

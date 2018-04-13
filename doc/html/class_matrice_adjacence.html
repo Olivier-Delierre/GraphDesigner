@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Graph Designed
-   &#160;<span id="projectnumber">dev</span>
+   &#160;<span id="projectnumber">production</span>
    </div>
   </td>
  </tr>
@@ -116,19 +116,61 @@ Graphe de collaboration de MatriceAdjacence:</div>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a73445137acdf553a34af22a761bae0ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrice_adjacence.html#a73445137acdf553a34af22a761bae0ec">MatriceAdjacence</a> ()</td></tr>
 <tr class="separator:a73445137acdf553a34af22a761bae0ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88248f14dede6a87486a5dc2e5344c2f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrice_adjacence.html#a88248f14dede6a87486a5dc2e5344c2f">affiche</a> (std::ostream &amp;ost) const override</td></tr>
-<tr class="separator:a88248f14dede6a87486a5dc2e5344c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a007165e7f8fd3048f27cf063b6475de6"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrice_adjacence.html#a007165e7f8fd3048f27cf063b6475de6">~MatriceAdjacence</a> ()=default</td></tr>
+<tr class="separator:a007165e7f8fd3048f27cf063b6475de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12b1755cd4ebf62dd6a1f3528c4d94e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrice_adjacence.html#a12b1755cd4ebf62dd6a1f3528c4d94e7">MatriceAdjacence</a> (std::vector&lt; std::vector&lt; <a class="el" href="class_arc.html">Arc</a> *&gt; &gt; adjacence, std::vector&lt; <a class="el" href="class_sommet.html">Sommet</a> *&gt; <a class="el" href="class_matrice_adjacence.html#aaa6414fb83b196b670ecd4a100bde86b">sommets</a>)</td></tr>
+<tr class="separator:a12b1755cd4ebf62dd6a1f3528c4d94e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab81ecda73e66584a3c37dbff970539fa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrice_adjacence.html#ab81ecda73e66584a3c37dbff970539fa">ajouterSommet</a> (<a class="el" href="class_sommet.html">Sommet</a> *sommet) override</td></tr>
+<tr class="separator:ab81ecda73e66584a3c37dbff970539fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f35ebf5162a6a616531c07fadb20beb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrice_adjacence.html#a1f35ebf5162a6a616531c07fadb20beb">ajouterArc</a> (<a class="el" href="class_arc.html">Arc</a> *arc, int i, int j) override</td></tr>
+<tr class="separator:a1f35ebf5162a6a616531c07fadb20beb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf92cb0642fb8f0e150a3625d34be9c3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrice_adjacence.html#abf92cb0642fb8f0e150a3625d34be9c3">supprimerArc</a> (int i, int j) override</td></tr>
+<tr class="separator:abf92cb0642fb8f0e150a3625d34be9c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91bcfd334d3da2fd09c71a101c95eef1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrice_adjacence.html#a91bcfd334d3da2fd09c71a101c95eef1">affiche</a> (std::ostream &amp;ost) const override</td></tr>
+<tr class="separator:a91bcfd334d3da2fd09c71a101c95eef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9224179eb512ef0099e6dc99d9bc5675"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrice_adjacence.html#a9224179eb512ef0099e6dc99d9bc5675">afficheMatrice</a> (std::ostream &amp;ost) const</td></tr>
+<tr class="separator:a9224179eb512ef0099e6dc99d9bc5675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a506eed8b5b7aeec3a81ff7485c57d2b1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_arc.html">Arc</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrice_adjacence.html#a506eed8b5b7aeec3a81ff7485c57d2b1">arcs</a> () const</td></tr>
+<tr class="separator:a506eed8b5b7aeec3a81ff7485c57d2b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa6414fb83b196b670ecd4a100bde86b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_sommet.html">Sommet</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrice_adjacence.html#aaa6414fb83b196b670ecd4a100bde86b">sommets</a> () const override</td></tr>
+<tr class="separator:aaa6414fb83b196b670ecd4a100bde86b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e5fd3f67447dcb17df175b02a6f2bda"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="class_arc.html">Arc</a> * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrice_adjacence.html#a8e5fd3f67447dcb17df175b02a6f2bda">matrice</a> () const</td></tr>
+<tr class="separator:a8e5fd3f67447dcb17df175b02a6f2bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91e0a7da7e386abb50e0a68649797805"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrice_adjacence.html#a91e0a7da7e386abb50e0a68649797805">nombreSommets</a> () const override</td></tr>
+<tr class="separator:a91e0a7da7e386abb50e0a68649797805"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74dc1f615008009db23b817111e03a85"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_fs_aps.html">FsAps</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrice_adjacence.html#a74dc1f615008009db23b817111e03a85">convertirEnFsAps</a> () const override</td></tr>
+<tr class="separator:a74dc1f615008009db23b817111e03a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad76d1c8b780494d166a8a819188b8d4f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_matrice_adjacence.html">MatriceAdjacence</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrice_adjacence.html#ad76d1c8b780494d166a8a819188b8d4f">convertirEnMatriceAdjacence</a> () const override</td></tr>
+<tr class="separator:ad76d1c8b780494d166a8a819188b8d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f4d716b67674d829c736e800226dde4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_listes.html">Listes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrice_adjacence.html#a0f4d716b67674d829c736e800226dde4">convertirEnListes</a> () const override</td></tr>
+<tr class="separator:a0f4d716b67674d829c736e800226dde4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_graphe"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_graphe')"><img src="closed.png" alt="-"/>&#160;Fonctions membres publiques hérités de <a class="el" href="class_graphe.html">Graphe</a></td></tr>
-<tr class="memitem:ac2447672b28bd73a211eac00799aab89 inherit pub_methods_class_graphe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#ac2447672b28bd73a211eac00799aab89">Graphe</a> ()</td></tr>
-<tr class="separator:ac2447672b28bd73a211eac00799aab89 inherit pub_methods_class_graphe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf227c43df4bf1adf0035b28f63dd652 inherit pub_methods_class_graphe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#abf227c43df4bf1adf0035b28f63dd652">Graphe</a> ()=default</td></tr>
+<tr class="separator:abf227c43df4bf1adf0035b28f63dd652 inherit pub_methods_class_graphe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e327d65486ccf60d0b3b7e1a999fe38 inherit pub_methods_class_graphe"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#a1e327d65486ccf60d0b3b7e1a999fe38">~Graphe</a> ()=default</td></tr>
+<tr class="separator:a1e327d65486ccf60d0b3b7e1a999fe38 inherit pub_methods_class_graphe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a704b5f0abb18036d24ea70b90359c3a5 inherit pub_methods_class_graphe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#a704b5f0abb18036d24ea70b90359c3a5">distance</a> (std::ostream &amp;ost) const</td></tr>
+<tr class="separator:a704b5f0abb18036d24ea70b90359c3a5 inherit pub_methods_class_graphe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ad40b8d6335d65208a598bff5a86774 inherit pub_methods_class_graphe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#a4ad40b8d6335d65208a598bff5a86774">rangs</a> (std::ostream &amp;ost) const</td></tr>
+<tr class="separator:a4ad40b8d6335d65208a598bff5a86774 inherit pub_methods_class_graphe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fc511c5632a056aa2edeeac5e81c69a inherit pub_methods_class_graphe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#a8fc511c5632a056aa2edeeac5e81c69a">Tarjan</a> (std::ostream &amp;ost) const</td></tr>
+<tr class="separator:a8fc511c5632a056aa2edeeac5e81c69a inherit pub_methods_class_graphe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a627eab684220ea4aafa8bb6e89d5cf4e inherit pub_methods_class_graphe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#a627eab684220ea4aafa8bb6e89d5cf4e">ordonnancement</a> (std::ostream &amp;ost) const</td></tr>
+<tr class="separator:a627eab684220ea4aafa8bb6e89d5cf4e inherit pub_methods_class_graphe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a594caf77866a7bbe7b3627e3e82a4e inherit pub_methods_class_graphe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#a0a594caf77866a7bbe7b3627e3e82a4e">Dijkstra</a> (std::ostream &amp;ost) const</td></tr>
+<tr class="separator:a0a594caf77866a7bbe7b3627e3e82a4e inherit pub_methods_class_graphe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e5b73db1268e57279e37e9191a86f32 inherit pub_methods_class_graphe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#a0e5b73db1268e57279e37e9191a86f32">Kruskal</a> (std::ostream &amp;ost) const</td></tr>
+<tr class="separator:a0e5b73db1268e57279e37e9191a86f32 inherit pub_methods_class_graphe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae58f4ba84f966038213041ad47bbf384 inherit pub_methods_class_graphe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#ae58f4ba84f966038213041ad47bbf384">Prufer</a> (std::ostream &amp;ost) const</td></tr>
+<tr class="separator:ae58f4ba84f966038213041ad47bbf384 inherit pub_methods_class_graphe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Classe héritant de <a class="el" href="class_graphe.html">Graphe</a> permettant de représenter un graphe sous la forme d'une matrice d'adjacence. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="_matrice_adjacence_8h_source.html#l00013">13</a> du fichier <a class="el" href="_matrice_adjacence_8h_source.html">MatriceAdjacence.h</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_matrice_adjacence_8h_source.html#l00014">14</a> du fichier <a class="el" href="_matrice_adjacence_8h_source.html">MatriceAdjacence.h</a>.</p>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a id="a73445137acdf553a34af22a761bae0ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73445137acdf553a34af22a761bae0ec">&#9670;&nbsp;</a></span>MatriceAdjacence()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a73445137acdf553a34af22a761bae0ec">&#9670;&nbsp;</a></span>MatriceAdjacence() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -143,11 +185,12 @@ Fonctions membres publiques</h2></td></tr>
 </div><div class="memdoc">
 <p>Constructeur par défaut de <a class="el" href="class_matrice_adjacence.html">MatriceAdjacence</a>. </p>
 
+<p class="definition">Définition à la ligne <a class="el" href="_matrice_adjacence_8cpp_source.html#l00003">3</a> du fichier <a class="el" href="_matrice_adjacence_8cpp_source.html">MatriceAdjacence.cpp</a>.</p>
+
 </div>
 </div>
-<h2 class="groupheader">Documentation des fonctions membres</h2>
-<a id="a88248f14dede6a87486a5dc2e5344c2f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88248f14dede6a87486a5dc2e5344c2f">&#9670;&nbsp;</a></span>affiche()</h2>
+<a id="a007165e7f8fd3048f27cf063b6475de6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a007165e7f8fd3048f27cf063b6475de6">&#9670;&nbsp;</a></span>~MatriceAdjacence()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -156,7 +199,65 @@ Fonctions membres publiques</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void MatriceAdjacence::affiche </td>
+          <td class="memname">virtual MatriceAdjacence::~MatriceAdjacence </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Destructeur virtuel </p>
+
+</div>
+</div>
+<a id="a12b1755cd4ebf62dd6a1f3528c4d94e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12b1755cd4ebf62dd6a1f3528c4d94e7">&#9670;&nbsp;</a></span>MatriceAdjacence() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MatriceAdjacence::MatriceAdjacence </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; <a class="el" href="class_arc.html">Arc</a> *&gt; &gt;&#160;</td>
+          <td class="paramname"><em>adjacence</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_sommet.html">Sommet</a> *&gt;&#160;</td>
+          <td class="paramname"><em>sommets</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constructeur complet de <a class="el" href="class_matrice_adjacence.html">MatriceAdjacence</a> </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="_matrice_adjacence_8cpp_source.html#l00008">8</a> du fichier <a class="el" href="_matrice_adjacence_8cpp_source.html">MatriceAdjacence.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="a91bcfd334d3da2fd09c71a101c95eef1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91bcfd334d3da2fd09c71a101c95eef1">&#9670;&nbsp;</a></span>affiche()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MatriceAdjacence::affiche </td>
           <td>(</td>
           <td class="paramtype">std::ostream &amp;&#160;</td>
           <td class="paramname"><em>ost</em></td><td>)</td>
@@ -169,7 +270,7 @@ Fonctions membres publiques</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Affiche une matrice d'adjacence sur la sortie standard.</p>
+<p>Affiche une matrice d'adjacence sur la sortie standard, sous la forme d'une liste d'arcs.</p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">ost</td><td>Une sortie standard. </td></tr>
@@ -179,10 +280,448 @@ Fonctions membres publiques</h2></td></tr>
 
 <p>Implémente <a class="el" href="class_graphe.html#aa7c2e3bce785feb8c22b559f14639cd2">Graphe</a>.</p>
 
+<p class="definition">Définition à la ligne <a class="el" href="_matrice_adjacence_8cpp_source.html#l00054">54</a> du fichier <a class="el" href="_matrice_adjacence_8cpp_source.html">MatriceAdjacence.cpp</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_matrice_adjacence_a91bcfd334d3da2fd09c71a101c95eef1_cgraph.png" border="0" usemap="#class_matrice_adjacence_a91bcfd334d3da2fd09c71a101c95eef1_cgraph" alt=""/></div>
+<map name="class_matrice_adjacence_a91bcfd334d3da2fd09c71a101c95eef1_cgraph" id="class_matrice_adjacence_a91bcfd334d3da2fd09c71a101c95eef1_cgraph">
+<area shape="rect" id="node2" href="class_matrice_adjacence.html#a91e0a7da7e386abb50e0a68649797805" title="MatriceAdjacence::nombre\lSommets" alt="" coords="229,5,407,47"/>
+<area shape="rect" id="node3" href="class_matrice_adjacence.html#aaa6414fb83b196b670ecd4a100bde86b" title="MatriceAdjacence::sommets" alt="" coords="224,71,412,98"/>
+</map>
+</div>
+
 </div>
 </div>
-<hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
-<li>include/<a class="el" href="_matrice_adjacence_8h_source.html">MatriceAdjacence.h</a></li>
+<a id="a9224179eb512ef0099e6dc99d9bc5675"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9224179eb512ef0099e6dc99d9bc5675">&#9670;&nbsp;</a></span>afficheMatrice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MatriceAdjacence::afficheMatrice </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>ost</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Affiche une matrice d'adjacence sur la sortie standard.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ost</td><td>Une sortie standard. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="_matrice_adjacence_8cpp_source.html#l00073">73</a> du fichier <a class="el" href="_matrice_adjacence_8cpp_source.html">MatriceAdjacence.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1f35ebf5162a6a616531c07fadb20beb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f35ebf5162a6a616531c07fadb20beb">&#9670;&nbsp;</a></span>ajouterArc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MatriceAdjacence::ajouterArc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_arc.html">Arc</a> *&#160;</td>
+          <td class="paramname"><em>arc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Ajoute un arc à la matrice d'adjacence courante, allant du sommet i au sommet j Si les index sont incorrects, la fonction ne fait rien.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">arc</td><td>Un arc à ajouter. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Le sommet de depart. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">j</td><td>Le sommet d'arrivee. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implémente <a class="el" href="class_graphe.html#a1693b7515f4c75bb1443dfc188f7bfc7">Graphe</a>.</p>
+
+<p class="definition">Définition à la ligne <a class="el" href="_matrice_adjacence_8cpp_source.html#l00039">39</a> du fichier <a class="el" href="_matrice_adjacence_8cpp_source.html">MatriceAdjacence.cpp</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_matrice_adjacence_a1f35ebf5162a6a616531c07fadb20beb_cgraph.png" border="0" usemap="#class_matrice_adjacence_a1f35ebf5162a6a616531c07fadb20beb_cgraph" alt=""/></div>
+<map name="class_matrice_adjacence_a1f35ebf5162a6a616531c07fadb20beb_cgraph" id="class_matrice_adjacence_a1f35ebf5162a6a616531c07fadb20beb_cgraph">
+<area shape="rect" id="node2" href="class_matrice_adjacence.html#a91e0a7da7e386abb50e0a68649797805" title="MatriceAdjacence::nombre\lSommets" alt="" coords="247,5,424,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab81ecda73e66584a3c37dbff970539fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab81ecda73e66584a3c37dbff970539fa">&#9670;&nbsp;</a></span>ajouterSommet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MatriceAdjacence::ajouterSommet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_sommet.html">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>sommet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Ajoute un sommet à la matrice d'adjacence courante, et redimensionne en conséquence celle-ci.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sommet</td><td>Un sommet à ajouter. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implémente <a class="el" href="class_graphe.html#a0c02d33a1faab45478310399fde22b98">Graphe</a>.</p>
+
+<p class="definition">Définition à la ligne <a class="el" href="_matrice_adjacence_8cpp_source.html#l00014">14</a> du fichier <a class="el" href="_matrice_adjacence_8cpp_source.html">MatriceAdjacence.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a506eed8b5b7aeec3a81ff7485c57d2b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a506eed8b5b7aeec3a81ff7485c57d2b1">&#9670;&nbsp;</a></span>arcs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_arc.html">Arc</a>*&gt; MatriceAdjacence::arcs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retourne le tableau des arcs.</p>
+<dl class="section return"><dt>Renvoie</dt><dd>un vecteur d'arcs. </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_matrice_adjacence_a506eed8b5b7aeec3a81ff7485c57d2b1_icgraph.png" border="0" usemap="#class_matrice_adjacence_a506eed8b5b7aeec3a81ff7485c57d2b1_icgraph" alt=""/></div>
+<map name="class_matrice_adjacence_a506eed8b5b7aeec3a81ff7485c57d2b1_icgraph" id="class_matrice_adjacence_a506eed8b5b7aeec3a81ff7485c57d2b1_icgraph">
+<area shape="rect" id="node2" href="class_matrice_adjacence.html#a74dc1f615008009db23b817111e03a85" title="MatriceAdjacence::convertir\lEnFsAps" alt="" coords="212,5,395,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a74dc1f615008009db23b817111e03a85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74dc1f615008009db23b817111e03a85">&#9670;&nbsp;</a></span>convertirEnFsAps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fs_aps.html">FsAps</a> MatriceAdjacence::convertirEnFsAps </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Renvoie le graphe stocke sous forme des vecteurs fs et aps</p>
+<dl class="section return"><dt>Renvoie</dt><dd>un graphe sous la forme fs/aps. </dd></dl>
+
+<p>Implémente <a class="el" href="class_graphe.html#a991a8019bd39056b148813d814e867e6">Graphe</a>.</p>
+
+<p class="definition">Définition à la ligne <a class="el" href="_matrice_adjacence_8cpp_source.html#l00103">103</a> du fichier <a class="el" href="_matrice_adjacence_8cpp_source.html">MatriceAdjacence.cpp</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_matrice_adjacence_a74dc1f615008009db23b817111e03a85_cgraph.png" border="0" usemap="#class_matrice_adjacence_a74dc1f615008009db23b817111e03a85_cgraph" alt=""/></div>
+<map name="class_matrice_adjacence_a74dc1f615008009db23b817111e03a85_cgraph" id="class_matrice_adjacence_a74dc1f615008009db23b817111e03a85_cgraph">
+<area shape="rect" id="node2" href="class_matrice_adjacence.html#a506eed8b5b7aeec3a81ff7485c57d2b1" title="MatriceAdjacence::arcs" alt="" coords="251,5,409,32"/>
+<area shape="rect" id="node3" href="class_matrice_adjacence.html#a91e0a7da7e386abb50e0a68649797805" title="MatriceAdjacence::nombre\lSommets" alt="" coords="241,57,419,98"/>
+<area shape="rect" id="node4" href="class_matrice_adjacence.html#a8e5fd3f67447dcb17df175b02a6f2bda" title="MatriceAdjacence::matrice" alt="" coords="241,123,419,149"/>
+<area shape="rect" id="node5" href="class_matrice_adjacence.html#aaa6414fb83b196b670ecd4a100bde86b" title="MatriceAdjacence::sommets" alt="" coords="236,173,424,200"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0f4d716b67674d829c736e800226dde4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f4d716b67674d829c736e800226dde4">&#9670;&nbsp;</a></span>convertirEnListes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_listes.html">Listes</a> MatriceAdjacence::convertirEnListes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Renvoie le graphe stocke sous forme de listes chainees</p>
+<dl class="section return"><dt>Renvoie</dt><dd>un graphe sous la forme de listes chainees. </dd></dl>
+
+<p>Implémente <a class="el" href="class_graphe.html#ad137cb623a0b75a6dc308c50bfaf81c3">Graphe</a>.</p>
+
+<p class="definition">Définition à la ligne <a class="el" href="_matrice_adjacence_8cpp_source.html#l00132">132</a> du fichier <a class="el" href="_matrice_adjacence_8cpp_source.html">MatriceAdjacence.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad76d1c8b780494d166a8a819188b8d4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad76d1c8b780494d166a8a819188b8d4f">&#9670;&nbsp;</a></span>convertirEnMatriceAdjacence()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_matrice_adjacence.html">MatriceAdjacence</a> MatriceAdjacence::convertirEnMatriceAdjacence </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Renvoie le graphe stocke sous forme de matrice d'adjacence</p>
+<dl class="section return"><dt>Renvoie</dt><dd>un graphe sous la forme d'une matrice d'adjacence. </dd></dl>
+
+<p>Implémente <a class="el" href="class_graphe.html#ae7309592585c6d86b752e9ff47e166f1">Graphe</a>.</p>
+
+<p class="definition">Définition à la ligne <a class="el" href="_matrice_adjacence_8cpp_source.html#l00127">127</a> du fichier <a class="el" href="_matrice_adjacence_8cpp_source.html">MatriceAdjacence.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8e5fd3f67447dcb17df175b02a6f2bda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e5fd3f67447dcb17df175b02a6f2bda">&#9670;&nbsp;</a></span>matrice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::vector&lt; <a class="el" href="class_arc.html">Arc</a> * &gt; &gt; MatriceAdjacence::matrice </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retourne la matrice d'adjacence</p>
+<dl class="section return"><dt>Renvoie</dt><dd>un tableau à deux dimensions d'entiers. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="_matrice_adjacence_8cpp_source.html#l00088">88</a> du fichier <a class="el" href="_matrice_adjacence_8cpp_source.html">MatriceAdjacence.cpp</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_matrice_adjacence_a8e5fd3f67447dcb17df175b02a6f2bda_icgraph.png" border="0" usemap="#class_matrice_adjacence_a8e5fd3f67447dcb17df175b02a6f2bda_icgraph" alt=""/></div>
+<map name="class_matrice_adjacence_a8e5fd3f67447dcb17df175b02a6f2bda_icgraph" id="class_matrice_adjacence_a8e5fd3f67447dcb17df175b02a6f2bda_icgraph">
+<area shape="rect" id="node2" href="class_graphe.html#a4ad40b8d6335d65208a598bff5a86774" title="Graphe::rangs" alt="" coords="270,5,374,32"/>
+<area shape="rect" id="node3" href="class_matrice_adjacence.html#a74dc1f615008009db23b817111e03a85" title="MatriceAdjacence::convertir\lEnFsAps" alt="" coords="231,57,413,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a91e0a7da7e386abb50e0a68649797805"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91e0a7da7e386abb50e0a68649797805">&#9670;&nbsp;</a></span>nombreSommets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MatriceAdjacence::nombreSommets </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Méthode virtuelle pure qui renvoie le nombre de sommets du graphe.</p>
+<dl class="section return"><dt>Renvoie</dt><dd>le nombre de sommets. </dd></dl>
+
+<p>Implémente <a class="el" href="class_graphe.html#a80719d7c32ca282e6a5f781c0cc084aa">Graphe</a>.</p>
+
+<p class="definition">Définition à la ligne <a class="el" href="_matrice_adjacence_8cpp_source.html#l00098">98</a> du fichier <a class="el" href="_matrice_adjacence_8cpp_source.html">MatriceAdjacence.cpp</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_matrice_adjacence_a91e0a7da7e386abb50e0a68649797805_icgraph.png" border="0" usemap="#class_matrice_adjacence_a91e0a7da7e386abb50e0a68649797805_icgraph" alt=""/></div>
+<map name="class_matrice_adjacence_a91e0a7da7e386abb50e0a68649797805_icgraph" id="class_matrice_adjacence_a91e0a7da7e386abb50e0a68649797805_icgraph">
+<area shape="rect" id="node2" href="class_matrice_adjacence.html#a1f35ebf5162a6a616531c07fadb20beb" title="MatriceAdjacence::ajouterArc" alt="" coords="239,5,433,32"/>
+<area shape="rect" id="node3" href="class_matrice_adjacence.html#abf92cb0642fb8f0e150a3625d34be9c3" title="MatriceAdjacence::supprimerArc" alt="" coords="231,56,441,83"/>
+<area shape="rect" id="node4" href="class_matrice_adjacence.html#a91bcfd334d3da2fd09c71a101c95eef1" title="MatriceAdjacence::affiche" alt="" coords="251,107,421,133"/>
+<area shape="rect" id="node5" href="class_matrice_adjacence.html#a74dc1f615008009db23b817111e03a85" title="MatriceAdjacence::convertir\lEnFsAps" alt="" coords="245,158,427,199"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaa6414fb83b196b670ecd4a100bde86b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa6414fb83b196b670ecd4a100bde86b">&#9670;&nbsp;</a></span>sommets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="class_sommet.html">Sommet</a> * &gt; MatriceAdjacence::sommets </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retourne le tableau des sommets.</p>
+<dl class="section return"><dt>Renvoie</dt><dd>un vecteur de pointeur vers sommets. </dd></dl>
+
+<p>Implémente <a class="el" href="class_graphe.html#aebd3e5a221a2c6f23bb0e32bf765830d">Graphe</a>.</p>
+
+<p class="definition">Définition à la ligne <a class="el" href="_matrice_adjacence_8cpp_source.html#l00093">93</a> du fichier <a class="el" href="_matrice_adjacence_8cpp_source.html">MatriceAdjacence.cpp</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_matrice_adjacence_aaa6414fb83b196b670ecd4a100bde86b_icgraph.png" border="0" usemap="#class_matrice_adjacence_aaa6414fb83b196b670ecd4a100bde86b_icgraph" alt=""/></div>
+<map name="class_matrice_adjacence_aaa6414fb83b196b670ecd4a100bde86b_icgraph" id="class_matrice_adjacence_aaa6414fb83b196b670ecd4a100bde86b_icgraph">
+<area shape="rect" id="node2" href="class_matrice_adjacence.html#a91bcfd334d3da2fd09c71a101c95eef1" title="MatriceAdjacence::affiche" alt="" coords="247,5,418,32"/>
+<area shape="rect" id="node3" href="class_matrice_adjacence.html#a74dc1f615008009db23b817111e03a85" title="MatriceAdjacence::convertir\lEnFsAps" alt="" coords="241,57,424,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abf92cb0642fb8f0e150a3625d34be9c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf92cb0642fb8f0e150a3625d34be9c3">&#9670;&nbsp;</a></span>supprimerArc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MatriceAdjacence::supprimerArc </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Supprime l'arc (i,j) de la matrice d'adjacence courante s'il existe.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Le sommet de depart. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">j</td><td>Le sommet d'arrivee. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implémente <a class="el" href="class_graphe.html#aad2933ef6e56fc2a6e5312fb04e36e87">Graphe</a>.</p>
+
+<p class="definition">Définition à la ligne <a class="el" href="_matrice_adjacence_8cpp_source.html#l00045">45</a> du fichier <a class="el" href="_matrice_adjacence_8cpp_source.html">MatriceAdjacence.cpp</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_matrice_adjacence_abf92cb0642fb8f0e150a3625d34be9c3_cgraph.png" border="0" usemap="#class_matrice_adjacence_abf92cb0642fb8f0e150a3625d34be9c3_cgraph" alt=""/></div>
+<map name="class_matrice_adjacence_abf92cb0642fb8f0e150a3625d34be9c3_cgraph" id="class_matrice_adjacence_abf92cb0642fb8f0e150a3625d34be9c3_cgraph">
+<area shape="rect" id="node2" href="class_matrice_adjacence.html#a91e0a7da7e386abb50e0a68649797805" title="MatriceAdjacence::nombre\lSommets" alt="" coords="264,5,441,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
+<li>C:/Users/Olivier Delierre/source/repos/GraphDesigner/include/<a class="el" href="_matrice_adjacence_8h_source.html">MatriceAdjacence.h</a></li>
+<li>C:/Users/Olivier Delierre/source/repos/GraphDesigner/src/<a class="el" href="_matrice_adjacence_8cpp_source.html">MatriceAdjacence.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

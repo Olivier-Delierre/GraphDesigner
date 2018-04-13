@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Graph Designed: Référence du fichier src/Graphe.cpp</title>
+<title>Graph Designed: Référence du fichier C:/Users/Olivier Delierre/source/repos/GraphDesigner/src/Graphe.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Graph Designed
-   &#160;<span id="projectnumber">dev</span>
+   &#160;<span id="projectnumber">production</span>
    </div>
   </td>
  </tr>
@@ -86,21 +86,205 @@ $(document).ready(function(){initNavTree('_graphe_8cpp.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
   <div class="headertitle">
 <div class="title">Référence du fichier Graphe.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="_graphe_8h_source.html">Graphe.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="_graphe_8h_source.html">../include/Graphe.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_fs_aps_8h_source.html">../include/FsAps.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Graphe des dépendances par inclusion de Graphe.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="_graphe_8cpp__incl.png" border="0" usemap="#src_2_graphe_8cpp" alt=""/></div>
-<map name="src_2_graphe_8cpp" id="src_2_graphe_8cpp">
-<area shape="rect" id="node2" href="_graphe_8h.html" title="Graphe.h" alt="" coords="23,80,98,107"/>
+<div class="center"><img src="_graphe_8cpp__incl.png" border="0" usemap="#_c_1_2_users_2_olivier_01_delierre_2source_2repos_2_graph_designer_2src_2_graphe_8cpp" alt=""/></div>
+<map name="_c_1_2_users_2_olivier_01_delierre_2source_2repos_2_graph_designer_2src_2_graphe_8cpp" id="_c_1_2_users_2_olivier_01_delierre_2source_2repos_2_graph_designer_2src_2_graphe_8cpp">
+<area shape="rect" id="node2" href="_graphe_8h.html" title="../include/Graphe.h" alt="" coords="94,259,226,285"/>
+<area shape="rect" id="node5" href="_fs_aps_8h.html" title="../include/FsAps.h" alt="" coords="245,109,373,136"/>
+<area shape="rect" id="node6" href="_sommet_8h.html" title="Sommet.h" alt="" coords="289,557,372,584"/>
+<area shape="rect" id="node8" href="_arc_8h.html" title="Arc.h" alt="" coords="556,557,609,584"/>
+<area shape="rect" id="node10" href="_listes_8h.html" title="Listes.h" alt="" coords="275,184,343,211"/>
+<area shape="rect" id="node15" href="_matrice_adjacence_8h.html" title="MatriceAdjacence.h" alt="" coords="393,259,530,285"/>
+<area shape="rect" id="node11" href="_liste_sommets_8h.html" title="ListeSommets.h" alt="" coords="251,259,368,285"/>
+<area shape="rect" id="node12" href="_chainon_sommet_8h.html" title="ChainonSommet.h" alt="" coords="215,333,345,360"/>
+<area shape="rect" id="node13" href="_liste_arcs_8h.html" title="ListeArcs.h" alt="" coords="411,408,499,435"/>
+<area shape="rect" id="node14" href="_chainon_arc_8h.html" title="ChainonArc.h" alt="" coords="419,483,519,509"/>
 </map>
 </div>
 </div>
 <p><a href="_graphe_8cpp_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a11538d23e4c851c4f20335d2d4c3fbf6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphe_8cpp.html#a11538d23e4c851c4f20335d2d4c3fbf6">empiler</a> (int s, std::vector&lt; int &gt; &amp;tarj)</td></tr>
+<tr class="separator:a11538d23e4c851c4f20335d2d4c3fbf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3a25fa3cec1aa21e0ef395073f622c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphe_8cpp.html#ab3a25fa3cec1aa21e0ef395073f622c8">depiler</a> (std::vector&lt; int &gt; &amp;tarj)</td></tr>
+<tr class="separator:ab3a25fa3cec1aa21e0ef395073f622c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64245bc0c4dd2b0029781b1e4beb75a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphe_8cpp.html#a64245bc0c4dd2b0029781b1e4beb75a1">traversee</a> (int s, int &amp;p, int &amp;nbcfc, const <a class="el" href="class_fs_aps.html">FsAps</a> &amp;fsaps, std::vector&lt; int &gt; &amp;num, std::vector&lt; int &gt; &amp;mu, std::vector&lt; int &gt; &amp;prem, std::vector&lt; int &gt; &amp;pilch, std::vector&lt; int &gt; &amp;cfc, std::vector&lt; int &gt; &amp;tarj, std::vector&lt; bool &gt; &amp;entarj)</td></tr>
+<tr class="separator:a64245bc0c4dd2b0029781b1e4beb75a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="ab3a25fa3cec1aa21e0ef395073f622c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3a25fa3cec1aa21e0ef395073f622c8">&#9670;&nbsp;</a></span>depiler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void depiler </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>tarj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="_graphe_8cpp_source.html#l00292">292</a> du fichier <a class="el" href="_graphe_8cpp_source.html">Graphe.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a11538d23e4c851c4f20335d2d4c3fbf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11538d23e4c851c4f20335d2d4c3fbf6">&#9670;&nbsp;</a></span>empiler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void empiler </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>tarj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="_graphe_8cpp_source.html#l00286">286</a> du fichier <a class="el" href="_graphe_8cpp_source.html">Graphe.cpp</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_graphe_8cpp_a11538d23e4c851c4f20335d2d4c3fbf6_icgraph.png" border="0" usemap="#_graphe_8cpp_a11538d23e4c851c4f20335d2d4c3fbf6_icgraph" alt=""/></div>
+<map name="_graphe_8cpp_a11538d23e4c851c4f20335d2d4c3fbf6_icgraph" id="_graphe_8cpp_a11538d23e4c851c4f20335d2d4c3fbf6_icgraph">
+<area shape="rect" id="node2" href="_graphe_8cpp.html#a64245bc0c4dd2b0029781b1e4beb75a1" title="traversee" alt="" coords="117,5,192,32"/>
+<area shape="rect" id="node3" href="class_graphe.html#a8fc511c5632a056aa2edeeac5e81c69a" title="Graphe::Tarjan" alt="" coords="240,5,347,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a64245bc0c4dd2b0029781b1e4beb75a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64245bc0c4dd2b0029781b1e4beb75a1">&#9670;&nbsp;</a></span>traversee()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void traversee </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>nbcfc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_fs_aps.html">FsAps</a> &amp;&#160;</td>
+          <td class="paramname"><em>fsaps</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>prem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pilch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cfc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>tarj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; bool &gt; &amp;&#160;</td>
+          <td class="paramname"><em>entarj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="_graphe_8cpp_source.html#l00297">297</a> du fichier <a class="el" href="_graphe_8cpp_source.html">Graphe.cpp</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_graphe_8cpp_a64245bc0c4dd2b0029781b1e4beb75a1_cgraph.png" border="0" usemap="#_graphe_8cpp_a64245bc0c4dd2b0029781b1e4beb75a1_cgraph" alt=""/></div>
+<map name="_graphe_8cpp_a64245bc0c4dd2b0029781b1e4beb75a1_cgraph" id="_graphe_8cpp_a64245bc0c4dd2b0029781b1e4beb75a1_cgraph">
+<area shape="rect" id="node2" href="_graphe_8cpp.html#a11538d23e4c851c4f20335d2d4c3fbf6" title="empiler" alt="" coords="141,5,205,32"/>
+<area shape="rect" id="node3" href="class_fs_aps.html#a9b63575ae5592ab9c1689423bd04ecf5" title="FsAps::aps" alt="" coords="128,56,217,83"/>
+<area shape="rect" id="node4" href="class_fs_aps.html#a958d14a1c92f9b5f72d5199e88893514" title="FsAps::fs" alt="" coords="133,107,212,133"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_graphe_8cpp_a64245bc0c4dd2b0029781b1e4beb75a1_icgraph.png" border="0" usemap="#_graphe_8cpp_a64245bc0c4dd2b0029781b1e4beb75a1_icgraph" alt=""/></div>
+<map name="_graphe_8cpp_a64245bc0c4dd2b0029781b1e4beb75a1_icgraph" id="_graphe_8cpp_a64245bc0c4dd2b0029781b1e4beb75a1_icgraph">
+<area shape="rect" id="node2" href="class_graphe.html#a8fc511c5632a056aa2edeeac5e81c69a" title="Graphe::Tarjan" alt="" coords="128,5,235,32"/>
+</map>
+</div>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

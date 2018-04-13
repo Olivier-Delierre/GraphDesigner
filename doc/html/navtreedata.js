@@ -24,18 +24,30 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "Graph Designed", "index.html", [
-    [ "GraphDesigner", "md__r_e_a_d_m_e.html", null ],
+    [ "GraphDesigner", "md__c_1__users__olivier__delierre_source_repos__graph_designer__r_e_a_d_m_e.html", null ],
+    [ "Espaces de nommage", "namespaces.html", [
+      [ "Liste des espaces de nommage", "namespaces.html", "namespaces_dup" ],
+      [ "Membres de l'espace de nommage", "namespacemembers.html", [
+        [ "Tout", "namespacemembers.html", null ],
+        [ "Fonctions", "namespacemembers_func.html", null ]
+      ] ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Liste des classes", "annotated.html", "annotated_dup" ],
       [ "Index des classes", "classes.html", null ],
       [ "Hiérarchie des classes", "hierarchy.html", "hierarchy" ],
       [ "Membres de classe", "functions.html", [
         [ "Tout", "functions.html", null ],
-        [ "Fonctions", "functions_func.html", null ]
+        [ "Fonctions", "functions_func.html", null ],
+        [ "Fonctions associées", "functions_rela.html", null ]
       ] ]
     ] ],
     [ "Fichiers", "files.html", [
-      [ "Liste des fichiers", "files.html", "files_dup" ]
+      [ "Liste des fichiers", "files.html", "files_dup" ],
+      [ "Membres de fichier", "globals.html", [
+        [ "Tout", "globals.html", null ],
+        [ "Fonctions", "globals_func.html", null ]
+      ] ]
     ] ]
   ] ]
 ];

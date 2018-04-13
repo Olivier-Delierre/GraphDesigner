@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['matriceadjacence',['MatriceAdjacence',['../class_matrice_adjacence.html#a73445137acdf553a34af22a761bae0ec',1,'MatriceAdjacence']]]
+  ['graphe',['Graphe',['../class_graphe.html#abf227c43df4bf1adf0035b28f63dd652',1,'Graphe']]]
 ];

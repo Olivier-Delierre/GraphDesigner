@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Graph Designed
-   &#160;<span id="projectnumber">dev</span>
+   &#160;<span id="projectnumber">production</span>
    </div>
   </td>
  </tr>
@@ -108,20 +108,55 @@ Graphe d'héritage de Graphe:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:ac2447672b28bd73a211eac00799aab89"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#ac2447672b28bd73a211eac00799aab89">Graphe</a> ()</td></tr>
-<tr class="separator:ac2447672b28bd73a211eac00799aab89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf227c43df4bf1adf0035b28f63dd652"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#abf227c43df4bf1adf0035b28f63dd652">Graphe</a> ()=default</td></tr>
+<tr class="separator:abf227c43df4bf1adf0035b28f63dd652"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e327d65486ccf60d0b3b7e1a999fe38"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#a1e327d65486ccf60d0b3b7e1a999fe38">~Graphe</a> ()=default</td></tr>
+<tr class="separator:a1e327d65486ccf60d0b3b7e1a999fe38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7c2e3bce785feb8c22b559f14639cd2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#aa7c2e3bce785feb8c22b559f14639cd2">affiche</a> (std::ostream &amp;ost) const =0</td></tr>
 <tr class="separator:aa7c2e3bce785feb8c22b559f14639cd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80719d7c32ca282e6a5f781c0cc084aa"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#a80719d7c32ca282e6a5f781c0cc084aa">nombreSommets</a> () const =0</td></tr>
+<tr class="separator:a80719d7c32ca282e6a5f781c0cc084aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebd3e5a221a2c6f23bb0e32bf765830d"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="class_sommet.html">Sommet</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#aebd3e5a221a2c6f23bb0e32bf765830d">sommets</a> () const =0</td></tr>
+<tr class="separator:aebd3e5a221a2c6f23bb0e32bf765830d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c02d33a1faab45478310399fde22b98"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#a0c02d33a1faab45478310399fde22b98">ajouterSommet</a> (<a class="el" href="class_sommet.html">Sommet</a> *sommet)=0</td></tr>
+<tr class="separator:a0c02d33a1faab45478310399fde22b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1693b7515f4c75bb1443dfc188f7bfc7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#a1693b7515f4c75bb1443dfc188f7bfc7">ajouterArc</a> (<a class="el" href="class_arc.html">Arc</a> *arc, int i, int j)=0</td></tr>
+<tr class="separator:a1693b7515f4c75bb1443dfc188f7bfc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad2933ef6e56fc2a6e5312fb04e36e87"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#aad2933ef6e56fc2a6e5312fb04e36e87">supprimerArc</a> (int i, int j)=0</td></tr>
+<tr class="separator:aad2933ef6e56fc2a6e5312fb04e36e87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a704b5f0abb18036d24ea70b90359c3a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#a704b5f0abb18036d24ea70b90359c3a5">distance</a> (std::ostream &amp;ost) const</td></tr>
+<tr class="separator:a704b5f0abb18036d24ea70b90359c3a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ad40b8d6335d65208a598bff5a86774"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#a4ad40b8d6335d65208a598bff5a86774">rangs</a> (std::ostream &amp;ost) const</td></tr>
+<tr class="separator:a4ad40b8d6335d65208a598bff5a86774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fc511c5632a056aa2edeeac5e81c69a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#a8fc511c5632a056aa2edeeac5e81c69a">Tarjan</a> (std::ostream &amp;ost) const</td></tr>
+<tr class="separator:a8fc511c5632a056aa2edeeac5e81c69a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a627eab684220ea4aafa8bb6e89d5cf4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#a627eab684220ea4aafa8bb6e89d5cf4e">ordonnancement</a> (std::ostream &amp;ost) const</td></tr>
+<tr class="separator:a627eab684220ea4aafa8bb6e89d5cf4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a594caf77866a7bbe7b3627e3e82a4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#a0a594caf77866a7bbe7b3627e3e82a4e">Dijkstra</a> (std::ostream &amp;ost) const</td></tr>
+<tr class="separator:a0a594caf77866a7bbe7b3627e3e82a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e5b73db1268e57279e37e9191a86f32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#a0e5b73db1268e57279e37e9191a86f32">Kruskal</a> (std::ostream &amp;ost) const</td></tr>
+<tr class="separator:a0e5b73db1268e57279e37e9191a86f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae58f4ba84f966038213041ad47bbf384"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#ae58f4ba84f966038213041ad47bbf384">Prufer</a> (std::ostream &amp;ost) const</td></tr>
+<tr class="separator:ae58f4ba84f966038213041ad47bbf384"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a991a8019bd39056b148813d814e867e6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_fs_aps.html">FsAps</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#a991a8019bd39056b148813d814e867e6">convertirEnFsAps</a> () const =0</td></tr>
+<tr class="separator:a991a8019bd39056b148813d814e867e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7309592585c6d86b752e9ff47e166f1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_matrice_adjacence.html">MatriceAdjacence</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#ae7309592585c6d86b752e9ff47e166f1">convertirEnMatriceAdjacence</a> () const =0</td></tr>
+<tr class="separator:ae7309592585c6d86b752e9ff47e166f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad137cb623a0b75a6dc308c50bfaf81c3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_listes.html">Listes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphe.html#ad137cb623a0b75a6dc308c50bfaf81c3">convertirEnListes</a> () const =0</td></tr>
+<tr class="separator:ad137cb623a0b75a6dc308c50bfaf81c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock">
-<p class="definition">Définition à la ligne <a class="el" href="_graphe_8h_source.html#l00006">6</a> du fichier <a class="el" href="_graphe_8h_source.html">Graphe.h</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_graphe_8h_source.html#l00013">13</a> du fichier <a class="el" href="_graphe_8h_source.html">Graphe.h</a>.</p>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
-<a id="ac2447672b28bd73a211eac00799aab89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2447672b28bd73a211eac00799aab89">&#9670;&nbsp;</a></span>Graphe()</h2>
+<a id="abf227c43df4bf1adf0035b28f63dd652"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf227c43df4bf1adf0035b28f63dd652">&#9670;&nbsp;</a></span>Graphe()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Graphe::Graphe </td>
@@ -130,8 +165,39 @@ Fonctions membres publiques</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Constructeur par défaut d'un <a class="el" href="class_graphe.html">Graphe</a>. </p>
+
+</div>
+</div>
+<a id="a1e327d65486ccf60d0b3b7e1a999fe38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e327d65486ccf60d0b3b7e1a999fe38">&#9670;&nbsp;</a></span>~Graphe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Graphe::~Graphe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Destructeur virtuel </p>
 
 </div>
 </div>
@@ -167,12 +233,577 @@ Fonctions membres publiques</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implémenté dans <a class="el" href="class_fs_aps.html#affb957782172b5fe90d9bdb08f65adf4">FsAps</a>, <a class="el" href="class_matrice_adjacence.html#a88248f14dede6a87486a5dc2e5344c2f">MatriceAdjacence</a>, et <a class="el" href="class_listes.html#a81a650e081276e7e71039a6409dccda3">Listes</a>.</p>
+<p>Implémenté dans <a class="el" href="class_matrice_adjacence.html#a91bcfd334d3da2fd09c71a101c95eef1">MatriceAdjacence</a>, <a class="el" href="class_fs_aps.html#a83b8e6d5207844d1ecc6a98fd5f050d7">FsAps</a>, et <a class="el" href="class_listes.html#aaef0ce3447c86318b3ff0e95e671c1ef">Listes</a>.</p>
 
 </div>
 </div>
-<hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
-<li>include/<a class="el" href="_graphe_8h_source.html">Graphe.h</a></li>
+<a id="a1693b7515f4c75bb1443dfc188f7bfc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1693b7515f4c75bb1443dfc188f7bfc7">&#9670;&nbsp;</a></span>ajouterArc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Graphe::ajouterArc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_arc.html">Arc</a> *&#160;</td>
+          <td class="paramname"><em>arc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Ajoute un arc au graphe courant, allant du sommet i au sommet j Si les index sont incorrects, la fonction ne fait rien.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">arc</td><td>Un arc à ajouter. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Le sommet de depart. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">j</td><td>Le sommet d'arrivee. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implémenté dans <a class="el" href="class_fs_aps.html#aa86b7e269bd4b9f2dba707b7aa314f89">FsAps</a>, <a class="el" href="class_listes.html#a5cfa44fbeea2867748f149710bd3bf81">Listes</a>, et <a class="el" href="class_matrice_adjacence.html#a1f35ebf5162a6a616531c07fadb20beb">MatriceAdjacence</a>.</p>
+
+</div>
+</div>
+<a id="a0c02d33a1faab45478310399fde22b98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c02d33a1faab45478310399fde22b98">&#9670;&nbsp;</a></span>ajouterSommet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Graphe::ajouterSommet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_sommet.html">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>sommet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Ajoute un sommet à la matrice d'adjacence courante, et redimensionne en conséquence celle-ci.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sommet</td><td>Un sommet à ajouter. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implémenté dans <a class="el" href="class_fs_aps.html#a6d1499dacb64a321f6aa824bad25f372">FsAps</a>, <a class="el" href="class_matrice_adjacence.html#ab81ecda73e66584a3c37dbff970539fa">MatriceAdjacence</a>, et <a class="el" href="class_listes.html#a273e206afcda2b66196238d07b007f10">Listes</a>.</p>
+
+</div>
+</div>
+<a id="a991a8019bd39056b148813d814e867e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a991a8019bd39056b148813d814e867e6">&#9670;&nbsp;</a></span>convertirEnFsAps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_fs_aps.html">FsAps</a> Graphe::convertirEnFsAps </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Renvoie le graphe stocke sous forme des vecteurs fs et aps</p>
+<dl class="section return"><dt>Renvoie</dt><dd>un graphe sous la forme fs/aps. </dd></dl>
+
+<p>Implémenté dans <a class="el" href="class_fs_aps.html#a224d6d93169046685af7dfce9a09d26f">FsAps</a>, <a class="el" href="class_matrice_adjacence.html#a74dc1f615008009db23b817111e03a85">MatriceAdjacence</a>, et <a class="el" href="class_listes.html#ae20196d9907cee489d72a21ad0310cee">Listes</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graphe_a991a8019bd39056b148813d814e867e6_icgraph.png" border="0" usemap="#class_graphe_a991a8019bd39056b148813d814e867e6_icgraph" alt=""/></div>
+<map name="class_graphe_a991a8019bd39056b148813d814e867e6_icgraph" id="class_graphe_a991a8019bd39056b148813d814e867e6_icgraph">
+<area shape="rect" id="node2" href="class_graphe.html#a704b5f0abb18036d24ea70b90359c3a5" title="Graphe::distance" alt="" coords="228,5,349,32"/>
+<area shape="rect" id="node3" href="class_graphe.html#a0a594caf77866a7bbe7b3627e3e82a4e" title="Graphe::Dijkstra" alt="" coords="397,31,513,57"/>
+<area shape="rect" id="node4" href="class_graphe.html#ae58f4ba84f966038213041ad47bbf384" title="Graphe::Prufer" alt="" coords="235,107,342,133"/>
+<area shape="rect" id="node5" href="class_graphe.html#a8fc511c5632a056aa2edeeac5e81c69a" title="Graphe::Tarjan" alt="" coords="235,157,342,184"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad137cb623a0b75a6dc308c50bfaf81c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad137cb623a0b75a6dc308c50bfaf81c3">&#9670;&nbsp;</a></span>convertirEnListes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_listes.html">Listes</a> Graphe::convertirEnListes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Renvoie le graphe stocke sous forme de listes chainees</p>
+<dl class="section return"><dt>Renvoie</dt><dd>un graphe sous la forme de listes chainees. </dd></dl>
+
+<p>Implémenté dans <a class="el" href="class_fs_aps.html#ac09e22cb8b0cdceb1b7acf15b1491d8e">FsAps</a>, <a class="el" href="class_matrice_adjacence.html#a0f4d716b67674d829c736e800226dde4">MatriceAdjacence</a>, et <a class="el" href="class_listes.html#a138c2974a6ebd9c349eedab3478ce31b">Listes</a>.</p>
+
+</div>
+</div>
+<a id="ae7309592585c6d86b752e9ff47e166f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7309592585c6d86b752e9ff47e166f1">&#9670;&nbsp;</a></span>convertirEnMatriceAdjacence()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_matrice_adjacence.html">MatriceAdjacence</a> Graphe::convertirEnMatriceAdjacence </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Renvoie le graphe stocke sous forme de matrice d'adjacence</p>
+<dl class="section return"><dt>Renvoie</dt><dd>un graphe sous la forme d'une matrice d'adjacence. </dd></dl>
+
+<p>Implémenté dans <a class="el" href="class_fs_aps.html#ad0058ba6f973dbf6000febe5d1a7a3c6">FsAps</a>, <a class="el" href="class_matrice_adjacence.html#ad76d1c8b780494d166a8a819188b8d4f">MatriceAdjacence</a>, et <a class="el" href="class_listes.html#a7b586e1495e3f238e10bbba51df4add8">Listes</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graphe_ae7309592585c6d86b752e9ff47e166f1_icgraph.png" border="0" usemap="#class_graphe_ae7309592585c6d86b752e9ff47e166f1_icgraph" alt=""/></div>
+<map name="class_graphe_ae7309592585c6d86b752e9ff47e166f1_icgraph" id="class_graphe_ae7309592585c6d86b752e9ff47e166f1_icgraph">
+<area shape="rect" id="node2" href="class_graphe.html#a4ad40b8d6335d65208a598bff5a86774" title="Graphe::rangs" alt="" coords="232,13,336,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0a594caf77866a7bbe7b3627e3e82a4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a594caf77866a7bbe7b3627e3e82a4e">&#9670;&nbsp;</a></span>Dijkstra()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphe::Dijkstra </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>ost</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Méthode qui réalise et affiche l'algorithme de calcul des plus courts chemin selon Djikstra</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ost</td><td>- Une sortie standard. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="_graphe_8cpp_source.html#l00148">148</a> du fichier <a class="el" href="_graphe_8cpp_source.html">Graphe.cpp</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graphe_a0a594caf77866a7bbe7b3627e3e82a4e_cgraph.png" border="0" usemap="#class_graphe_a0a594caf77866a7bbe7b3627e3e82a4e_cgraph" alt=""/></div>
+<map name="class_graphe_a0a594caf77866a7bbe7b3627e3e82a4e_cgraph" id="class_graphe_a0a594caf77866a7bbe7b3627e3e82a4e_cgraph">
+<area shape="rect" id="node2" href="class_graphe.html#a991a8019bd39056b148813d814e867e6" title="Graphe::convertirEnFsAps" alt="" coords="388,5,563,32"/>
+<area shape="rect" id="node3" href="class_graphe.html#a80719d7c32ca282e6a5f781c0cc084aa" title="Graphe::nombreSommets" alt="" coords="169,195,340,221"/>
+<area shape="rect" id="node4" href="class_fs_aps.html#aabff1b58b9ebd1cc6fe177db992d514a" title="FsAps::estPredecesseur" alt="" coords="171,245,338,272"/>
+<area shape="rect" id="node5" href="class_fs_aps.html#a9b63575ae5592ab9c1689423bd04ecf5" title="FsAps::aps" alt="" coords="431,81,520,108"/>
+<area shape="rect" id="node6" href="class_fs_aps.html#a958d14a1c92f9b5f72d5199e88893514" title="FsAps::fs" alt="" coords="436,132,515,159"/>
+<area shape="rect" id="node7" href="class_graphe.html#a704b5f0abb18036d24ea70b90359c3a5" title="Graphe::distance" alt="" coords="194,93,315,120"/>
+<area shape="rect" id="node8" href="class_fs_aps.html#add3c4ca9bedbaf3b2b5129b76365665f" title="FsAps::arcs" alt="" coords="208,296,301,323"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a704b5f0abb18036d24ea70b90359c3a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a704b5f0abb18036d24ea70b90359c3a5">&#9670;&nbsp;</a></span>distance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphe::distance </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>ost</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Méthode qui réalise et affiche l'algorithme de calcul des distances d'un graphe</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ost</td><td>- Une sortie standard. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="_graphe_8cpp_source.html#l00086">86</a> du fichier <a class="el" href="_graphe_8cpp_source.html">Graphe.cpp</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graphe_a704b5f0abb18036d24ea70b90359c3a5_cgraph.png" border="0" usemap="#class_graphe_a704b5f0abb18036d24ea70b90359c3a5_cgraph" alt=""/></div>
+<map name="class_graphe_a704b5f0abb18036d24ea70b90359c3a5_cgraph" id="class_graphe_a704b5f0abb18036d24ea70b90359c3a5_cgraph">
+<area shape="rect" id="node2" href="class_graphe.html#a991a8019bd39056b148813d814e867e6" title="Graphe::convertirEnFsAps" alt="" coords="175,5,349,32"/>
+<area shape="rect" id="node3" href="class_fs_aps.html#a9b63575ae5592ab9c1689423bd04ecf5" title="FsAps::aps" alt="" coords="217,56,307,83"/>
+<area shape="rect" id="node4" href="class_fs_aps.html#a958d14a1c92f9b5f72d5199e88893514" title="FsAps::fs" alt="" coords="223,107,301,133"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graphe_a704b5f0abb18036d24ea70b90359c3a5_icgraph.png" border="0" usemap="#class_graphe_a704b5f0abb18036d24ea70b90359c3a5_icgraph" alt=""/></div>
+<map name="class_graphe_a704b5f0abb18036d24ea70b90359c3a5_icgraph" id="class_graphe_a704b5f0abb18036d24ea70b90359c3a5_icgraph">
+<area shape="rect" id="node2" href="class_graphe.html#a0a594caf77866a7bbe7b3627e3e82a4e" title="Graphe::Dijkstra" alt="" coords="175,5,291,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0e5b73db1268e57279e37e9191a86f32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e5b73db1268e57279e37e9191a86f32">&#9670;&nbsp;</a></span>Kruskal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphe::Kruskal </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>ost</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Méthode qui réalise et affiche l'algorithme de calcul des distances d'un graphe</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ost</td><td>- Une sortie standard. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="_graphe_8cpp_source.html#l00249">249</a> du fichier <a class="el" href="_graphe_8cpp_source.html">Graphe.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a80719d7c32ca282e6a5f781c0cc084aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80719d7c32ca282e6a5f781c0cc084aa">&#9670;&nbsp;</a></span>nombreSommets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Graphe::nombreSommets </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Méthode virtuelle pure qui renvoie le nombre de sommets du graphe.</p>
+<dl class="section return"><dt>Renvoie</dt><dd>le nombre de sommets. </dd></dl>
+
+<p>Implémenté dans <a class="el" href="class_fs_aps.html#a9c82cb24ae1af30b99e16ba30f5e7087">FsAps</a>, <a class="el" href="class_matrice_adjacence.html#a91e0a7da7e386abb50e0a68649797805">MatriceAdjacence</a>, et <a class="el" href="class_listes.html#a39946f4cd6efa269aa7e729d9d646a78">Listes</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graphe_a80719d7c32ca282e6a5f781c0cc084aa_icgraph.png" border="0" usemap="#class_graphe_a80719d7c32ca282e6a5f781c0cc084aa_icgraph" alt=""/></div>
+<map name="class_graphe_a80719d7c32ca282e6a5f781c0cc084aa_icgraph" id="class_graphe_a80719d7c32ca282e6a5f781c0cc084aa_icgraph">
+<area shape="rect" id="node2" href="class_graphe.html#a0a594caf77866a7bbe7b3627e3e82a4e" title="Graphe::Dijkstra" alt="" coords="224,5,340,32"/>
+<area shape="rect" id="node3" href="class_graphe.html#ae58f4ba84f966038213041ad47bbf384" title="Graphe::Prufer" alt="" coords="229,56,335,83"/>
+<area shape="rect" id="node4" href="class_graphe.html#a8fc511c5632a056aa2edeeac5e81c69a" title="Graphe::Tarjan" alt="" coords="229,107,335,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a627eab684220ea4aafa8bb6e89d5cf4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a627eab684220ea4aafa8bb6e89d5cf4e">&#9670;&nbsp;</a></span>ordonnancement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphe::ordonnancement </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>ost</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Méthode qui réalise et affiche l'algorithme de resolution du probleme d'ordonnancement</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ost</td><td>- Une sortie standard. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="_graphe_8cpp_source.html#l00143">143</a> du fichier <a class="el" href="_graphe_8cpp_source.html">Graphe.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae58f4ba84f966038213041ad47bbf384"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae58f4ba84f966038213041ad47bbf384">&#9670;&nbsp;</a></span>Prufer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphe::Prufer </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>ost</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Méthode qui réalise et affiche le codage de Prufer.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ost</td><td>- Une sortie standard. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="_graphe_8cpp_source.html#l00254">254</a> du fichier <a class="el" href="_graphe_8cpp_source.html">Graphe.cpp</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graphe_ae58f4ba84f966038213041ad47bbf384_cgraph.png" border="0" usemap="#class_graphe_ae58f4ba84f966038213041ad47bbf384_cgraph" alt=""/></div>
+<map name="class_graphe_ae58f4ba84f966038213041ad47bbf384_cgraph" id="class_graphe_ae58f4ba84f966038213041ad47bbf384_cgraph">
+<area shape="rect" id="node2" href="class_graphe.html#a991a8019bd39056b148813d814e867e6" title="Graphe::convertirEnFsAps" alt="" coords="160,5,335,32"/>
+<area shape="rect" id="node3" href="class_graphe.html#a80719d7c32ca282e6a5f781c0cc084aa" title="Graphe::nombreSommets" alt="" coords="162,56,333,83"/>
+<area shape="rect" id="node4" href="class_fs_aps.html#a9b63575ae5592ab9c1689423bd04ecf5" title="FsAps::aps" alt="" coords="203,107,292,133"/>
+<area shape="rect" id="node5" href="class_fs_aps.html#a958d14a1c92f9b5f72d5199e88893514" title="FsAps::fs" alt="" coords="208,157,287,184"/>
+<area shape="rect" id="node6" href="class_fs_aps.html#a53f53b1d2559e76fc2b01bea4cfaa9f8" title="FsAps::supprimerArc" alt="" coords="175,208,320,235"/>
+<area shape="rect" id="node7" href="class_fs_aps.html#a9c82cb24ae1af30b99e16ba30f5e7087" title="FsAps::nombreSommets" alt="" coords="383,208,549,235"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4ad40b8d6335d65208a598bff5a86774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ad40b8d6335d65208a598bff5a86774">&#9670;&nbsp;</a></span>rangs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphe::rangs </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>ost</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Méthode qui réalise et affiche l'algorithme de determination des rangs des sommets</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ost</td><td>- Une sortie standard. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="_graphe_8cpp_source.html#l00005">5</a> du fichier <a class="el" href="_graphe_8cpp_source.html">Graphe.cpp</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graphe_a4ad40b8d6335d65208a598bff5a86774_cgraph.png" border="0" usemap="#class_graphe_a4ad40b8d6335d65208a598bff5a86774_cgraph" alt=""/></div>
+<map name="class_graphe_a4ad40b8d6335d65208a598bff5a86774_cgraph" id="class_graphe_a4ad40b8d6335d65208a598bff5a86774_cgraph">
+<area shape="rect" id="node2" href="class_graphe.html#ae7309592585c6d86b752e9ff47e166f1" title="Graphe::convertirEnMatrice\lAdjacence" alt="" coords="157,5,336,47"/>
+<area shape="rect" id="node3" href="class_matrice_adjacence.html#a8e5fd3f67447dcb17df175b02a6f2bda" title="MatriceAdjacence::matrice" alt="" coords="158,71,335,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aebd3e5a221a2c6f23bb0e32bf765830d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebd3e5a221a2c6f23bb0e32bf765830d">&#9670;&nbsp;</a></span>sommets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt;<a class="el" href="class_sommet.html">Sommet</a>*&gt; Graphe::sommets </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Méthode virtuelle pure qui renvoie le tableau de pointeurs de sommets du graphe.</p>
+<dl class="section return"><dt>Renvoie</dt><dd>le tableau de pointeurs de sommets. </dd></dl>
+
+<p>Implémenté dans <a class="el" href="class_fs_aps.html#ae126fe8353783f6cfd1f4257610242f7">FsAps</a>, <a class="el" href="class_matrice_adjacence.html#aaa6414fb83b196b670ecd4a100bde86b">MatriceAdjacence</a>, et <a class="el" href="class_listes.html#a327f930e3705cd96f9a0695f5fa4e847">Listes</a>.</p>
+
+</div>
+</div>
+<a id="aad2933ef6e56fc2a6e5312fb04e36e87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad2933ef6e56fc2a6e5312fb04e36e87">&#9670;&nbsp;</a></span>supprimerArc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Graphe::supprimerArc </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Supprime l'arc (i,j) du graphe courant s'il existe.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Le sommet de depart. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">j</td><td>Le sommet d'arrivee. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implémenté dans <a class="el" href="class_fs_aps.html#a53f53b1d2559e76fc2b01bea4cfaa9f8">FsAps</a>, <a class="el" href="class_listes.html#adaeec6d28b02976d46ee25aae743438d">Listes</a>, et <a class="el" href="class_matrice_adjacence.html#abf92cb0642fb8f0e150a3625d34be9c3">MatriceAdjacence</a>.</p>
+
+</div>
+</div>
+<a id="a8fc511c5632a056aa2edeeac5e81c69a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fc511c5632a056aa2edeeac5e81c69a">&#9670;&nbsp;</a></span>Tarjan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphe::Tarjan </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>ost</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Méthode qui réalise et affiche l'algorithme de determination des CFC selon Tarjan</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ost</td><td>- Une sortie standard. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="_graphe_8cpp_source.html#l00335">335</a> du fichier <a class="el" href="_graphe_8cpp_source.html">Graphe.cpp</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_graphe_a8fc511c5632a056aa2edeeac5e81c69a_cgraph.png" border="0" usemap="#class_graphe_a8fc511c5632a056aa2edeeac5e81c69a_cgraph" alt=""/></div>
+<map name="class_graphe_a8fc511c5632a056aa2edeeac5e81c69a_cgraph" id="class_graphe_a8fc511c5632a056aa2edeeac5e81c69a_cgraph">
+<area shape="rect" id="node2" href="class_graphe.html#a991a8019bd39056b148813d814e867e6" title="Graphe::convertirEnFsAps" alt="" coords="160,5,335,32"/>
+<area shape="rect" id="node3" href="class_graphe.html#a80719d7c32ca282e6a5f781c0cc084aa" title="Graphe::nombreSommets" alt="" coords="162,56,333,83"/>
+<area shape="rect" id="node4" href="_graphe_8cpp.html#a64245bc0c4dd2b0029781b1e4beb75a1" title="traversee" alt="" coords="210,107,285,133"/>
+<area shape="rect" id="node5" href="_graphe_8cpp.html#a11538d23e4c851c4f20335d2d4c3fbf6" title="empiler" alt="" coords="395,56,459,83"/>
+<area shape="rect" id="node6" href="class_fs_aps.html#a9b63575ae5592ab9c1689423bd04ecf5" title="FsAps::aps" alt="" coords="383,107,472,133"/>
+<area shape="rect" id="node7" href="class_fs_aps.html#a958d14a1c92f9b5f72d5199e88893514" title="FsAps::fs" alt="" coords="388,157,467,184"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
+<li>C:/Users/Olivier Delierre/source/repos/GraphDesigner/include/<a class="el" href="_graphe_8h_source.html">Graphe.h</a></li>
+<li>C:/Users/Olivier Delierre/source/repos/GraphDesigner/src/<a class="el" href="_graphe_8cpp_source.html">Graphe.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
