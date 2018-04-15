@@ -132,6 +132,10 @@ class FsAps : public Graphe
         */
         virtual Listes convertirEnListes() const override ;
 
+        virtual void supprimerSommet(Sommet* s) override ;
+
+        virtual void ajouterSommet(Sommet* s) override ;
+
 	private:
 		std::vector<int> d_fs;
 		std::vector<int> d_aps;

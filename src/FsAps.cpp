@@ -191,5 +191,84 @@ Listes FsAps::convertirEnListes() const
 	return Listes();
 }
 
+void FsAps::supprimerSommet(Sommet* s)
+{
+    bool sommetExiste = false;
+    int indiceSommet;
+    //On récupère le sommet
+    for(int i = 0; i < d_sommets.size(); i++)
+    {
+        if(d_sommets[i]->id() == s->id())
+        {
+            sommetExiste = true;
+            indiceSommet = i;
+        }
+    }
+
+    // On vérifie que le sommet soit dans le graphe
+    if(!sommetExiste)
+    {
+//        cout >> "Le sommet entré n'existe pas";
+        return;
+    }
+
+    // On supprime le sommet dans fs et arcs
+    int indiceFs = d_aps[indiceSommet];
+    int i = d_aps[indiceSommet];
+    for(; i < d_fs.size() && d_fs[i] != 0; i++);
+    d_fs.erase(d_fs.begin()+indiceFs, d_fs.begin()+i+1);
+    d_arcs.erase(d_arcs.begin()+indiceFs, d_arcs.begin()+i+1);
+
+    // On supprime s en tant que successeur de tous les autres sommets
+    for(int i = d_fs.size(); i >= 0; i--)
+    {
+        if(d_fs[i] == indiceSommet+1)
+        {
+            d_fs.erase(d_fs.begin()+i);
+            d_arcs.erase(d_arcs.begin()+i);
+        }
+    }
+
+    // On reforme aps
+    d_aps.pop_back(); // il y a un sommet en moins
+    d_aps[0] = 0;
+    int indiceAps = 1;
+    for(int i = 1; i < d_fs.size(); i++)
+    {
+        if(d_fs[i] == 0)
+        {
+            d_aps[indiceAps] = i+1;
+            indiceAps++;
+        }
+    }
+
+    for(int i = 0; i < d_fs.size(); i++)
+        std::cout<<d_fs[i] << " ";
+    std::cout << std::endl;
+
+    for(int i = 0; i < d_aps.size(); i++)
+        std::cout << d_aps[i] << " ";
+    std::cout << std::endl;
+
+    //Enfin, on supprime le sommet dans d_sommet
+    d_sommets.erase(d_sommets.begin()+indiceSommet);
+}
+
+void FsAps::ajouterSommet(Sommet* s)
+{
+    d_sommets.push_back(s);
+    d_arcs.push_back(nullptr);
+    d_fs.push_back(0);
+    d_aps.push_back(d_fs.size()-1);
+
+    for(int i = 0; i < d_fs.size(); i++)
+        std::cout<<d_fs[i] << " ";
+    std::cout << std::endl;
+
+    for(int i = 0; i < d_aps.size(); i++)
+        std::cout << d_aps[i] << " ";
+    std::cout << std::endl;
+}
+
 
 

@@ -35,7 +35,9 @@ class MatriceAdjacence : public Graphe
 		 *
 		 * @param sommet Un sommet à ajouter.
 		 */
-		void ajouterSommet(Sommet* sommet);
+		virtual void ajouterSommet(Sommet* sommet) override;
+
+		virtual void supprimerSommet(Sommet* s) override;
 
 		/**
 		 * Ajoute un arc à la matrice d'adjacence courante, allant du sommet i au sommet j

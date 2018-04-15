@@ -8,6 +8,7 @@ class Arc ;
 class MatriceAdjacence ;
 class FsAps ;
 class Listes ;
+class Sommet;
 
 class Graphe
 {
@@ -124,6 +125,20 @@ class Graphe
 		* @return un graphe sous la forme de listes chainees.
 		*/
 		virtual Listes convertirEnListes() const = 0 ;
+
+		/**
+		* Méthode virtuelle pure qui supprime un sommet du graphe
+		*
+		* @param s - le sommet à supprimer
+		*/
+		virtual void supprimerSommet(Sommet* s) = 0;
+
+		/**
+		* Méthode virtuelle pure qui ajoute un sommet du graphe
+		*
+		* @param s - le sommet à ajouter
+		*/
+		virtual void ajouterSommet(Sommet* s) = 0;
 
 
 	private:
