@@ -263,7 +263,7 @@ namespace Interface {
 		std::string nomSommet = "";
 		Header();
 		std::cout << "- Ajouter un sommet -" << std::endl;
-		
+
 		// On affiche les noms deja pris
 		std::cout << "Liste des noms deja pris : { ";
 
@@ -413,9 +413,11 @@ namespace Interface {
 		case 3:
 			std::cout << "Resultat de l'algorithme de rangs : " << std::endl;
 			grapheSelectionne->rangs(std::cout);
+			break;
 		case 4:
 			std::cout << "Resultat de l'algorithme de distance : " << std::endl;
 			grapheSelectionne->distance(std::cout);
+			break;
 		}
 
 		system("pause");
