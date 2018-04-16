@@ -65,22 +65,23 @@ void Graphe::rangs(std::ostream &ost) const
 			}
 		}
 	}
+	ost << std::endl;
 	if (si_circuit == false) {
 
-        ost << "\t";
+        ost << "Sommet :" << "\t";
 
 		for (int i = 1; i <= nbr_sommets; ++i) {
 
 			ost << i << " |" << "\t";
 		}
 		ost << std::endl;
-		ost << "   ";
+		ost << "\t" << "   ";
 		for (int i = 0; i < nbr_sommets; ++i) {
 
             ost << "--------";
 		}
 		ost << std::endl;
-		ost << "\t";
+		ost << "Rang :" << "\t" << "\t";
 		for (int i = 0; i < nbr_sommets; ++i) {
 
 			ost << tab_rang[i] << " |" << "\t";
@@ -90,7 +91,7 @@ void Graphe::rangs(std::ostream &ost) const
 
 		ost << "Impossible ! Le graphe possede un circuit !";
 	}
-	ost << std::endl;
+	ost << std::endl << std::endl;
 }
 
 void Graphe::distance(std::ostream &ost) const
@@ -102,28 +103,31 @@ void Graphe::distance(std::ostream &ost) const
 
 	for (int i = 1; i <= nbr_sommets; ++i) {
 
+        for (int j = 1; j <= nbr_sommets; ++j) {
+
+            matrice_distance[i][j] = -1;
+        }
+	}
+	for (int i = 1; i <= nbr_sommets; ++i) {
+
 		std::vector<int> fa(nbr_sommets + 1);
 		int t = 0, q = 1, p = 1, compteur = 0, x;
 
-		for (int j = 1; j <= nbr_sommets; ++j) {
-
-			matrice_distance[i][j] = -1;
-		}
 		matrice_distance[i][i] = 0;
 		fa[1] = i;
 
-		ost << "test" << std::endl;
 		while (t < q) {
 
 			++compteur;
 			for (int m = t + 1; m <= q; ++m) {
 
-				for (int n = fsaps.aps()[fa[m]]; (x = fsaps.fs()[n]) != 0; ++n) {
+				for (int n = fsaps.aps()[fa[m] - 1]; (x = fsaps.fs()[n]) != 0; ++n) {
 
 					if (matrice_distance[i][x] == -1) {
 
 						matrice_distance[i][x] = compteur;
-						fa[++p] = x;
+						++p;
+						fa[p] = x;
 					}
 				}
 			}
@@ -132,6 +136,8 @@ void Graphe::distance(std::ostream &ost) const
 		}
 	}
 
+	ost << std::endl;
+    ost << "Matrice des distances :" << std::endl << std::endl;
 	ost << "\t";
 	for (int i = 1; i <= nbr_sommets; ++i) {
 
