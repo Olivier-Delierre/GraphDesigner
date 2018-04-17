@@ -4,16 +4,161 @@
 #include <string>
 #include <iostream>
 
-void Graphe::rangs(std::ostream ost) const
+void Graphe::rangs(std::ostream &ost) const
 {
+	MatriceAdjacence matriceAdjacence = this->convertirEnMatriceAdjacence();
 
+	int nbr_sommets = matriceAdjacence.matrice().size();
+	std::vector<bool> rang_est_calcule(nbr_sommets);
+	std::vector<int> nbr_predecesseurs(nbr_sommets);
+	std::vector<int> tab_rang(nbr_sommets);
+
+	for (int i = 0; i < nbr_sommets; ++i) {
+
+		rang_est_calcule[i] = false;
+		int sommets_passes = 0;
+		for (int j = 0; j < nbr_sommets; ++j) {
+
+			if (matriceAdjacence.matrice()[i][j] > 0) {
+
+				++sommets_passes;
+			}
+		}
+		nbr_predecesseurs[i] = sommets_passes;
+	}
+	int nbr_sommets_marques = 0;
+	int rang_courant = -1;
+	bool si_circuit = false;
+
+	while (nbr_sommets_marques < nbr_sommets && si_circuit == false) {
+
+		bool si_modification = false;
+		++rang_courant;
+		for (int i = 0; i < nbr_sommets; ++i) {
+
+			if ((!rang_est_calcule[i]) && nbr_predecesseurs[i] == 0) {
+
+				rang_est_calcule[i] = true;
+				++nbr_sommets_marques;
+				tab_rang[i] = rang_courant;
+				si_modification = true;
+			}
+		}
+		if (si_modification == false) {
+
+			si_circuit = true;
+		}
+		else {
+
+			if (nbr_sommets_marques < nbr_sommets) {
+
+				for (int i = 0; i < nbr_sommets; ++i) {
+
+					int sommets_passes = 0;
+					for (int j = 0; j < nbr_sommets; ++j) {
+
+						if (matriceAdjacence.matrice()[i][j] > 0 && rang_est_calcule[j] == 0) {
+
+							++sommets_passes;
+						}
+					}
+					nbr_predecesseurs[i] = sommets_passes;
+				}
+			}
+		}
+	}
+	ost << std::endl;
+	if (si_circuit == false) {
+
+        ost << "Sommet :" << "\t";
+
+		for (int i = 1; i <= nbr_sommets; ++i) {
+
+			ost << i << " |" << "\t";
+		}
+		ost << std::endl;
+		ost << "\t" << "   ";
+		for (int i = 0; i < nbr_sommets; ++i) {
+
+            ost << "--------";
+		}
+		ost << std::endl;
+		ost << "Rang :" << "\t" << "\t";
+		for (int i = 0; i < nbr_sommets; ++i) {
+
+			ost << tab_rang[i] << " |" << "\t";
+		}
+	}
+	else {
+
+		ost << "Impossible ! Le graphe possede un circuit !";
+	}
+	ost << std::endl << std::endl;
 }
 
-void Graphe::distance(std::ostream ost) const
+void Graphe::distance(std::ostream &ost) const
 {
+	FsAps fsaps = this->convertirEnFsAps();
+
+	int nbr_sommets = fsaps.nombreSommets();
+	std::vector< std::vector<int> > matrice_distance(nbr_sommets + 1, std::vector<int>(nbr_sommets + 1));
+
+	for (int i = 1; i <= nbr_sommets; ++i) {
+
+        for (int j = 1; j <= nbr_sommets; ++j) {
+
+            matrice_distance[i][j] = -1;
+        }
+	}
+	for (int i = 1; i <= nbr_sommets; ++i) {
+
+		std::vector<int> fa(nbr_sommets + 1);
+		int t = 0, q = 1, p = 1, compteur = 0, x;
+
+		matrice_distance[i][i] = 0;
+		fa[1] = i;
+
+		while (t < q) {
+
+			++compteur;
+			for (int m = t + 1; m <= q; ++m) {
+
+				for (int n = fsaps.aps()[fa[m] - 1]; (x = fsaps.fs()[n]) != 0; ++n) {
+
+					if (matrice_distance[i][x] == -1) {
+
+						matrice_distance[i][x] = compteur;
+						++p;
+						fa[p] = x;
+					}
+				}
+			}
+			t = q;
+			q = p;
+		}
+	}
+
+	ost << std::endl;
+    ost << "Matrice des distances :" << std::endl << std::endl;
+	ost << "\t";
+	for (int i = 1; i <= nbr_sommets; ++i) {
+
+		ost << i << "\t";
+	}
+	ost << std::endl;
+	for (int i = 1; i <= nbr_sommets; ++i) {
+
+		ost << i << "\t";
+		for (int j = 1; j <= nbr_sommets; ++j) {
+
+			ost << matrice_distance[i][j] << "\t";
+		}
+		ost << std::endl;
+	}
+	ost << std::endl;
 }
 
-void Graphe::ordonnancement(std::ostream ost) const
+void Graphe::ordonnancement(std::ostream &ost) const
 {
 
 }
@@ -120,6 +265,10 @@ void Graphe::Dijkstra(std::ostream &ost) const
 }
 
 void Graphe::fusion(int i, int j, std::vector<int>& prem, std::vector<int>& pilch, std::vector<int>& cc, std::vector<int>& nb) const
+{
+}
+
+  void Graphe::Kruskal(std::ostream &ost) const
 {
     int x;
     if(nb[i] > nb[j])
@@ -343,7 +492,7 @@ void traversee(int s , int &p , int& nbcfc , const FsAps& fsaps , std::vector<in
 
 }
 
-void Graphe::Tarjan(std::ostream ost) const
+void Graphe::Tarjan(std::ostream &ost) const
 {
     ost << "Resultats de Tarjan" << std::endl ;
 

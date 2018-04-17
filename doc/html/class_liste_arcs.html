@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Graph Designed
-   &#160;<span id="projectnumber">dev</span>
+   &#160;<span id="projectnumber">production</span>
    </div>
   </td>
  </tr>
@@ -88,6 +88,7 @@ $(document).ready(function(){initNavTree('class_liste_arcs.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#friends">Amis</a> &#124;
 <a href="class_liste_arcs-members.html">Liste de tous les membres</a>  </div>
   <div class="headertitle">
 <div class="title">Référence de la classe ListeArcs</div>  </div>
@@ -100,10 +101,23 @@ $(document).ready(function(){initNavTree('class_liste_arcs.html','');});
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a4e59b30fc69b3064887164bf627b8587"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_liste_arcs.html#a4e59b30fc69b3064887164bf627b8587">ListeArcs</a> ()</td></tr>
 <tr class="separator:a4e59b30fc69b3064887164bf627b8587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43e90a4a154dfad29d3beef0f1bc755b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_liste_arcs.html#a43e90a4a154dfad29d3beef0f1bc755b">ajouter</a> (<a class="el" href="class_chainon_arc.html">ChainonArc</a> *chainearc)</td></tr>
+<tr class="separator:a43e90a4a154dfad29d3beef0f1bc755b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab50da5bf2bbdcc7c0b9a8e8fb12527b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_liste_arcs.html#ab50da5bf2bbdcc7c0b9a8e8fb12527b2">supprimer</a> (<a class="el" href="class_chainon_arc.html">ChainonArc</a> *chainearc)</td></tr>
+<tr class="separator:ab50da5bf2bbdcc7c0b9a8e8fb12527b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Amis</h2></td></tr>
+<tr class="memitem:ab94c122f01681bded4af754bd7515192"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_liste_arcs.html#ab94c122f01681bded4af754bd7515192">ChainonArc</a></td></tr>
+<tr class="separator:ab94c122f01681bded4af754bd7515192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a800f30828207e3b19c359cae6244984c"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_liste_arcs.html#a800f30828207e3b19c359cae6244984c">ChainonSommet</a></td></tr>
+<tr class="separator:a800f30828207e3b19c359cae6244984c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a698470711486f39816c627c86b5e6dd5"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_liste_arcs.html#a698470711486f39816c627c86b5e6dd5">ListeSommets</a></td></tr>
+<tr class="separator:a698470711486f39816c627c86b5e6dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock">
-<p class="definition">Définition à la ligne <a class="el" href="_liste_arcs_8h_source.html#l00007">7</a> du fichier <a class="el" href="_liste_arcs_8h_source.html">ListeArcs.h</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_liste_arcs_8h_source.html#l00008">8</a> du fichier <a class="el" href="_liste_arcs_8h_source.html">ListeArcs.h</a>.</p>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a id="a4e59b30fc69b3064887164bf627b8587"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4e59b30fc69b3064887164bf627b8587">&#9670;&nbsp;</a></span>ListeArcs()</h2>
@@ -119,15 +133,145 @@ Fonctions membres publiques</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Constructeur par défaut de <a class="el" href="class_liste_arcs.html">ListeArcs</a> </p>
+<p>Constructeur par défaut de <a class="el" href="class_liste_arcs.html">ListeArcs</a>. </p>
 
 <p class="definition">Définition à la ligne <a class="el" href="_liste_arcs_8cpp_source.html#l00003">3</a> du fichier <a class="el" href="_liste_arcs_8cpp_source.html">ListeArcs.cpp</a>.</p>
 
 </div>
 </div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="a43e90a4a154dfad29d3beef0f1bc755b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43e90a4a154dfad29d3beef0f1bc755b">&#9670;&nbsp;</a></span>ajouter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ListeArcs::ajouter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_chainon_arc.html">ChainonArc</a> *&#160;</td>
+          <td class="paramname"><em>chainearc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Fonction qui ajoute un arc vers un sommet dans la liste des arcs</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>Un arc </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">successeur</td><td>Un pointeur sur le sommet de l'arc </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="_liste_arcs_8cpp_source.html#l00006">6</a> du fichier <a class="el" href="_liste_arcs_8cpp_source.html">ListeArcs.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab50da5bf2bbdcc7c0b9a8e8fb12527b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab50da5bf2bbdcc7c0b9a8e8fb12527b2">&#9670;&nbsp;</a></span>supprimer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ListeArcs::supprimer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_chainon_arc.html">ChainonArc</a> *&#160;</td>
+          <td class="paramname"><em>chainearc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Fonction qui supprime un arc vers un sommet dans la liste des arcs</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>Un arc </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">successeur</td><td>Un pointeur sur le sommet de l'arc </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="_liste_arcs_8cpp_source.html#l00019">19</a> du fichier <a class="el" href="_liste_arcs_8cpp_source.html">ListeArcs.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions amies et associées</h2>
+<a id="ab94c122f01681bded4af754bd7515192"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab94c122f01681bded4af754bd7515192">&#9670;&nbsp;</a></span>ChainonArc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_chainon_arc.html">ChainonArc</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="_liste_arcs_8h_source.html#l00032">32</a> du fichier <a class="el" href="_liste_arcs_8h_source.html">ListeArcs.h</a>.</p>
+
+</div>
+</div>
+<a id="a800f30828207e3b19c359cae6244984c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a800f30828207e3b19c359cae6244984c">&#9670;&nbsp;</a></span>ChainonSommet</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_chainon_sommet.html">ChainonSommet</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="_liste_arcs_8h_source.html#l00033">33</a> du fichier <a class="el" href="_liste_arcs_8h_source.html">ListeArcs.h</a>.</p>
+
+</div>
+</div>
+<a id="a698470711486f39816c627c86b5e6dd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a698470711486f39816c627c86b5e6dd5">&#9670;&nbsp;</a></span>ListeSommets</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_liste_sommets.html">ListeSommets</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="_liste_arcs_8h_source.html#l00034">34</a> du fichier <a class="el" href="_liste_arcs_8h_source.html">ListeArcs.h</a>.</p>
+
+</div>
+</div>
 <hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
-<li>include/<a class="el" href="_liste_arcs_8h_source.html">ListeArcs.h</a></li>
-<li>src/<a class="el" href="_liste_arcs_8cpp_source.html">ListeArcs.cpp</a></li>
+<li>C:/Users/Olivier Delierre/source/repos/GraphDesigner/include/<a class="el" href="_liste_arcs_8h_source.html">ListeArcs.h</a></li>
+<li>C:/Users/Olivier Delierre/source/repos/GraphDesigner/src/<a class="el" href="_liste_arcs_8cpp_source.html">ListeArcs.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

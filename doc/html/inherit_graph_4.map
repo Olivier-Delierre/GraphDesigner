@@ -1,3 +1,6 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node1" href="$class_liste_sommets.html" title="ListeSommets" alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node1" href="$class_graphe.html" title="Graphe" alt="" coords="5,56,69,83"/>
+<area shape="rect" id="node2" href="$class_fs_aps.html" title="FsAps" alt="" coords="151,5,211,32"/>
+<area shape="rect" id="node3" href="$class_listes.html" title="Listes" alt="" coords="152,56,209,83"/>
+<area shape="rect" id="node4" href="$class_matrice_adjacence.html" title="MatriceAdjacence" alt="" coords="117,107,244,133"/>
 </map>

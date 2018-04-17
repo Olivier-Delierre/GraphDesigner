@@ -37,6 +37,11 @@ class MatriceAdjacence : public Graphe
 		 */
 		virtual void ajouterSommet(Sommet* sommet) override;
 
+    /**
+     * Supprime un sommet
+     *
+     *
+     */
 		virtual void supprimerSommet(Sommet* s) override;
 
 		/**
@@ -83,7 +88,7 @@ class MatriceAdjacence : public Graphe
         *
         * @return un vecteur de pointeur vers sommets.
 		*/
-		std::vector<Sommet*> sommets() const ;
+		std::vector<Sommet*> sommets() const override;
 
 		/**
 		* Retourne la matrice d'adjacence

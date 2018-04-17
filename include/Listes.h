@@ -25,6 +25,16 @@ class Listes : public Graphe
         virtual ~Listes() = default ;
 
 		/**
+		* Ajoute un sommet à la matrice d'adjacence courante,
+		* et redimensionne en conséquence celle-ci.
+		*
+		* @param sommet Un sommet à ajouter.
+		*/
+		virtual void ajouterSommet(Sommet* sommet) override;
+
+		virtual std::vector<Sommet*> sommets() const override;
+
+		/**
 		 * Affiche une Listes sur la sortie standard.
 		 *
 		 * @param ost Une sortie standard.

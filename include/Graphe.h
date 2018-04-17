@@ -8,7 +8,7 @@ class Arc ;
 class MatriceAdjacence ;
 class FsAps ;
 class Listes ;
-class Sommet;
+class Sommet ;
 
 class Graphe
 {
@@ -39,6 +39,21 @@ class Graphe
 		virtual int nombreSommets() const = 0;
 
 		/**
+		* Méthode virtuelle pure qui renvoie le tableau de pointeurs de sommets du graphe.
+		*
+		* @return le tableau de pointeurs de sommets.
+		*/
+		virtual std::vector<Sommet*> sommets() const = 0;
+
+		/**
+		* Ajoute un sommet à la matrice d'adjacence courante,
+		* et redimensionne en conséquence celle-ci.
+		*
+		* @param sommet Un sommet à ajouter.
+		*/
+		virtual void ajouterSommet(Sommet* sommet) = 0;
+
+		/**
 		 * Ajoute un arc au graphe courant, allant du sommet i au sommet j
 		 * Si les index sont incorrects, la fonction ne fait rien.
 		 *
@@ -61,28 +76,28 @@ class Graphe
 		*
 		* @param ost - Une sortie standard.
 		*/
-		void distance(std::ostream ost) const ;
+		void distance(std::ostream &ost) const ;
 
 		/**
 		* Méthode qui réalise et affiche l'algorithme de determination des rangs des sommets
 		*
 		* @param ost - Une sortie standard.
 		*/
-		void rangs(std::ostream ost) const ;
+		void rangs(std::ostream &ost) const ;
 
 		/**
 		* Méthode qui réalise et affiche l'algorithme de determination des CFC selon Tarjan
 		*
 		* @param ost - Une sortie standard.
 		*/
-		void Tarjan(std::ostream ost) const ;
+		void Tarjan(std::ostream &ost) const ;
 
 		/**
 		* Méthode qui réalise et affiche l'algorithme de resolution du probleme d'ordonnancement
 		*
 		* @param ost - Une sortie standard.
 		*/
-		void ordonnancement(std::ostream ost) const ;
+		void ordonnancement(std::ostream &ost) const ;
 
 		/**
 		* Méthode qui réalise et affiche l'algorithme de calcul des plus courts chemin selon Djikstra

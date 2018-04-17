@@ -1,0 +1,5 @@
+<map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
+<area shape="rect" id="node1" href="$class_sommet.html" title="Sommet" alt="" coords="5,31,76,57"/>
+<area shape="rect" id="node2" href="$class_sommet_mot.html" title="SommetMot" alt="" coords="135,5,229,32"/>
+<area shape="rect" id="node3" href="$class_sommet_numero.html" title="SommetNumero" alt="" coords="124,56,240,83"/>
+</map>

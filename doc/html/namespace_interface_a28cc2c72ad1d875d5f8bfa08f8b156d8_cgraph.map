@@ -1,0 +1,11 @@
+<map id="Interface::MenuPrincipal" name="Interface::MenuPrincipal">
+<area shape="rect" id="node2" href="$namespace_interface.html#ac6194590dfc413701cc7197cc11f8ee1" title="Interface::Header" alt="" coords="457,174,577,200"/>
+<area shape="rect" id="node3" href="$namespace_interface.html#ac47256a08c003033bd92f80a764e3f1a" title="Interface::ImporterGraphe" alt="" coords="228,47,396,74"/>
+<area shape="rect" id="node4" href="$namespace_interface.html#abaee349476f8ccdce2127f2cefee966f" title="Interface::CreerGraphe" alt="" coords="236,98,388,124"/>
+<area shape="rect" id="node5" href="$namespace_interface.html#a92353e3d82c39367939cdfe6f4c32f90" title="Interface::AjouterSommet" alt="" coords="227,148,397,175"/>
+<area shape="rect" id="node6" href="$namespace_interface.html#aa4303a22831c89703156baa85dd3c8ff" title="Interface::TransformerGraphe" alt="" coords="217,199,407,226"/>
+<area shape="rect" id="node7" href="$namespace_interface.html#ad3be9a02e93f5b64d6fb1cd26d36ca8e" title="Interface::AppliquerAlgorithme" alt="" coords="215,250,409,276"/>
+<area shape="rect" id="node8" href="$namespace_interface.html#a7143566263b5c035f8bbe370435ba75b" title="Interface::AfficherGraphe" alt="" coords="230,300,394,327"/>
+<area shape="rect" id="node9" href="$namespace_interface.html#a0bce5263f1b3f312efad6d5c470ce7f8" title="Interface::SauvegarderGraphe" alt="" coords="216,351,408,378"/>
+<area shape="rect" id="node10" href="$namespace_interface.html#a0934ea62c87d07338ba7d607f7cd038a" title="Interface::Quitter" alt="" coords="253,402,371,428"/>
+</map>

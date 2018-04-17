@@ -1,0 +1,8 @@
+<map id="Graphe::Prufer" name="Graphe::Prufer">
+<area shape="rect" id="node2" href="$class_graphe.html#a991a8019bd39056b148813d814e867e6" title="Graphe::convertirEnFsAps" alt="" coords="160,5,335,32"/>
+<area shape="rect" id="node3" href="$class_graphe.html#a80719d7c32ca282e6a5f781c0cc084aa" title="Graphe::nombreSommets" alt="" coords="162,56,333,83"/>
+<area shape="rect" id="node4" href="$class_fs_aps.html#a9b63575ae5592ab9c1689423bd04ecf5" title="FsAps::aps" alt="" coords="203,107,292,133"/>
+<area shape="rect" id="node5" href="$class_fs_aps.html#a958d14a1c92f9b5f72d5199e88893514" title="FsAps::fs" alt="" coords="208,157,287,184"/>
+<area shape="rect" id="node6" href="$class_fs_aps.html#a53f53b1d2559e76fc2b01bea4cfaa9f8" title="FsAps::supprimerArc" alt="" coords="175,208,320,235"/>
+<area shape="rect" id="node7" href="$class_fs_aps.html#a9c82cb24ae1af30b99e16ba30f5e7087" title="FsAps::nombreSommets" alt="" coords="383,208,549,235"/>
+</map>

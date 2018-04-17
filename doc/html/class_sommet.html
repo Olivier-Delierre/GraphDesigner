@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Graph Designed
-   &#160;<span id="projectnumber">dev</span>
+   &#160;<span id="projectnumber">production</span>
    </div>
   </td>
  </tr>
@@ -100,16 +100,19 @@ Graphe d'héritage de Sommet:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_sommet__inherit__graph.png" border="0" usemap="#_sommet_inherit__map" alt="Inheritance graph"/></div>
 <map name="_sommet_inherit__map" id="_sommet_inherit__map">
-<area shape="rect" id="node2" href="class_sommet_numero.html" title="SommetNumero" alt="" coords="5,80,121,107"/>
+<area shape="rect" id="node2" href="class_sommet_mot.html" title="SommetMot" alt="" coords="5,80,99,107"/>
+<area shape="rect" id="node3" href="class_sommet_numero.html" title="SommetNumero" alt="" coords="123,80,239,107"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a9eda43dcb97673d6a9c0e1c5240a7bf9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sommet.html#a9eda43dcb97673d6a9c0e1c5240a7bf9">Sommet</a> (unsigned int id)</td></tr>
+<tr class="memitem:a9eda43dcb97673d6a9c0e1c5240a7bf9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sommet.html#a9eda43dcb97673d6a9c0e1c5240a7bf9">Sommet</a> (unsigned int <a class="el" href="class_sommet.html#abbd6d6c9d2dbbac829db818a937414a9">id</a>)</td></tr>
 <tr class="separator:a9eda43dcb97673d6a9c0e1c5240a7bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e795b7960773423c2b843204a9e243d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sommet.html#a7e795b7960773423c2b843204a9e243d">affiche</a> (std::ostream &amp;ost) const =0</td></tr>
 <tr class="separator:a7e795b7960773423c2b843204a9e243d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbd6d6c9d2dbbac829db818a937414a9"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sommet.html#abbd6d6c9d2dbbac829db818a937414a9">id</a> () const</td></tr>
+<tr class="separator:abbd6d6c9d2dbbac829db818a937414a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Classe virtuelle pure permettant de représenter les sommets d'un graphe. </p>
@@ -175,13 +178,41 @@ Fonctions membres publiques</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implémenté dans <a class="el" href="class_sommet_numero.html#a8ec15200f804b8a1696772009f06eced">SommetNumero</a>.</p>
+<p>Implémenté dans <a class="el" href="class_sommet_mot.html#ab902938ddf7c26058221530eeeaa0bc5">SommetMot</a>, et <a class="el" href="class_sommet_numero.html#a259b6daebda57af20c25f353c3bb42fc">SommetNumero</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_sommet_a7e795b7960773423c2b843204a9e243d_icgraph.png" border="0" usemap="#class_sommet_a7e795b7960773423c2b843204a9e243d_icgraph" alt=""/></div>
+<map name="class_sommet_a7e795b7960773423c2b843204a9e243d_icgraph" id="class_sommet_a7e795b7960773423c2b843204a9e243d_icgraph">
+<area shape="rect" id="node2" href="class_liste_sommets.html#a262c037299beddfac6b046a229a27f81" title="ListeSommets::affiche" alt="" coords="169,5,320,32"/>
+<area shape="rect" id="node3" href="class_listes.html#aaef0ce3447c86318b3ff0e95e671c1ef" title="Listes::affiche" alt="" coords="368,5,471,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abbd6d6c9d2dbbac829db818a937414a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbd6d6c9d2dbbac829db818a937414a9">&#9670;&nbsp;</a></span>id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Sommet::id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="_sommet_8cpp_source.html#l00007">7</a> du fichier <a class="el" href="_sommet_8cpp_source.html">Sommet.cpp</a>.</p>
 
 </div>
 </div>
 <hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
-<li>include/<a class="el" href="_sommet_8h_source.html">Sommet.h</a></li>
-<li>src/<a class="el" href="_sommet_8cpp_source.html">Sommet.cpp</a></li>
+<li>C:/Users/Olivier Delierre/source/repos/GraphDesigner/include/<a class="el" href="_sommet_8h_source.html">Sommet.h</a></li>
+<li>C:/Users/Olivier Delierre/source/repos/GraphDesigner/src/<a class="el" href="_sommet_8cpp_source.html">Sommet.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
