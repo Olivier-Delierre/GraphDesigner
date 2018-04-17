@@ -47,3 +47,8 @@ Listes Listes::convertirEnListes() const
     return *this ;
 }
 
+void Listes::ajouterSommet(Sommet* s)
+{}
+
+void Listes::supprimerSommet(Sommet* s)
+{}

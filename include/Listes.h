@@ -87,6 +87,10 @@ class Listes : public Graphe
         */
         virtual Listes convertirEnListes() const override ;
 
+        virtual void ajouterSommet(Sommet* s) override;
+
+        virtual void supprimerSommet(Sommet* s) override;
+
 	private:
 		ListeSommets* d_principale;
 };

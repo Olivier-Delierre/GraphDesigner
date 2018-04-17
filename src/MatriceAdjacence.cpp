@@ -133,3 +133,6 @@ Listes MatriceAdjacence::convertirEnListes() const
 {
 	return Listes();
 }
+
+void MatriceAdjacence::supprimerSommet(Sommet* s)
+{}
