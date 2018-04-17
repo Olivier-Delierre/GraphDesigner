@@ -1,6 +1,8 @@
 #include "../include/Graphe.h"
 
 #include "../include/FsAps.h"
+#include <string>
+#include <iostream>
 
 void Graphe::rangs(std::ostream ost) const
 {
@@ -117,9 +119,147 @@ void Graphe::Dijkstra(std::ostream &ost) const
 	}
 }
 
-void Graphe::Kruskal(std::ostream ost) const
+void Graphe::fusion(int i, int j, std::vector<int>& prem, std::vector<int>& pilch, std::vector<int>& cc, std::vector<int>& nb) const
 {
+    int x;
+    if(nb[i] > nb[j])
+    {
+        x = i;
+        i = j;
+        j = x;
+    }
+    x = prem[i];
+    cc[x] = j;
+    while(pilch[x] != 0)
+    {
+        x = pilch[x];
+        cc[x] = j;
+    }
+    pilch[x] = prem[j];
+    prem[j] = prem [i];
+    nb[j] = nb[j] + nb[i];
+}
 
+void Graphe::sortWithQuickSort(std::vector<Arc*>& arcs,int first, int last, std::vector<int> somDeb, std::vector<int> somFin) const
+{
+    double x = arcs[(first + last) / 2]->poids();
+    int i = first;
+    int j = last;
+    Arc* temp_var;
+    int temp_num = 0;
+
+    while (true) {
+      while (arcs[i]->poids() < x) i++;
+      while (x < arcs[j]->poids()) j--;
+      if (i >= j) break;
+
+      temp_var = arcs[i];
+      arcs[i] = arcs[j];
+      arcs[j] = temp_var;
+
+      temp_num = somDeb[i];
+      somDeb[i] = somDeb[j];
+      somDeb[j] = temp_num;
+
+      temp_num = somFin[i];
+      somFin[i] = somFin[j];
+      somFin[j] = temp_num;
+
+      i++;
+      j--;
+    }
+
+    if (first < (i -1)) sortWithQuickSort(arcs, first, i - 1, somDeb, somFin);
+    if ((j + 1) < last) sortWithQuickSort(arcs, j + 1, last, somDeb, somFin);
+}
+
+void Graphe::Kruskal(std::ostream& ost) const
+{
+    ost << "Resultat de Kruskal : " << std::endl;
+
+    MatriceAdjacence matrice = this->convertirEnMatriceAdjacence();
+    int n = this->nombreSommets();
+
+    int k =0;
+
+    std::vector<int> prem (n+1);
+    std::vector<int> pilch(n+1);
+    std::vector<int> cc (n+1);
+    std::vector<int> nb (n+1);
+
+    MatriceAdjacence* T = new MatriceAdjacence();
+
+    std::vector<Sommet*> sommetsT = matrice.sommets();
+
+    for(int i = 0; i < sommetsT.size() ; i++)
+    {
+        T->ajouterSommet(sommetsT[i]);
+    }
+
+    for(int i = 1; i <= n; i++)
+    {
+        prem[i] = i;
+        pilch[i] = 0;
+        cc[i] = i;
+        nb[i] = 1;
+    }
+
+    std::vector<Arc*> arcTri;
+    std::vector<int> sommetDebut;
+    std::vector<int> sommetFin;
+
+     //On récupère tous les arcs du graphe
+        for(int i = 0; i < T->nombreSommets(); i++)
+        {
+            for(int j = 0; j < T->nombreSommets(); j++)
+            {
+                if(matrice.matrice()[i][j]!= nullptr)
+                {
+                    arcTri.push_back(matrice.matrice()[i][j]);
+                    sommetDebut.push_back(i);
+                    sommetFin.push_back(j);
+                }
+//                if(matrice.matrice()[i][j]!= nullptr && matrice.matrice()[i][j]->poids() < poidsMax)
+//                {
+////                    poidsMax = matrice.matrice()[i][j]->poids();
+//                    a = new Arc(matrice.matrice()[i][j]->poids(), "");
+//                    dep = i;
+//                    arr = j;
+//                }
+            }
+        }
+
+        //tri des arcs pas ordre croissant
+        for(int i = 0; i < arcTri.size(); i++)
+            std::cout<<arcTri[i]->poids();
+        sortWithQuickSort(arcTri,0, arcTri.size()-1, sommetDebut, sommetFin);
+
+    while(k < n && arcTri.size() > 0)
+    {
+//        Arc* a = nullptr;
+        int deb = sommetDebut[0];
+        int arr = sommetFin[0];
+
+        //si les sommets sont dans 2 composantes connexes différentes, on ajoute l'arc et fusionne les Cc
+        if(cc[deb] != cc[arr])
+        {
+            fusion(deb, arr, prem, pilch, cc, nb);
+            std::string nomArc = std::to_string(deb) + " - " + std::to_string(arr);
+            T->ajouterArc(arcTri[0], deb, arr);
+            k++;
+            ost << "..";
+        }
+
+        //on enleve les arcs traités
+        arcTri.erase(arcTri.begin());
+        sommetDebut.erase(sommetDebut.begin());
+        sommetFin.erase(sommetFin.begin());
+
+
+    }
+    std::cout<<std::endl;
+
+    T->affiche(ost);
 }
 
 void Graphe::Prufer(std::ostream &ost) const

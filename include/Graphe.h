@@ -92,11 +92,34 @@ class Graphe
 		void Dijkstra(std::ostream &ost) const ;
 
 		/**
-		* Méthode qui réalise et affiche l'algorithme de calcul des distances d'un graphe
+		* Méthode fusionnant deux composantes connexes
+		*
+		* @param i - La composante connexe du premier sommet
+		* @param j - La composante connexe du second sommet
+		* @param prem - Le tableau des premiers éléments de rang k
+		* @param pilch - La pile chainée des sommets de l'ARM
+		* @param cc - Le tableau des composantes connexes
+		* @param nb - La composante connexe du premier sommet
+		*/
+		void fusion(int i, int j, std::vector<int>& prem, std::vector<int>& pilch, std::vector<int>& cc, std::vector<int>& nb) const;
+
+		/**
+		* Méthode de quickSort modifiée pour trier les arcs, les somemts de début et les sommets de Fin
+		*
+		* @param arcs - Le tableau des arcs
+		* @param first - L'indice de début du quickSort
+		* @param last - L'indice de fin du quickSort
+		* @param somDeb - Le vecteur des indices des sommets de départ
+		* @param SomFin - Le vecteur des indices des sommets d'arrivée
+		*/
+		void sortWithQuickSort(std::vector<Arc*>& arcs,int first, int last, std::vector<int> somDeb, std::vector<int> somFin) const;
+
+		/**
+		* Méthode qui détermine et affiche un arbre recouvrant minimal du graphe
 		*
 		* @param ost - Une sortie standard.
 		*/
-		void Kruskal(std::ostream ost) const ;
+		void Kruskal(std::ostream& ost) const ;
 
 		/**
 		* Méthode qui réalise et affiche le codage de Prufer.
